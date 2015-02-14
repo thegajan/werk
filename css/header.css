@@ -45,7 +45,7 @@ header {
     font-weight: 300;
     background-color: #db4437;
     width: 100%;
-    box-shadow: 0 -10px 50px -10px #000;
+    /*box-shadow: 0 -10px 50px -10px #000;*/
 }
 
 header:after {
