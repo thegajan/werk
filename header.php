@@ -63,10 +63,8 @@
                     <option>PM</option>
                 </select>
                 <br>
-                <ul id="burst-div">
-                    <li><input type="checkbox" id="burst" name="burst" class="input section"></li>
-                    <li id="burst-writing">Do you want burst notifications to be enabled?</li>
-                </ul>
+                <div><input id="submit-add" name="submit-add" class="button" type="submit" value="Create Task"></div><br>
+                <div><input id="submit-add-cancel" name="submit-add-cancel" class="button" type="submit" value="Cancel"></div>
             </div>
             <div class="ico-shit other">
                 <div data-icon="ei-bell"></div>

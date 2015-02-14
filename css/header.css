@@ -168,7 +168,7 @@ header nav div {
     right: 20px;
     position: absolute;
     width: 350px;
-    height: 600px;
+    height: 590px;
     padding: 0px;
     background: #FFFFFF;
     -webkit-border-radius: 5px;
@@ -208,16 +208,20 @@ header nav div {
     padding: 10px;
 }
 
-#burst-div li{
+#burst-div li {
     display: inline-block;
 }
 
-#burst-writing {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    color: #000;
-    padding: 10px;
-}
+/*#burst{*/
+/*margin-top: 15px;*/
+/*}*/
+
+/*#burst-writing {*/
+/*font-family: 'Open Sans', sans-serif;*/
+/*font-size: 15px;*/
+/*color: #000;*/
+/*padding: 5px;*/
+/*}*/
 
 textarea {
     font-family: 'Open Sans', sans-serif;
@@ -225,26 +229,26 @@ textarea {
     color: #000000;
     font-weight: 300;
     resize: none;
-    width: 300px;
+    width: 310px;
 }
 
 #task-name {
     font-family: "Open Sans", sans-serif;
     margin: 10px;
     font-size: 20px;
-    width: 90%;
+    width: 310px;
 }
 
 #start-date {
-    width: 85%;
+    width: 310px;
 }
 
 #end-date {
-    width: 85%;
+    width: 310px;
 }
 
 .times {
-    width: 110px;
+    width: 123px;
 }
 
 #date ul li {
@@ -269,147 +273,17 @@ textarea {
 
 .ui-datepicker {
     font-family: "open sans", sans-serif;
-    background: #fff;
-    Old browsers background
-
-: #fff
-
--moz-linear-gradient
-(
-top, #fcfcfc
-
-0
-%
-,
-#fff
-
-100
-%
-)
-;
-FF3
-
-.6
-+
-background: #fff
-
--webkit-gradient
-(
-linear, left top, left bottom,
-
-color-stop
-(
-0
-%
-,
-#fcfcfc
-
-)
-)
-,
-color-stop
-(
-100
-%
-,
-#fff
-
-)
-)
-;
-Chrome, Safari4 +
-background: #fff
-
--webkit-linear-gradient
-(
-top, #fcfcfc
-
-0
-%
-,
-#fff
-
-100
-%
-)
-;
-Chrome10 +, Safari5
-
-.1
-+
-background: #fff
-
--o-linear-gradient
-(
-top, #fcfcfc
-
-0
-%
-,
-#fff
-
-100
-%
-)
-;
-Opera11
-
-.10
-+
-background: #fff
-
--ms-linear-gradient
-(
-top, #fcfcfc
-
-0
-%
-,
-#fff
-
-100
-%
-)
-;
-IE10 +
-background: #fff
-
-linear-gradient
-(
-top, #fcfcfc
-
-0
-%
-,
-#fff
-
-100
-%
-)
-;
-W3C
-font-size:
-
-15
-px
-
-;
-font-weight:
-
-300
-;
-padding:
-
-10
-px
-
-;
-border:
-
-1
-px solid #ccc
-
-;
+    background: #fff;  Old browsers
+background: #fff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%);  FF3.6+
+background: #fff -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc)), color-stop(100%, #fff));  Chrome,Safari4+
+background: #fff -webkit-linear-gradient(top, #fcfcfc 0%, #fff 100%);  Chrome10+,Safari5.1+
+background: #fff -o-linear-gradient(top, #fcfcfc 0%, #fff 100%);  Opera11.10+
+background: #fff -ms-linear-gradient(top, #fcfcfc 0%, #fff 100%);  IE10+
+                                                                   background: #fff linear-gradient(top, #fcfcfc 0%, #fff 100%);  W3C
+                                                                                                                                  font-size: 15px;
+font-weight: 300;
+padding: 10px;
+border: 1px solid #ccc;
 }
 
 .ui-datepicker table {
@@ -443,4 +317,26 @@ px solid #ccc
     font-family: "OPEN SANS", sans-serif;
     font-weight: 300;
     color: #000000;
+}
+
+.button {
+    font-family: "open sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px 0 0;
+    border-radius: 5px;
+    width: 315px;
+    padding: 5px;
+}
+
+#submit-add{
+    background-color: #2ecc71;
+    color: #ffffff;
+    border: 1px solid #2ecc71;
+}
+
+#submit-add-cancel{
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: 1px solid #e74c3c;
 }
