@@ -33,7 +33,7 @@
     </div>
     <nav>
         <div class="ico-shit other add">
-            <div data-icon="ei-plus"></div>
+            <div id="add-button"><div data-icon="ei-plus"></div></div>
             <div class="drop-down bubble" id="add-drop-down">
                 <h1>Add a Task</h1>
                 <input type="text" id="task-name" class="input section" name="task-name" placeholder="Task Name">
