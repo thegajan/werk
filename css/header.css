@@ -112,15 +112,12 @@ header nav div{
     /*padding-left: 0px;*/
 /*}*/
 
-.icon--ei-navicon {
-    fill: #fff;
-}
-
 .icon--ei-user {
     padding-top: 5px;
     width: 50px;
     height: 50px;
     fill: #fff;
+    cursor: pointer;
 }
 
 .icon--ei-bell {
@@ -128,6 +125,7 @@ header nav div{
     width: 35px;
     height: 35px;
     fill: #fff;
+    cursor: pointer;
 }
 
 .icon--ei-plus {
@@ -135,10 +133,12 @@ header nav div{
     width: 35px;
     height: 35px;
     fill: #fff;
+    cursor: pointer;
 }
 
 .icon--ei-pencil{
     fill: #fff;
     width: 25px;
     height: 25px;
+    cursor: pointer;
 }
