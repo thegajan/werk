@@ -9,7 +9,7 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/evil-icons.min.js"></script>
     <link rel="stylesheet" href="css/evil-icons.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
     <meta name="description"
           content="A Time Productivity App.">
     <meta name="keywords"

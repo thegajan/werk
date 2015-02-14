@@ -1,144 +1,25 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-     margin: 0;
-     padding: 0;
-     border: 0;
-     font-size: 100%;
-     font: inherit;
-     vertical-align: baseline;
-     text-decoration: none;
-     cursor: auto;
- }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
+.circle {
+    display: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 5px solid #DB4437;
+    border-right: 5px solid #DB4437;
+    border-bottom: 5px solid #DB4437;
+    border-left: 5px solid #ecf0f1;
+    -webkit-animation: circle 1s infinite linear;
+    animation: circle 5s infinite linear;
 }
 
-/*header {*/
-/*border-bottom: 1px solid #ecf0f1;*/
-/*}*/
-
-body {
-    line-height: 1;
-    width: 100%;
+@-webkit-keyframes circle {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
-ul {
-    list-style: none;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-header {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    background-color: #db4437;
-    width: 100%;
-    box-shadow: 0 -10px 50px -10px #000;
-}
-
-header:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-header #logo {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    float: left;
-    color: #ffffff;
-    padding-top: 15px;
-    font-size: 30px;
-    font-style: 700;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-}
-
-header #logo ul li {
-    display: inline-block;
-    padding-right: 0px;
-}
-
-header nav {
-    float: right;
-    padding-top: 0px;
-    padding-right: 15px;
-    font-size: 17px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-}
-
-header nav div{
-    display: inline-block;
-}
-
-/*header nav ul {*/
-    /*margin-top: 11px;*/
-    /*float: right;*/
-/*}*/
-
-/*header nav ul .ico-font {*/
-    /*display: inline-block;*/
-/*}*/
-
-/*header nav ul li a {*/
-    /*color: #777;*/
-    /*text-decoration: none;*/
-/*}*/
-
-/*header nav ul li a:hover {*/
-    /*color: #27ae60;*/
-    /*cursor: pointer;*/
-/*}*/
-
-/*header nav ul li a:active {*/
-    /*color: #2ecc71;*/
-/*}*/
-
-/*header nav li + li {*/
-    /*padding-left: 0px;*/
-/*}*/
-
-.icon--ei-navicon {
-    fill: #fff;
-}
-
-.icon--ei-user {
-    padding-top: 5px;
-    width: 50px;
-    height: 50px;
-    fill: #fff;
-}
-
-.icon--ei-bell {
-    padding: 5px 0px 5px;
-    width: 35px;
-    height: 35px;
-    fill: #fff;
-}
-
-.icon--ei-plus {
-    padding: 5px 0px 5px;
-    width: 35px;
-    height: 35px;
-    fill: #fff;
-}
-
-.icon--ei-pencil{
-    fill: #fff;
-    width: 25px;
-    height: 25px;
+@keyframes circle {
+    100% {
+        transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
