@@ -245,7 +245,11 @@
       <created>1423894343826</created>
       <updated>1423894343826</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changed the icon">
+      <created>1423894359068</created>
+      <updated>1423894359068</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
