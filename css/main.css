@@ -136,3 +136,6 @@ header nav div{
     height: 35px;
     fill: #fff;
 }
+header{
+    display: none;
+}
