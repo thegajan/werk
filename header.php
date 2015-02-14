@@ -42,22 +42,22 @@
 
                 <h1>Task Timings</h1>
 
-                <h2>Start Time:</h2> <input type="text" id="start-date" class="time datepicker" name="startDay"
+                <h2>Start Time:</h2> <input type="text" id="start-date" class="time datepicker box" name="startDay"
                                             placeholder="Start Day"><br></br.>
                 <input type="text" id="startHour" name="startHour" placeholder="Hour"
-                       class="time start times">:<input type="text" id="startMinute" name="min" placeholder="Minute"
-                                                        class="time start times">:<select name="start-time"
+                       class="time start times  box">:<input type="text" id="startMinute" name="min" placeholder="Minute"
+                                                        class="time start times box">:<select name="start-time"
                                                                                           id="startTOD">
                     <option></option>
                     <option>AM</option>
                     <option>PM</option>
                 </select>
 
-                <h2>End Time:</h2> <input type="text" id="end-date" class="time datepicker" name="endDay"
-                                          placeholder="Ens Day"><br></br.>
+                <h2>End Time:</h2> <input type="text" id="end-date" class="time datepicker box" name="endDay"
+                                          placeholder="End Day"><br></br.>
                 <input type="text" id="endHour" name="endHour" placeholder="Hour"
-                       class="time end times">:<input type="text" id="endMinute" name="min" placeholder="Minute"
-                                                      class="time end times">:<select name="end-time" id="endTOD">
+                       class="time end times box">:<input type="text" id="endMinute" name="min" placeholder="Minute"
+                                                      class="time end times box">:<select name="end-time" id="endTOD">
                     <option></option>
                     <option>AM</option>
                     <option>PM</option>
