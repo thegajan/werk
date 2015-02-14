@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -57,7 +55,7 @@
       <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="13" selection-start="2704" selection-end="2704" vertical-scroll-proportion="0.7868339" vertical-offset="1895" max-vertical-offset="2533">
+            <state line="143" column="1" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.8401254" vertical-offset="1895" max-vertical-offset="2533">
               <folding />
             </state>
           </provider>
@@ -243,7 +241,11 @@
       <created>1423885083500</created>
       <updated>1423885083500</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changed the icon">
+      <created>1423894343826</created>
+      <updated>1423894343826</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -305,7 +307,8 @@
     </option>
     <MESSAGE value="Test" />
     <MESSAGE value="Corrected Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected Commit" />
+    <MESSAGE value="Changed the icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the icon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -393,7 +396,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="13" selection-start="2704" selection-end="2704" vertical-scroll-proportion="0.7868339" vertical-offset="1895" max-vertical-offset="2533">
+        <state line="143" column="1" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.8401254" vertical-offset="1895" max-vertical-offset="2533">
           <folding />
         </state>
       </provider>
