@@ -12,12 +12,10 @@
 
 @implementation Task
 
-@dynamic t_start;
-@dynamic t_end;
 @dynamic length;
 @dynamic name;
+@dynamic t_end;
 @dynamic task_description;
-@dynamic notif_burst;
 @dynamic was_success;
 @dynamic account;
 

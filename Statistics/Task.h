@@ -13,12 +13,10 @@
 
 @interface Task : NSManagedObject
 
-@property (nonatomic, retain) NSDate * t_start;
-@property (nonatomic, retain) NSDate * t_end;
 @property (nonatomic, retain) NSNumber * length;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSDate * t_end;
 @property (nonatomic, retain) NSString * task_description;
-@property (nonatomic, retain) NSNumber * notif_burst;
 @property (nonatomic, retain) NSNumber * was_success;
 @property (nonatomic, retain) Account *account;
 
