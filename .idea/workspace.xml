@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="Added new font and made add task">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/header.css" afterPath="$PROJECT_DIR$/css/header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="Finished front end for add task">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -67,7 +64,7 @@
       <file leaf-file-name="header.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/header.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="286" column="1" selection-start="5715" selection-end="5715" vertical-scroll-proportion="0.26645768" vertical-offset="4692" max-vertical-offset="5899">
+            <state line="300" column="1" selection-start="5902" selection-end="5902" vertical-scroll-proportion="0.6394984" vertical-offset="4692" max-vertical-offset="5899">
               <folding />
             </state>
           </provider>
@@ -236,6 +233,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="D:/tabler" />
     <property name="FullScreen" value="false" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -341,7 +339,11 @@
       <created>1423943937918</created>
       <updated>1423943937918</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Finished front end for add task">
+      <created>1423948345325</created>
+      <updated>1423948345325</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -387,7 +389,8 @@
     <MESSAGE value="Made sidebar" />
     <MESSAGE value="Adding Db shit" />
     <MESSAGE value="Added new font and made add task" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new font and made add task" />
+    <MESSAGE value="Finished front end for add task" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished front end for add task" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -511,7 +514,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="1" selection-start="5715" selection-end="5715" vertical-scroll-proportion="0.26645768" vertical-offset="4692" max-vertical-offset="5899">
+        <state line="300" column="1" selection-start="5902" selection-end="5902" vertical-scroll-proportion="0.6394984" vertical-offset="4692" max-vertical-offset="5899">
           <folding />
         </state>
       </provider>
