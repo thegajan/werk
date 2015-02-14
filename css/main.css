@@ -136,3 +136,9 @@ header nav div{
     height: 35px;
     fill: #fff;
 }
+
+.icon--ei-pencil{
+    fill: #fff;
+    width: 25px;
+    height: 25px;
+}

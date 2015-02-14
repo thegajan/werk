@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,7 +30,7 @@
       <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="26" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="136">
+            <state line="1" column="26" selection-start="32" selection-end="32" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="136">
               <folding />
             </state>
           </provider>
@@ -38,7 +39,7 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="33" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="799">
+            <state line="23" column="45" selection-start="1017" selection-end="1017" vertical-scroll-proportion="-9.807693" vertical-offset="136" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -47,7 +48,7 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="32" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="204">
+            <state line="1" column="0" selection-start="32" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
               <folding />
             </state>
           </provider>
@@ -56,7 +57,7 @@
       <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="17" selection-start="2637" selection-end="2637" vertical-scroll-proportion="0.7601881" vertical-offset="1810" max-vertical-offset="2448">
+            <state line="141" column="13" selection-start="2704" selection-end="2704" vertical-scroll-proportion="0.7868339" vertical-offset="1895" max-vertical-offset="2533">
               <folding />
             </state>
           </provider>
@@ -78,8 +79,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/css/evil-icons.min.css" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
@@ -238,7 +239,11 @@
       <created>1423884973070</created>
       <updated>1423884973070</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Corrected Commit">
+      <created>1423885083500</created>
+      <updated>1423885083500</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -299,7 +304,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test" />
+    <MESSAGE value="Corrected Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -364,20 +370,6 @@
         <state line="6" column="18308" selection-start="18557" selection-end="18557" vertical-scroll-proportion="0.1598746" vertical-offset="0" max-vertical-offset="638" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="33" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="26" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="136">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="32" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
@@ -385,9 +377,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="26" selection-start="32" selection-end="32" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="45" selection-start="1017" selection-end="1017" vertical-scroll-proportion="-9.807693" vertical-offset="136" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="17" selection-start="2637" selection-end="2637" vertical-scroll-proportion="0.7601881" vertical-offset="1810" max-vertical-offset="2448">
+        <state line="141" column="13" selection-start="2704" selection-end="2704" vertical-scroll-proportion="0.7868339" vertical-offset="1895" max-vertical-offset="2533">
           <folding />
         </state>
       </provider>

@@ -21,7 +21,7 @@
 
         <div id="logo">
             <ul>
-                <li><div data-icon="ei-navicon"></div></li>
+                <li><div data-icon="ei-pencil"></div></li>
                 </li>
                 <!--				<li style="cursor:pointer;" id="menuIcon"><img alt="menuBTN" src="images/MenuButton.png"></li>-->
                 <li onclick="document.location='main.php'" style="cursor: pointer;">Werk</li>
