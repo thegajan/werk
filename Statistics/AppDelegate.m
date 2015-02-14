@@ -7,8 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
+#import "StatsViewController.h"
+#import "GraphsViewController.h"
+#import "InterfaceController.h"
+#import "AddTaskController.h"
+#import "ColorOptions.h"
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) InterfaceController * interfaceControl;
 
 @end
 
@@ -16,7 +24,53 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    MainViewController * mvc = [MainViewController new];
+    StatsViewController * svc = [StatsViewController new];
+    GraphsViewController * gvc = [GraphsViewController new];
+    AddTaskController * atc = [AddTaskController new];
+    
+    mvc.moc = [self managedObjectContext];
+    UITabBarController *tbc = [[UITabBarController alloc] init];
+    tbc.viewControllers = [NSArray arrayWithObjects:mvc, svc, gvc, nil];
+    UINavigationController * nvc = [[UINavigationController alloc] initWithRootViewController:tbc];
+    self.window.rootViewController = nvc;
+    [self.window makeKeyAndVisible];
+    
+    _interfaceControl = [[InterfaceController alloc] initWithNavigationController:nvc];
+    _interfaceControl.c_task = atc;
+    
+    [[UINavigationBar appearance] setBarTintColor:[ColorOptions mainRed]];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    mvc.tabBarItem.image = [UIImage imageNamed:@"Home"];
+    mvc.tabBarItem.title = @"Home";
+    
+    svc.tabBarItem.image = [UIImage imageNamed:@"Calculator"];
+    svc.tabBarItem.title = @"Stats";
+    
+    gvc.tabBarItem.image = [UIImage imageNamed:@"Chart"];
+    gvc.tabBarItem.title = @"Graphs";
+    
+    UIButton * settingsButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [settingsButton setImage:[[UIImage imageNamed:@"Gear"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    settingsButton.frame = CGRectMake(0, 0, 40, 40);
+    
+    UIButton * addTaskButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [addTaskButton setImage:[[UIImage imageNamed:@"Plus"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    addTaskButton.frame = CGRectMake(0, 0, 40, 40);
+    [addTaskButton addTarget:_interfaceControl action:@selector(addTask) forControlEvents:UIControlEventTouchUpInside];
+
+    UIBarButtonItem * settings = [[UIBarButtonItem alloc] initWithCustomView:settingsButton];
+    UIBarButtonItem * addTask = [[UIBarButtonItem alloc] initWithCustomView:addTaskButton];
+    UIBarButtonItem * negativeSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    negativeSpace.width = -10;
+    tbc.navigationItem.rightBarButtonItems = @[negativeSpace, settings, addTask];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 
