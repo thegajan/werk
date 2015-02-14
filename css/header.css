@@ -39,18 +39,22 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 @font-face {
     font-family: ex02-exlight;
     src: url(/img_fonts/exo2/Exo2-ExtraLight.otf);
 }
+
 @font-face {
     font-family: ex02-light;
     src: url(/img_fonts/exo2/Exo2-Light.otf);
 }
+
 @font-face {
     font-family: ex02;
     src: url(/img_fonts/exo2/Exo2-Regular.otf);
 }
+
 header {
     font-family: 'EX02-LIGHT', sans-serif;
     font-weight: 300;
@@ -171,6 +175,7 @@ header nav div {
     -moz-border-radius: 5px;
     border-radius: 5px;
     box-shadow: 0 0 20px -10px #000;
+    overflow-y: scroll;
 }
 
 .bubble:after {
@@ -197,6 +202,24 @@ header nav div {
     padding: 10px;
 }
 
+#add-drop-down h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #000;
+    padding: 10px;
+}
+
+#burst-div li{
+    display: inline-block;
+}
+
+#burst-writing {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #000;
+    padding: 10px;
+}
+
 textarea {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
@@ -205,9 +228,220 @@ textarea {
     resize: none;
     width: 300px;
 }
-#task-name{
+
+#task-name {
     font-family: "Open Sans", sans-serif;
     margin: 10px;
     font-size: 20px;
     width: 86%;
+}
+
+#start-date {
+    width: 85%;
+}
+
+#end-date {
+    width: 85%;
+}
+
+.times {
+    width: 110px;
+}
+
+#date ul li {
+    display: inline-block;
+    font-weight: 300;
+    padding: 5px;
+    font-family: "open sans", sans-serif;
+    color: #000;
+}
+
+.mmddyyyy {
+    font-family: "open sans", sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    height: 23px;
+    width: 40px;
+}
+
+#year {
+    width: 60px;
+}
+
+.ui-datepicker {
+    font-family: "open sans", sans-serif;
+    background: #fff;
+    Old browsers background
+
+: #fff
+
+-moz-linear-gradient
+(
+top, #fcfcfc
+
+0
+%
+,
+#fff
+
+100
+%
+)
+;
+FF3
+
+.6
++
+background: #fff
+
+-webkit-gradient
+(
+linear, left top, left bottom,
+
+color-stop
+(
+0
+%
+,
+#fcfcfc
+
+)
+)
+,
+color-stop
+(
+100
+%
+,
+#fff
+
+)
+)
+;
+Chrome, Safari4 +
+background: #fff
+
+-webkit-linear-gradient
+(
+top, #fcfcfc
+
+0
+%
+,
+#fff
+
+100
+%
+)
+;
+Chrome10 +, Safari5
+
+.1
++
+background: #fff
+
+-o-linear-gradient
+(
+top, #fcfcfc
+
+0
+%
+,
+#fff
+
+100
+%
+)
+;
+Opera11
+
+.10
++
+background: #fff
+
+-ms-linear-gradient
+(
+top, #fcfcfc
+
+0
+%
+,
+#fff
+
+100
+%
+)
+;
+IE10 +
+background: #fff
+
+linear-gradient
+(
+top, #fcfcfc
+
+0
+%
+,
+#fff
+
+100
+%
+)
+;
+W3C
+font-size:
+
+15
+px
+
+;
+font-weight:
+
+300
+;
+padding:
+
+10
+px
+
+;
+border:
+
+1
+px solid #ccc
+
+;
+}
+
+.ui-datepicker table {
+    width: 290px;
+}
+
+.ui-datepicker table td {
+    text-align: center;
+    color: #000000;
+}
+
+.ui-datepicker a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ui-datepicker-prev {
+}
+
+.ui-datepicker-next {
+    float: right;
+}
+
+.ui-datepicker-title {
+    text-align: center;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.ui-datepicker-calendar {
+    font-family: "OPEN SANS", sans-serif;
+    font-weight: 300;
+    color: #000000;
 }
