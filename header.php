@@ -5,6 +5,7 @@
     <meta charset="utf-8"/>
     <!--    <link rel="shortcut icon" href="img_fontss/favicon.jpg" type="image/x-icon">-->
     <title>A Time Productivity App</title>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/evil-icons.min.js"></script>
