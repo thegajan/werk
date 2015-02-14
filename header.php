@@ -5,9 +5,9 @@
     <meta charset="utf-8"/>
     <!--    <link rel="shortcut icon" href="img_fontss/favicon.jpg" type="image/x-icon">-->
     <title>A Time Productivity App</title>
-    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/main.js"></script>
     <script type="text/javascript" src="js/evil-icons.min.js"></script>
     <link rel="stylesheet" href="css/evil-icons.min.css">
     <link rel="stylesheet" href="css/header.css">
@@ -46,8 +46,8 @@
                                             placeholder="Start Day"><br></br.>
                 <input type="text" id="startHour" name="startHour" placeholder="Hour"
                        class="time start times  box">:<input type="text" id="startMinute" name="min" placeholder="Minute"
-                                                        class="time start times box">:<select name="start-time"
-                                                                                          id="startTOD">
+                                                        class="time start times box"> <select name="start-time"
+                                                                                          id="startTOD" class="box">
                     <option></option>
                     <option>AM</option>
                     <option>PM</option>
@@ -57,7 +57,7 @@
                                           placeholder="End Day"><br></br.>
                 <input type="text" id="endHour" name="endHour" placeholder="Hour"
                        class="time end times box">:<input type="text" id="endMinute" name="min" placeholder="Minute"
-                                                      class="time end times box">:<select name="end-time" id="endTOD">
+                                                      class="time end times box"> <select name="end-time" id="endTOD"  class="box">
                     <option></option>
                     <option>AM</option>
                     <option>PM</option>

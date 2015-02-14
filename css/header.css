@@ -159,6 +159,7 @@ header nav div {
 }
 
 .bubble {
+    display: none;
     font-family: 'EX02-EXLIGHT', sans-serif;
     font-size: 25px;
     color: #000000;
@@ -168,7 +169,7 @@ header nav div {
     right: 20px;
     position: absolute;
     width: 350px;
-    height: 590px;
+    height: 600px;
     padding: 0px;
     background: #FFFFFF;
     -webkit-border-radius: 5px;
@@ -248,7 +249,7 @@ textarea {
 }
 
 .times {
-    width: 123px;
+    width: 116px;
 }
 
 #date ul li {
@@ -273,18 +274,19 @@ textarea {
 
 .ui-datepicker {
     font-family: "open sans", sans-serif;
-    background: #fff;  Old browsers
-    background: #fff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%);  FF3.6+
-    background: #fff -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc)), color-stop(100%, #fff));  Chrome,Safari4+
-    background: #fff -webkit-linear-gradient(top, #fcfcfc 0%, #fff 100%);  Chrome10+,Safari5.1+
-    background: #fff -o-linear-gradient(top, #fcfcfc 0%, #fff 100%);  Opera11.10+
-    background: #fff -ms-linear-gradient(top, #fcfcfc 0%, #fff 100%);  IE10+
-                                                                   background: #fff linear-gradient(top, #fcfcfc 0%, #fff 100%);  W3C
-                                                                                                                                  font-size: 15px;
+    background: #fff;
+    background: #fff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%);
+    background: #fff -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc)), color-stop(100%, #fff));
+    background: #fff -webkit-linear-gradient(top, #fcfcfc 0%, #fff 100%);
+    background: #fff -o-linear-gradient(top, #fcfcfc 0%, #fff 100%);
+    background: #fff -ms-linear-gradient(top, #fcfcfc 0%, #fff 100%);
+    background: #fff linear-gradient(top, #fcfcfc 0%, #fff 100%);
+    font-size: 15px;
     font-weight: 300;
     padding: 10px;
     border: 1px solid #ccc;
 }
+
 .ui-datepicker table {
     width: 290px;
 }
@@ -324,18 +326,51 @@ textarea {
     font-weight: 300;
     margin: 10px 0 0;
     border-radius: 5px;
-    width: 315px;
+    width: 320px;
     padding: 5px;
 }
 
-#submit-add{
+#submit-add {
     background-color: #2ecc71;
     color: #ffffff;
     border: 1px solid #2ecc71;
+    transition: .5s;
 }
 
-#submit-add-cancel{
-    background-color: #e74c3c;
+#submit-add:hover {
+    cursor: pointer;
+    background-color: #27ae60;
     color: #ffffff;
-    border: 1px solid #e74c3c;
+    border: 1px solid #27ae60;
+}
+
+#submit-add:active {
+    cursor: pointer;
+    background-color: #27974b;
+    color: #ffffff;
+    border: 1px solid #27974b;
+}
+
+#submit-add-cancel {
+    background-color: #DB4437;
+    color: #ffffff;
+    border: 1px solid #DB4437;
+    transition: .5s;
+}
+
+#submit-add-cancel:hover {
+    cursor: pointer;
+    background-color: #c0392b;
+    color: #ffffff;
+    border: 1px solid #c0392b;
+}
+
+#submit-add-cancel:active {
+    background-color: #b2382b;
+    color: #ffffff;
+    border: 1px solid #b2382b;
+}
+
+.box {
+    padding: 5px;
 }
