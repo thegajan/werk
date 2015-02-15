@@ -1,0 +1,487 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    cursor: auto;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/*header {*/
+/*border-bottom: 1px solid #ecf0f1;*/
+/*}*/
+
+body {
+    line-height: 1;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: ex02-exlight;
+    src: url(/img_fonts/exo2/Exo2-ExtraLight.otf);
+}
+
+@font-face {
+    font-family: ex02-light;
+    src: url(/img_fonts/exo2/Exo2-Light.otf);
+}
+
+@font-face {
+    font-family: ex02;
+    src: url(/img_fonts/exo2/Exo2-Regular.otf);
+}
+
+header {
+    font-family: 'EX02-LIGHT', sans-serif;
+    font-weight: 300;
+    background-color: #db4437;
+    width: 100%;
+    /*box-shadow: 0 -10px 50px -10px #000;*/
+}
+
+header:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+header #logo {
+    font-family: 'EX02-LIGHT', sans-serif;
+    font-weight: 300;
+    float: left;
+    color: #ffffff;
+    padding-top: 15px;
+    font-size: 30px;
+    font-style: 700;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+header #logo ul li {
+    display: inline-block;
+    padding-right: 0px;
+}
+
+header nav {
+    float: right;
+    padding-top: 0px;
+    padding-right: 15px;
+    font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+header nav div {
+    display: inline-block;
+}
+
+/*header nav ul {*/
+/*margin-top: 11px;*/
+/*float: right;*/
+/*}*/
+
+/*header nav ul .ico-font {*/
+/*display: inline-block;*/
+/*}*/
+
+/*header nav ul li a {*/
+/*color: #777;*/
+/*text-decoration: none;*/
+/*}*/
+
+/*header nav ul li a:hover {*/
+/*color: #27ae60;*/
+/*cursor: pointer;*/
+/*}*/
+
+/*header nav ul li a:active {*/
+/*color: #2ecc71;*/
+/*}*/
+
+/*header nav li + li {*/
+/*padding-left: 0px;*/
+/*}*/
+
+.icon--ei-user {
+    padding-top: 5px;
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+    cursor: pointer;
+}
+
+.icon--ei-bell {
+    padding: 5px 0px 5px;
+    width: 35px;
+    height: 35px;
+    fill: #fff;
+    cursor: pointer;
+}
+
+.icon--ei-plus {
+    padding: 5px 0px 5px;
+    width: 35px;
+    height: 35px;
+    fill: #fff;
+    cursor: pointer;
+}
+
+.icon--ei-pencil {
+    fill: #fff;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.bubble {
+    display: none;
+    font-family: 'EX02-EXLIGHT', sans-serif;
+    font-size: 25px;
+    color: #000000;
+    text-align: center;
+    border: 1px solid #ecf0f1;
+    top: 60px;
+    right: 20px;
+    position: absolute;
+    width: 350px;
+    height: 600px;
+    padding: 0px;
+    background: #FFFFFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px -10px #000;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 15px 15px;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: -10px;
+    left: 230px;
+}
+
+#add-drop-down .section {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#add-drop-down h1 {
+    color: #DB4437;
+    padding: 10px;
+}
+
+#add-drop-down h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #000;
+    padding: 10px;
+}
+
+#burst-div li {
+    display: inline-block;
+}
+
+/*#burst{*/
+/*margin-top: 15px;*/
+/*}*/
+
+/*#burst-writing {*/
+/*font-family: 'Open Sans', sans-serif;*/
+/*font-size: 15px;*/
+/*color: #000;*/
+/*padding: 5px;*/
+/*}*/
+
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #000000;
+    font-weight: 300;
+    resize: none;
+    width: 310px;
+}
+
+#task-name {
+    font-family: "Open Sans", sans-serif;
+    margin: 10px;
+    font-size: 20px;
+    width: 310px;
+}
+
+#start-date {
+    width: 310px;
+}
+
+#end-date {
+    width: 310px;
+}
+
+.times {
+    width: 116px;
+}
+
+#date ul li {
+    display: inline-block;
+    font-weight: 300;
+    padding: 5px;
+    font-family: "open sans", sans-serif;
+    color: #000;
+}
+
+.ui-datepicker,
+.ui-datepicker table,
+.ui-datepicker tr,
+.ui-datepicker td,
+.ui-datepicker th {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-spacing: 0;
+}
+
+.ui-datepicker {
+    display: none;
+    width: 300px;
+    padding: 11px;
+    cursor: default;
+
+    text-transform: uppercase;
+    font-family: Tahoma;
+    font-size: 12px;
+
+    background: #141517;
+
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-bottom-left-image: 3px;
+    -moz-border-bottom-right-image: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    -webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, .1), inset 0px 1px 1px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 1px 1px rgba(255, 255, 255, .1), inset 0px 1px 1px rgb(0, 0, 0);
+    box-shadow: 0px 1px 1px rgba(255, 255, 255, .1), inset 0px 1px 1px rgb(0, 0, 0);
+}
+
+.ui-datepicker-header {
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.ui-datepicker-title {
+    text-align: center;
+}
+
+.ui-datepicker-month {
+    position: relative;
+    padding-right: 15px;
+    color: #ffffff;
+}
+
+.ui-datepicker-year {
+    padding-left: 8px;
+    color: #ffffff;
+}
+
+.ui-datepicker-month:before {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    content: '';
+
+    background: #DB4437;
+    background: -moz-linear-gradient(top, #DB4437 0%, #c0392b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #DB4437), color-stop(100%, #c0392b));
+    background: -webkit-linear-gradient(top, #DB4437 0%, #c0392b 100%);
+    background: -o-linear-gradient(top, #DB4437 0%, #c0392b 100%);
+    background: -ms-linear-gradient(top, #DB4437 0%, #c0392b 100%);
+    background: linear-gradient(top, #DB4437 0%, #c0392b 100%);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    position: absolute;
+    top: -2px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.ui-datepicker-prev {
+    left: 0;
+    padding-left: 0;
+}
+
+.ui-datepicker-next {
+    right: 0;
+    padding-right: 0;
+}
+
+.ui-datepicker-prev span,
+.ui-datepicker-next span {
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    color: #ffffff;
+}
+
+.ui-datepicker-prev span:hover, .ui-datepicker-next span:hover {
+    cursor: pointer;
+    color: #c0392b;
+}
+
+.ui-datepicker-prev span {
+    background-position: 0px 0px;
+}
+
+.ui-datepicker-next span {
+    background-position: -5px 0px;
+}
+
+.ui-datepicker-prev-hover span {
+    background-position: 0px -10px;
+}
+
+.ui-datepicker-next-hover span {
+    background-position: -5px -10px;
+}
+
+.ui-datepicker-calendar th {
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    text-align: center;
+    font-weight: normal;
+    color: #a8a8a8;
+}
+
+.ui-datepicker-calendar td {
+    padding: 0 7px;
+
+    text-align: center;
+    line-height: 26px;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+    display: block;
+    width: 26px;
+    outline: none;
+
+    text-decoration: none;
+    color: #a8a8a8;
+    border: 1px solid transparent;
+}
+
+.ui-datepicker-calendar .ui-state-default:hover {
+    cursor: pointer;
+    color: #c0392b;
+    border: 1px solid #c0392b;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    color: #c0392b;
+    border: 1px solid #c0392b;
+}
+
+.ui-datepicker-other-month .ui-state-default {
+    color: #565656;
+}
+
+.ui-datepicker-today {
+    color: #c0392b;
+    border: 1px solid #c0392b;
+}
+
+.button {
+    font-family: "open sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px 0 0;
+    border-radius: 5px;
+    width: 320px;
+    padding: 5px;
+}
+
+#submit-add {
+    background-color: #2ecc71;
+    color: #ffffff;
+    border: 1px solid #2ecc71;
+    transition: .5s;
+}
+
+#submit-add:hover {
+    cursor: pointer;
+    background-color: #27ae60;
+    color: #ffffff;
+    border: 1px solid #27ae60;
+}
+
+#submit-add:active {
+    cursor: pointer;
+    background-color: #27974b;
+    color: #ffffff;
+    border: 1px solid #27974b;
+}
+
+#submit-add-cancel {
+    background-color: #DB4437;
+    color: #ffffff;
+    border: 1px solid #DB4437;
+    transition: .5s;
+}
+
+#submit-add-cancel:hover {
+    cursor: pointer;
+    background-color: #c0392b;
+    color: #ffffff;
+    border: 1px solid #c0392b;
+}
+
+#submit-add-cancel:active {
+    background-color: #b2382b;
+    color: #ffffff;
+    border: 1px solid #b2382b;
+}
+
+.box {
+    padding: 5px;
+}
