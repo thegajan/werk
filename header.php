@@ -7,6 +7,7 @@
     <title>A Time Productivity App</title>
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.11.3.custom/jquery-ui.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/evil-icons.min.js"></script>
     <link rel="stylesheet" href="css/evil-icons.min.css">
@@ -42,7 +43,7 @@
 
                 <h1>Task Timings</h1>
 
-                <h2>Start Time:</h2> <input type="text" id="start-date" class="time datepicker box" name="startDay"
+                <h2>Start Time:</h2> <input type="text" id="start-date" class="time datepicker box .ll-skin-melon" name="startDay"
                                             placeholder="Start Day"><br></br.>
                 <input type="text" id="startHour" name="startHour" placeholder="Hour"
                        class="time start times  box">:<input type="text" id="startMinute" name="min" placeholder="Minute"
