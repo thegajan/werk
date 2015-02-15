@@ -23,7 +23,7 @@
 }
 
 +(UIColor *)secondaryGreen {
-    return [ColorOptions colorFromHex:0x2ECC71];
+    return [ColorOptions colorFromHex:0x2ECC71]; // Emerald
 }
 
 @end

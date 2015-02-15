@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddTaskController : UIViewController
+@interface AddTaskController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 
+@property (strong, nonatomic) UITapGestureRecognizer * screenTapped;
 @property (strong, nonatomic) UITextField * titleInput;
+@property (strong, nonatomic) UITextView * descriptionInput;
+@property (strong, nonatomic) UIDatePicker * timePicker;
+@property (strong, nonatomic) UIButton * selectStart;
+@property (strong, nonatomic) UISegmentedControl * timeSelection;
+@property (strong, nonatomic) UIButton * confirmTask;
 
 @end

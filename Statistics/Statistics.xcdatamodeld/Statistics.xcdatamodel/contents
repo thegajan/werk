@@ -10,12 +10,13 @@
         <attribute name="length" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="t_end" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="t_start" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="task_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="was_success" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="task_list" inverseEntity="Account" syncable="YES"/>
     </entity>
     <elements>
         <element name="Account" positionX="-63" positionY="18" width="128" height="103"/>
-        <element name="Task" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Task" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

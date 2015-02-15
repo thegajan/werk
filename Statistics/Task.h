@@ -18,6 +18,7 @@
 @property (nonatomic, retain) NSDate * t_end;
 @property (nonatomic, retain) NSString * task_description;
 @property (nonatomic, retain) NSNumber * was_success;
+@property (nonatomic, retain) NSDate * t_start;
 @property (nonatomic, retain) Account *account;
 
 @end

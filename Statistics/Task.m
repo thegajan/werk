@@ -17,6 +17,7 @@
 @dynamic t_end;
 @dynamic task_description;
 @dynamic was_success;
+@dynamic t_start;
 @dynamic account;
 
 @end
