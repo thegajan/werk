@@ -8,6 +8,8 @@
 
 #import "AddTaskController.h"
 #import "ColorOptions.h"
+#import "CoreDataHandler.h"
+#import "InterfaceController.h"
 
 @interface AddTaskController () {
     NSString * DEFAULT_DESCRIPTION;
@@ -144,8 +146,8 @@
 }
 
 -(void)createTask {
-    NSString * name = self.titleInput.text;
-    NSString * description = self.descriptionInput.text;
+    [CoreDataHandler createTaskWithName:_titleInput.text withDescription:_descriptionInput.text startsAt:startTime endsAt:endTime];
+    [[InterfaceController sharedInstance] popToRoot];
 }
 
 @end

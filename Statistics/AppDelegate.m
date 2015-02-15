@@ -13,10 +13,9 @@
 #import "InterfaceController.h"
 #import "AddTaskController.h"
 #import "ColorOptions.h"
+#import "CoreDataHandler.h"
 
 @interface AppDelegate ()
-
-@property (strong, nonatomic) InterfaceController * interfaceControl;
 
 @end
 
@@ -30,15 +29,16 @@
     GraphsViewController * gvc = [GraphsViewController new];
     AddTaskController * atc = [AddTaskController new];
     
-    mvc.moc = [self managedObjectContext];
+    [CoreDataHandler sharedInstance].moc = [self managedObjectContext];
+    [CoreDataHandler sharedInstance].acc = [CoreDataHandler getAccount];
     UITabBarController *tbc = [[UITabBarController alloc] init];
     tbc.viewControllers = [NSArray arrayWithObjects:mvc, svc, gvc, nil];
     UINavigationController * nvc = [[UINavigationController alloc] initWithRootViewController:tbc];
     self.window.rootViewController = nvc;
     [self.window makeKeyAndVisible];
     
-    _interfaceControl = [[InterfaceController alloc] initWithNavigationController:nvc];
-    _interfaceControl.c_task = atc;
+    [InterfaceController setNavController:nvc];
+    [InterfaceController sharedInstance].c_task = atc;
     
     [[UINavigationBar appearance] setBarTintColor:[ColorOptions mainRed]];
     [[UINavigationBar appearance] setTranslucent:NO];
@@ -61,7 +61,7 @@
     UIButton * addTaskButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [addTaskButton setImage:[[UIImage imageNamed:@"Plus"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     addTaskButton.frame = CGRectMake(0, 0, 40, 40);
-    [addTaskButton addTarget:_interfaceControl action:@selector(addTask) forControlEvents:UIControlEventTouchUpInside];
+    [addTaskButton addTarget:[InterfaceController sharedInstance] action:@selector(addTask) forControlEvents:UIControlEventTouchUpInside];
 
     UIBarButtonItem * settings = [[UIBarButtonItem alloc] initWithCustomView:settingsButton];
     UIBarButtonItem * addTask = [[UIBarButtonItem alloc] initWithCustomView:addTaskButton];

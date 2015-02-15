@@ -11,11 +11,13 @@
 
 @interface InterfaceController : NSObject <UIGestureRecognizerDelegate>
 
++(InterfaceController *)sharedInstance;
++(void)setNavController:(UINavigationController *)nav;
+
 @property (strong, nonatomic) UINavigationController * c_nav;
 @property (strong, nonatomic) UIViewController * c_task;
 
--(id)initWithNavigationController:(UINavigationController *)nav;
-
 -(void)addTask;
+-(void)popToRoot;
 
 @end
