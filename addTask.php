@@ -17,7 +17,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             $endMinute = $_POST['endMinute'];
             $endTOD = $_POST['endTOD'];
             $creator = "1";
-            echo strlen($startDate) . " " . strlen($endDate);
+            echo $taskName . " " . $description;
             $startTime = $startDate . " " . $startHour . ":" . $startMinute . ":00" . " " . $startTOD;
             $endTime = $endDate . " " . $endHour . ":" . $endMinute . ":00" . " " . $endTOD;
             function validateDate($date)

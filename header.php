@@ -97,16 +97,17 @@ $_SESSION['token'] = $token; //store it as session variable
                         var endMinute = document.getElementById('endMinute').value;
                         var endTOD = document.getElementById('endTOD').value;
                         alert(str + " " + str1);
-                        var form_data = {
-                            data: {taskName: taskName, description: description, sur: str, startHour: startHour, startMinute: startMinute, startTOD: startTOD, sur1: str1, endHour: endHour, endMinute: endMinute, endTOD: endTOD},
-                            token: '<?php echo $token; ?>',
-                            is_ajax: 1
-                        };
+<!--                        var form_data = {-->
+<!--                            data: {taskName: taskName, description: description, sur: str, startHour: startHour, startMinute: startMinute, startTOD: startTOD, sur1: str1, endHour: endHour, endMinute: endMinute, endTOD: endTOD},-->
+<!--                            token: '--><?php //echo $token; ?><!--',-->
+<!--                            is_ajax: 1-->
+<!--                        };-->
 
                         $.ajax({
                             type: "POST",
                             url: 'https://www.readmybluebutton.com/werk/addTask.php',
-                            data: form_data,
+//                            data: form_data,
+                            data: {taskName: taskName, description: description, sur: str, startHour: startHour, startMinute: startMinute, startTOD: startTOD, sur1: str1, endHour: endHour, endMinute: endMinute, endTOD: endTOD, token: '<?php echo $token ?>'},
                             success: function (response) {
                                 alert(response);
                             }
