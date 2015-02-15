@@ -40,23 +40,8 @@ table {
     border-spacing: 0;
 }
 
-@font-face {
-    font-family: ex02-exlight;
-    src: url(/img_fonts/exo2/Exo2-ExtraLight.otf);
-}
-
-@font-face {
-    font-family: ex02-light;
-    src: url(/img_fonts/exo2/Exo2-Light.otf);
-}
-
-@font-face {
-    font-family: ex02;
-    src: url(/img_fonts/exo2/Exo2-Regular.otf);
-}
-
 header {
-    font-family: 'EX02-LIGHT', sans-serif;
+    font-family: 'EX0 2', sans-serif;
     font-weight: 300;
     background-color: #db4437;
     width: 100%;
@@ -70,13 +55,12 @@ header:after {
 }
 
 header #logo {
-    font-family: 'EX02-LIGHT', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     font-weight: 300;
     float: left;
     color: #ffffff;
     padding-top: 15px;
     font-size: 30px;
-    font-style: 700;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
@@ -160,7 +144,8 @@ header nav div {
 
 .bubble {
     display: none;
-    font-family: 'EX02-EXLIGHT', sans-serif;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 200;
     font-size: 25px;
     color: #000000;
     text-align: center;

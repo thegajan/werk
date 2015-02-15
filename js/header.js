@@ -10,17 +10,5 @@ $(document).ready(function () {
         showOtherMonths: true,
         dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
     });
-    $('#submit-add').click(function () {
-        var taskName = $('#task-name').trim();
-        var description = $('#taskDescription').trim();
-        var startDate = $('#start-date').trim();
-        var startHour = $('#startHour').trim();
-        var startMinute = $('#startMinute').trim();
-        var startTOD = $('#startTOD').trim();
-        var endDate = $('#end-date').trim();
-        var endHour = $('#endHour').trim();
-        var endMinute = $('#endMinute').trim();
-        var endTOD = $('#endTOD').trim();
 
-    });
 });
