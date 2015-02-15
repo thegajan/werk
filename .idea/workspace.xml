@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="awesome encrypted ajax :D + fixed fonts issues">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addTask.php" afterPath="$PROJECT_DIR$/addTask.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connManager.php" afterPath="$PROJECT_DIR$/connManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/header.js" afterPath="$PROJECT_DIR$/js/header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
+    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -428,7 +425,11 @@
       <created>1424026169770</created>
       <updated>1424026169770</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="FUCKING SHIT">
+      <created>1424039100032</created>
+      <updated>1424039100032</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -481,7 +482,8 @@
     <MESSAGE value="changed names" />
     <MESSAGE value="need new db creds" />
     <MESSAGE value="awesome encrypted ajax :D + fixed fonts issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="awesome encrypted ajax :D + fixed fonts issues" />
+    <MESSAGE value="FUCKING SHIT" />
+    <option name="LAST_COMMIT_MESSAGE" value="FUCKING SHIT" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
