@@ -26,7 +26,6 @@
                 <li onclick="document.location='main.php'">
                     <div data-icon="ei-pencil"></div>
                 </li>
-                </li>
                 <!--				<li style="cursor:pointer;" id="menuIcon"><img alt="menuBTN" src="images/MenuButton.png"></li>-->
                 <li onclick="document.location='main.php'" style="cursor: pointer;">Werk</li>
             </ul>
@@ -34,7 +33,7 @@
     </div>
     <nav>
         <div class="ico-shit other add">
-            <div id="add-button"><div data-icon="ei-plus"></div></div>
+            <div id="add-button" title="Add Task"><div data-icon="ei-plus"></div></div>
             <div class="drop-down bubble" id="add-drop-down">
                 <h1>Add a Task</h1>
                 <input type="text" id="task-name" class="input section" name="task-name" placeholder="Task Name">
@@ -44,7 +43,7 @@
                 <h1>Task Timings</h1>
 
                 <h2>Start Time:</h2> <input type="text" id="start-date" class="time datepicker box" name="startDay"
-                                            placeholder="Start Day"><br></br.>
+                                            placeholder="Start Day"><br>
                 <input type="text" id="startHour" name="startHour" placeholder="Hour"
                        class="time start times  box">:<input type="text" id="startMinute" name="min" placeholder="Minute"
                                                         class="time start times box"> <select name="start-time"
@@ -55,7 +54,7 @@
                 </select>
 
                 <h2>End Time:</h2> <input type="text" id="end-date" class="time datepicker box" name="endDay"
-                                          placeholder="End Day"><br></br.>
+                                          placeholder="End Day"><br>
                 <input type="text" id="endHour" name="endHour" placeholder="Hour"
                        class="time end times box">:<input type="text" id="endMinute" name="min" placeholder="Minute"
                                                       class="time end times box"> <select name="end-time" id="endTOD"  class="box">
