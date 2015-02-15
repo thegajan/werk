@@ -283,9 +283,12 @@ textarea {
 
     background: #141517;
 
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-bottom-left-image: 3px;
+    -moz-border-bottom-right-image: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 
     -webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, .1), inset 0px 1px 1px rgb(0, 0, 0);
     -moz-box-shadow: 0px 1px 1px rgba(255, 255, 255, .1), inset 0px 1px 1px rgb(0, 0, 0);

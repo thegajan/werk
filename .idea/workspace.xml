@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="js">
+    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/header.css" afterPath="$PROJECT_DIR$/css/header.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -37,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="90" selection-start="3000" selection-end="3010" vertical-scroll-proportion="0.5555556" vertical-offset="612" max-vertical-offset="1496">
+            <state line="45" column="98" selection-start="2226" selection-end="2226" vertical-scroll-proportion="-11.769231" vertical-offset="459" max-vertical-offset="1496">
               <folding>
                 <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
               </folding>
@@ -57,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="header.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/header.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="363" column="31" selection-start="6875" selection-end="6875" vertical-scroll-proportion="0.0" vertical-offset="5950" max-vertical-offset="8330">
+            <state line="287" column="27" selection-start="5172" selection-end="5172" vertical-scroll-proportion="0.7601881" vertical-offset="4394" max-vertical-offset="8381">
               <folding />
             </state>
           </provider>
@@ -100,8 +99,8 @@
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/js/jquery.js" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/css/header.css" />
       </list>
     </option>
@@ -361,7 +360,11 @@
       <created>1423951917468</created>
       <updated>1423951917468</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added calender">
+      <created>1423960799104</created>
+      <updated>1423960799104</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -409,7 +412,8 @@
     <MESSAGE value="Added new font and made add task" />
     <MESSAGE value="Finished front end for add task" />
     <MESSAGE value="js" />
-    <option name="LAST_COMMIT_MESSAGE" value="js" />
+    <MESSAGE value="added calender" />
+    <option name="LAST_COMMIT_MESSAGE" value="added calender" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -568,19 +572,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="363" column="31" selection-start="6875" selection-end="6875" vertical-scroll-proportion="0.0" vertical-offset="5950" max-vertical-offset="8330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="90" selection-start="3000" selection-end="3010" vertical-scroll-proportion="0.5555556" vertical-offset="612" max-vertical-offset="1496">
+        <state line="45" column="98" selection-start="2226" selection-end="2226" vertical-scroll-proportion="-11.769231" vertical-offset="459" max-vertical-offset="1496">
           <folding>
             <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="287" column="27" selection-start="5172" selection-end="5172" vertical-scroll-proportion="0.7601881" vertical-offset="4394" max-vertical-offset="8381">
+          <folding />
         </state>
       </provider>
     </entry>

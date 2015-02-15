@@ -43,7 +43,7 @@
 
                 <h1>Task Timings</h1>
 
-                <h2>Start Time:</h2> <input type="text" id="start-date" class="time datepicker box .ll-skin-melon" name="startDay"
+                <h2>Start Time:</h2> <input type="text" id="start-date" class="time datepicker box" name="startDay"
                                             placeholder="Start Day"><br></br.>
                 <input type="text" id="startHour" name="startHour" placeholder="Hour"
                        class="time start times  box">:<input type="text" id="startMinute" name="min" placeholder="Minute"
