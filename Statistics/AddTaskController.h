@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddTaskController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+@interface AddTaskController : UIViewController <UITextFieldDelegate, UITextViewDelegate, UIPickerViewDelegate>
 
 @property (strong, nonatomic) UITapGestureRecognizer * screenTapped;
 @property (strong, nonatomic) UITextField * titleInput;

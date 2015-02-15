@@ -11,6 +11,8 @@
 
 @interface AddTaskController () {
     NSString * DEFAULT_DESCRIPTION;
+    NSDate * startTime;
+    NSDate * endTime;
 }
 
 @end
@@ -37,6 +39,11 @@
     _screenTapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyboard)];
     DEFAULT_DESCRIPTION = @"Task Description";
     [_confirmTask addTarget:self action:@selector(createTask) forControlEvents:UIControlEventTouchUpInside];
+    [_timePicker addTarget:self action:@selector(timeChanged:) forControlEvents:UIControlEventValueChanged];
+    [_timeSelection addTarget:self action:@selector(timeSelectionChanged:) forControlEvents:UIControlEventValueChanged];
+
+    startTime = _timePicker.date;
+    endTime = _timePicker.date;
 }
 
 - (void)viewDidLoad {
@@ -84,7 +91,7 @@
     _timeSelection.selectedSegmentIndex = 0;
     _timeSelection.tintColor = [ColorOptions mainRed];
     [_timeSelection setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Exo2-Black" size:18]} forState:UIControlStateNormal];
-
+    
     _confirmTask.backgroundColor = [ColorOptions secondaryGreen];
     _confirmTask.layer.cornerRadius = 9.0;
     _confirmTask.titleLabel.font = [UIFont fontWithName:@"Exo2-Light" size:24];
@@ -93,7 +100,6 @@
 }
 
 -(void)createConstraints {
-    
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-12-[_titleInput(66)]-12-[_descriptionInput]-12-[_timeSelection(33)][_timePicker][_confirmTask(54)]-12-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput, _descriptionInput, _timePicker, _timeSelection, _confirmTask)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_titleInput]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_descriptionInput]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_descriptionInput)]];
@@ -123,8 +129,23 @@
              _descriptionInput.text = DEFAULT_DESCRIPTION;
 }
 
+-(void)timeChanged:(id)sender {
+    if (_timeSelection.selectedSegmentIndex == 0) // Start Time
+        startTime = _timePicker.date;
+    else if (_timeSelection.selectedSegmentIndex == 1) // End Time
+        endTime = _timePicker.date;
+}
+
+-(void)timeSelectionChanged:(id)sender {
+    if (_timeSelection.selectedSegmentIndex == 0) // Start Time
+        _timePicker.date = startTime;
+    else if (_timeSelection.selectedSegmentIndex == 1) // End Time
+        _timePicker.date = endTime;
+}
+
 -(void)createTask {
-    
+    NSString * name = self.titleInput.text;
+    NSString * description = self.descriptionInput.text;
 }
 
 @end
