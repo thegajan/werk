@@ -12,7 +12,6 @@
 
 @interface MainViewController : UIViewController
 
-@property (strong, nonatomic) NSManagedObjectContext * moc;
 @property (strong, nonatomic) Account * acc;
 
 @end
