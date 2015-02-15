@@ -61,9 +61,9 @@
     self.view.backgroundColor = [ColorOptions mainWhite];
     
     _titleInput.backgroundColor = [ColorOptions mainWhite];
-    _titleInput.layer.cornerRadius = 15.0;
+    _titleInput.layer.cornerRadius = 9.0;
     _titleInput.layer.borderColor = [ColorOptions mainRed].CGColor;
-    _titleInput.layer.borderWidth = 3.0;
+    _titleInput.layer.borderWidth = 1.0;
     _titleInput.font = [UIFont fontWithName:@"Exo2-Light" size:32];
     _titleInput.placeholder = @"Task Name";
     UIView * pad = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
@@ -73,9 +73,9 @@
     _titleInput.returnKeyType = UIReturnKeyDone;
     
     _descriptionInput.backgroundColor = [ColorOptions mainWhite];
-    _descriptionInput.layer.cornerRadius = 15.0;
+    _descriptionInput.layer.cornerRadius = 9.0;
     _descriptionInput.layer.borderColor = [ColorOptions mainRed].CGColor;
-    _descriptionInput.layer.borderWidth = 3.0;
+    _descriptionInput.layer.borderWidth = 1.0;
     _descriptionInput.font = [UIFont fontWithName:@"Exo2-Light" size:22];
     _descriptionInput.text = DEFAULT_DESCRIPTION;
     
@@ -86,7 +86,7 @@
     [_timeSelection setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Exo2-Black" size:18]} forState:UIControlStateNormal];
 
     _confirmTask.backgroundColor = [ColorOptions secondaryGreen];
-    _confirmTask.layer.cornerRadius = 15.0;
+    _confirmTask.layer.cornerRadius = 9.0;
     _confirmTask.titleLabel.font = [UIFont fontWithName:@"Exo2-Light" size:24];
     [_confirmTask setTitleColor:[ColorOptions mainWhite] forState:UIControlStateNormal];
     [_confirmTask setTitle:@"Create Task" forState:UIControlStateNormal];
