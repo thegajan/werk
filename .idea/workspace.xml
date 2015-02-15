@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.php" afterPath="$PROJECT_DIR$/main.php" />
+    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="changed names">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-bg_flat_30_cccccc_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-bg_flat_50_5c5c5c_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-bg_glass_20_555555_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-bg_glass_40_0078a3_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-bg_glass_40_ffc73d_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-bg_gloss-wave_25_333333_500x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-bg_inset-soft_25_000000_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-bg_inset-soft_30_f58400_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-icons_4b8e0b_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-icons_a83300_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-icons_cccccc_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/jquery-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/jquery-ui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/jquery-ui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/jquery-ui.structure.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/jquery-ui.structure.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/jquery-ui.theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/jquery-ui.theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.3.custom/external/jquery/jquery.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -39,7 +61,7 @@
       <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="29" selection-start="629" selection-end="629" vertical-scroll-proportion="0.8694316" vertical-offset="114" max-vertical-offset="799">
+            <state line="40" column="29" selection-start="629" selection-end="629" vertical-scroll-proportion="0.8172043" vertical-offset="148" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -325,12 +347,16 @@
       <created>1423962496113</created>
       <updated>1423962496113</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="changed names">
+      <created>1423962787533</created>
+      <updated>1423962787533</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -338,7 +364,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1669107" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -489,7 +515,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="10331" column="6" selection-start="398811" selection-end="398811" vertical-scroll-proportion="0.56739813" vertical-offset="175265" max-vertical-offset="175984">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -538,7 +564,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="29" selection-start="629" selection-end="629" vertical-scroll-proportion="0.8694316" vertical-offset="114" max-vertical-offset="799">
+        <state line="40" column="29" selection-start="629" selection-end="629" vertical-scroll-proportion="0.8172043" vertical-offset="148" max-vertical-offset="799">
           <folding />
         </state>
       </provider>
