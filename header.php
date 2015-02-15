@@ -1,6 +1,6 @@
 <?php
 session_start();
-$token = md5(rand(1000,9999)); //you can use any encryption
+$token = md5(rand(1000, 9999)); //you can use any encryption
 $_SESSION['token'] = $token; //store it as session variable
 ?>
 <!DOCTYPE html>
@@ -81,34 +81,40 @@ $_SESSION['token'] = $token; //store it as session variable
                 <div><input id="submit-add-cancel" name="submit-add-cancel" class="button" type="submit" value="Cancel">
                 </div>
                 <script type="text/javascript">
-                        $('#submit-add').click(function () {
-//                            var taskName = $('#task-name').trim();
-//                            var description = $('#taskDescription').trim();
-//                            var startDate = $('#start-date').trim();
-//                            var startHour = $('#startHour').trim();
-//                            var startMinute = $('#startMinute').trim();
-//                            var startTOD = $('#startTOD').trim();
-//                            var endDate = $('#end-date').trim();
-//                            var endHour = $('#endHour').trim();
-//                            var endMinute = $('#endMinute').trim();
-//                            var endTOD = $('#endTOD').trim();
-                            var hi = "hi";
-                            var form_data = {
-                                data: hi, //your data being sent with ajax
-                                token:'<?php echo $token; ?>', //used token here.
-                                is_ajax: 1
-                            };
+                    $('#submit-add').click(function () {
+                        var taskName = document.getElementById('task-name').value;
+                        var description = document.getElementById('taskDescription').value;
+                        var startDate = $('#start-date').datepicker( "getDate" );
+                        var d = new Date(startDate);
+                        var str = $.datepicker.formatDate('mm/dd/yy', d);
+                        var startHour = document.getElementById('startHour').value;
+                        var startMinute = document.getElementById('startMinute').value;
+                        var startTOD = document.getElementById('startTOD').value;
+                        var endDate = $('#end-date').datepicker( "getDate" );
+                        var b = new Date(endDate);
+                        var str1 = $.datepicker.formatDate('mm/dd/yy', b);
+                        var endHour = document.getElementById('endHour').value;
+                        var endMinute = document.getElementById('endMinute').value;
+                        var endTOD = document.getElementById('endTOD').value;
+                        alert(str + " " + str1);
+                        var form_data = {
+                            data: {taskName: taskName, description: description, sur: str, startHour: startHour, startMinute: startMinute, startTOD: startTOD, sur1: str1, endHour: endHour, endMinute: endMinute, endTOD: endTOD},
+                            token: '<?php echo $token; ?>',
+                            is_ajax: 1
+                        };
 
-                            $.ajax({
-                                type: "POST",
-                                url: 'https://www.readmybluebutton.com/werk/addTask.php',
-                                data: form_data,
-                                success: function(response)
-                                {
-                                    alert(response);
-                                }
-                            });
+                        $.ajax({
+                            type: "POST",
+                            url: 'https://www.readmybluebutton.com/werk/addTask.php',
+                            data: form_data,
+                            success: function (response) {
+                                alert(response);
+                            }
+//                            error: function(xhr, status, error) {
+//                                alert("Could not connect to the server.");
+//                            }
                         });
+                    });
                 </script>
             </div>
             <div class="ico-shit other">
