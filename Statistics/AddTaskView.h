@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class SuccessView;
+@class PHTextView;
 
-@interface AddTaskView : UIView <UITextFieldDelegate, UITextViewDelegate, UIPickerViewDelegate>
+@interface AddTaskView : UIView <UITextFieldDelegate, UIPickerViewDelegate>
 
 @property (strong, nonatomic) UITextField * titleInput;
-@property (strong, nonatomic) UITextView * descriptionInput;
+@property (strong, nonatomic) PHTextView * descriptionInput;
 @property (strong, nonatomic) UIDatePicker * timePicker;
 @property (strong, nonatomic) UIButton * selectStart;
 @property (strong, nonatomic) UISegmentedControl * timeSelection;

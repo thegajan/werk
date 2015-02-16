@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D91275111A927B530009DEDD /* PHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D91275101A927B530009DEDD /* PHTextView.m */; };
 		D92928DB1A8F12CB00CCA1CF /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928DA1A8F12CB00CCA1CF /* StatsViewController.m */; };
 		D92928DE1A8F12DB00CCA1CF /* GraphsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928DD1A8F12DB00CCA1CF /* GraphsViewController.m */; };
 		D92928E11A8F3DAB00CCA1CF /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928E01A8F3DAB00CCA1CF /* Account.m */; };
@@ -55,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D912750F1A927B530009DEDD /* PHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHTextView.h; sourceTree = "<group>"; };
+		D91275101A927B530009DEDD /* PHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHTextView.m; sourceTree = "<group>"; };
 		D92928D91A8F12CB00CCA1CF /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		D92928DA1A8F12CB00CCA1CF /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		D92928DC1A8F12DB00CCA1CF /* GraphsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphsViewController.h; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				D995A1831A913ECA005BC74F /* AddTaskView.m */,
 				D9FF04D41A91D89B0010436C /* SuccessView.h */,
 				D9FF04D51A91D89B0010436C /* SuccessView.m */,
+				D912750F1A927B530009DEDD /* PHTextView.h */,
+				D91275101A927B530009DEDD /* PHTextView.m */,
 			);
 			name = TaskCreationUI;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				D92928EC1A8F3FA300CCA1CF /* InterfaceController.m in Sources */,
 				D92928E11A8F3DAB00CCA1CF /* Account.m in Sources */,
 				D931A4801A8DDD1D000B8E8B /* AppDelegate.m in Sources */,
+				D91275111A927B530009DEDD /* PHTextView.m in Sources */,
 				D995A1841A913ECA005BC74F /* AddTaskView.m in Sources */,
 				D931A47D1A8DDD1D000B8E8B /* main.m in Sources */,
 				D92928DB1A8F12CB00CCA1CF /* StatsViewController.m in Sources */,
