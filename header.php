@@ -43,80 +43,123 @@ $_SESSION['token'] = $token; //store it as session variable
                 <div data-icon="ei-plus"></div>
             </div>
             <div class="drop-down bubble" id="add-drop-down">
-                <h1>Add a Task</h1>
-                <input type="text" id="task-name" class="input section" name="task-name" placeholder="Task Name">
-                <textarea class="textarea seciton" id="taskDescription" rows="5" name="taskDescription"
-                          placeholder="Task Description"></textarea>
+                <div id="add-task-content">
+                        <h1>Add a Task</h1>
+                        <input type="text" id="task-name" class="input section" name="task-name"
+                               placeholder="Task Name">
+                        <textarea class="textarea seciton" id="taskDescription" rows="5" name="taskDescription"
+                                  placeholder="Task Description"></textarea>
 
-                <h1>Task Timings</h1>
+                        <h1>Task Timings</h1>
 
-                <h2>Start Time:</h2> <input type="text" id="start-date" class="time datepicker box" name="startDay"
-                                            placeholder="Start Day"><br>
-                <input type="text" id="startHour" name="startHour" placeholder="Hour"
-                       class="time start times  box">:<input type="text" id="startMinute" name="min"
-                                                             placeholder="Minute"
-                                                             class="time start times box"> <select name="start-time"
-                                                                                                   id="startTOD"
-                                                                                                   class="box">
-                    <option></option>
-                    <option>AM</option>
-                    <option>PM</option>
-                </select>
+                        <h2>Start Time:</h2> <input type="text" id="start-date" class="time datepicker box"
+                                                    name="startDay"
+                                                    placeholder="Start Day"><br>
+                        <input type="text" id="startHour" name="startHour" placeholder="Hour"
+                               class="time start times  box">:<input type="text" id="startMinute" name="min"
+                                                                     placeholder="Minute"
+                                                                     class="time start times box"> <select
+                            name="start-time"
+                            id="startTOD"
+                            class="box">
+                            <option></option>
+                            <option>AM</option>
+                            <option>PM</option>
+                        </select>
 
-                <h2>End Time:</h2> <input type="text" id="end-date" class="time datepicker box" name="endDay"
-                                          placeholder="End Day"><br>
-                <input type="text" id="endHour" name="endHour" placeholder="Hour"
-                       class="time end times box">:<input type="text" id="endMinute" name="min" placeholder="Minute"
-                                                          class="time end times box"> <select name="end-time"
-                                                                                              id="endTOD" class="box">
-                    <option></option>
-                    <option>AM</option>
-                    <option>PM</option>
-                </select>
-                <br>
+                        <h2>End Time:</h2> <input type="text" id="end-date" class="time datepicker box" name="endDay"
+                                                  placeholder="End Day"><br>
+                        <input type="text" id="endHour" name="endHour" placeholder="Hour"
+                               class="time end times box">:<input type="text" id="endMinute" name="min"
+                                                                  placeholder="Minute"
+                                                                  class="time end times box"> <select name="end-time"
+                                                                                                      id="endTOD"
+                                                                                                      class="box">
+                            <option></option>
+                            <option>AM</option>
+                            <option>PM</option>
+                        </select>
+                        <br>
 
-                <div><input id="submit-add" name="submit-add" class="button" type="submit" value="Create Task"></div>
-                <br>
+                        <div><input id="submit-add" name="submit-add" class="button" type="submit" value="Create Task">
+                        </div>
+                        <br>
 
-                <div><input id="submit-add-cancel" name="submit-add-cancel" class="button" type="submit" value="Cancel">
-                </div>
-                <script type="text/javascript">
-                    $('#submit-add').click(function () {
-                        var taskName = document.getElementById('task-name').value;
-                        var description = document.getElementById('taskDescription').value;
-                        var startDate = $('#start-date').datepicker( "getDate" );
-                        var d = new Date(startDate);
-                        var str = $.datepicker.formatDate('mm/dd/yy', d);
-                        var startHour = document.getElementById('startHour').value;
-                        var startMinute = document.getElementById('startMinute').value;
-                        var startTOD = document.getElementById('startTOD').value;
-                        var endDate = $('#end-date').datepicker( "getDate" );
-                        var b = new Date(endDate);
-                        var str1 = $.datepicker.formatDate('mm/dd/yy', b);
-                        var endHour = document.getElementById('endHour').value;
-                        var endMinute = document.getElementById('endMinute').value;
-                        var endTOD = document.getElementById('endTOD').value;
+                        <div><input id="submit-add-cancel" name="submit-add-cancel" class="button" type="submit"
+                                    value="Cancel">
+                        </div>
+                        <script type="text/javascript">
+                            $('#submit-add').click(function () {
+                                var taskName = document.getElementById('task-name').value;
+                                var description = document.getElementById('taskDescription').value;
+                                var startDate = $('#start-date').datepicker("getDate");
+                                var d = new Date(startDate);
+                                var str = $.datepicker.formatDate('mm/dd/yy', d);
+                                var startHour = document.getElementById('startHour').value;
+                                var startMinute = document.getElementById('startMinute').value;
+                                var startTOD = document.getElementById('startTOD').value;
+                                var endDate = $('#end-date').datepicker("getDate");
+                                var b = new Date(endDate);
+                                var str1 = $.datepicker.formatDate('mm/dd/yy', b);
+                                var endHour = document.getElementById('endHour').value;
+                                var endMinute = document.getElementById('endMinute').value;
+                                var endTOD = document.getElementById('endTOD').value;
 //                        alert(str + " " + str1);
-<!--                        var form_data = {-->
-<!--                            data: {taskName: taskName, description: description, sur: str, startHour: startHour, startMinute: startMinute, startTOD: startTOD, sur1: str1, endHour: endHour, endMinute: endMinute, endTOD: endTOD},-->
-<!--                            token: '--><?php //echo $token; ?><!--',-->
-<!--                            is_ajax: 1-->
-<!--                        };-->
+                                <!--                        var form_data = {-->
+                                <!--                            data: {taskName: taskName, description: description, sur: str, startHour: startHour, startMinute: startMinute, startTOD: startTOD, sur1: str1, endHour: endHour, endMinute: endMinute, endTOD: endTOD},-->
+                                <!--                            token: '-->
+                                <?php //echo $token; ?><!--',-->
+                                <!--                            is_ajax: 1-->
+                                <!--                        };-->
 
-                        $.ajax({
-                            type: "POST",
-                            url: 'https://www.readmybluebutton.com/werk/addTask.php',
+                                $.ajax({
+                                    type: "POST",
+                                    url: 'https://www.readmybluebutton.com/werk/addTask.php',
 //                            data: form_data,
-                            data: {taskName: taskName, description: description, sur: str, startHour: startHour, startMinute: startMinute, startTOD: startTOD, sur1: str1, endHour: endHour, endMinute: endMinute, endTOD: endTOD, token: '<?php echo $token ?>'},
-                            success: function (response) {
-                                alert(response);
-                            }
-//                            error: function(xhr, status, error) {
-//                                alert("Could not connect to the server.");
-//                            }
-                        });
-                    });
-                </script>
+                                    data: {taskName: taskName, description: description, sur: str, startHour: startHour, startMinute: startMinute, startTOD: startTOD, sur1: str1, endHour: endHour, endMinute: endMinute, endTOD: endTOD, token: '<?php echo $token ?>'},
+                                    success: function (response) {
+                                        if (response == "success") {
+                                            $('#add-task-content').css('display', 'none');
+                                            $('#successful').fadeIn('fast');
+                                            setTimeout(function () {
+                                                $('.bubble').fadeOut('fast');
+                                                setTimeout(function () {
+                                                $('#task-name').val(null);
+                                                $('#taskDescription').val(null);
+                                                $('#start-date').val(null);
+                                                $('#startHour').val(null);
+                                                $('#startMinute').val(null);
+                                                $('#startTOD').val(null);
+                                                $('#end-date').val(null);
+                                                $('#endHour').val(null);
+                                                $('#endMinute').val(null);
+                                                $('#endTOD').val(null);
+                                                $('#successful').css('display', 'none');
+                                                $('#add-task-content').css('display', 'block');
+                                                }, 1000);
+                                            }, 3000);
+                                        } else {
+                                            alert('Success');
+                                        }
+                                    },
+                                    error: function (xhr, status, error) {
+                                        $('#add-task-content').css('display', 'none');
+                                        $('#fail').fadeIn('fast');
+                                        setTimeout(function () {
+                                                $('#fail').css('display', 'none');
+                                                $('#add-task-content').css('display', 'block');
+                                        }, 3000);
+                                    }
+                                });
+                            });
+                        </script>
+                </div>
+                <div id="successful">
+                    <div data-icon="ei-check"></div>
+                    <h4>Task Created!</h4></div>
+                <div id="fail">
+                    <div data-icon="ei-close-o"></div>
+                    <h4>Task Creation Failed!</h4></div>
             </div>
             <div class="ico-shit other">
                 <div data-icon="ei-bell"></div>
