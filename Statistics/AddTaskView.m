@@ -11,14 +11,17 @@
 #import "InterfaceController.h"
 #import "ColorOptions.h"
 #import "SuccessView.h"
+#import "PHTextView.h"
 
 @interface AddTaskView () {
-    NSString * DEFAULT_DESCRIPTION;
     NSDate * startTime;
     NSDate * endTime;
     NSMutableArray * vertConstraints;
     NSMutableArray * horizConstraints;
     BOOL didCreateTask;
+    
+    NSString * confirmText;
+    UIColor * confirmColor;
 }
 
 @end
@@ -30,14 +33,13 @@
     if (self) {
         didCreateTask = NO;
         _titleInput = [UITextField new];
-        _descriptionInput = [UITextView new];
+        _descriptionInput = [PHTextView new];
         _timePicker = [UIDatePicker new];
         _timeSelection = [[UISegmentedControl alloc] initWithItems:@[@"Start", @"End"]];
         _confirmTask = [UIButton new];
         _successView = [SuccessView new];
         
         _titleInput.delegate = self;
-        _descriptionInput.delegate = self;
         
         [_titleInput setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_descriptionInput setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -46,8 +48,7 @@
         [_confirmTask setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_successView setTranslatesAutoresizingMaskIntoConstraints:NO];
         
-        DEFAULT_DESCRIPTION = @"Task Description";
-        [_confirmTask addTarget:self action:@selector(createTask) forControlEvents:UIControlEventTouchUpInside];
+        [_confirmTask addTarget:self action:@selector(attemptToCreateTask) forControlEvents:UIControlEventTouchUpInside];
         [_timePicker addTarget:self action:@selector(timeChanged:) forControlEvents:UIControlEventValueChanged];
         [_timeSelection addTarget:self action:@selector(timeSelectionChanged:) forControlEvents:UIControlEventValueChanged];
         
@@ -69,6 +70,9 @@
 -(void)loadBasicUI {
     self.backgroundColor = [ColorOptions mainWhite];
     
+    confirmText = @"Create Task";
+    confirmColor = [ColorOptions secondaryGreen];
+    
     _titleInput.backgroundColor = [ColorOptions mainWhite];
     _titleInput.layer.cornerRadius = 9.0;
     _titleInput.layer.borderColor = [ColorOptions mainRed].CGColor;
@@ -86,7 +90,7 @@
     _descriptionInput.layer.borderColor = [ColorOptions mainRed].CGColor;
     _descriptionInput.layer.borderWidth = 1.0;
     _descriptionInput.font = [UIFont fontWithName:@"Exo2-Light" size:22];
-    _descriptionInput.text = DEFAULT_DESCRIPTION;
+    _descriptionInput.placeholderText = @"Task Description";
     
     _timePicker.datePickerMode = UIDatePickerModeDateAndTime;
     
@@ -94,11 +98,11 @@
     _timeSelection.tintColor = [ColorOptions mainRed];
     [_timeSelection setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Exo2-Black" size:18]} forState:UIControlStateNormal];
     
-    _confirmTask.backgroundColor = [ColorOptions secondaryGreen];
+    _confirmTask.backgroundColor = confirmColor;
     _confirmTask.layer.cornerRadius = 9.0;
     _confirmTask.titleLabel.font = [UIFont fontWithName:@"Exo2-Light" size:24];
     [_confirmTask setTitleColor:[ColorOptions mainWhite] forState:UIControlStateNormal];
-    [_confirmTask setTitle:@"Create Task" forState:UIControlStateNormal];
+    [_confirmTask setTitle:confirmText forState:UIControlStateNormal];
     
     vertConstraints = [NSMutableArray new];
     horizConstraints = [NSMutableArray new];
@@ -148,18 +152,6 @@
         _timePicker.date = endTime;
 }
 
--(void)textViewDidBeginEditing:(UITextView *)textView {
-    if (textView == _descriptionInput)
-        if ([_descriptionInput.text isEqualToString:DEFAULT_DESCRIPTION])
-            _descriptionInput.text = @"";
-}
-
--(void)textViewDidEndEditing:(UITextView *)textView {
-    if (textView == _descriptionInput)
-        if ([_descriptionInput.text isEqualToString:@""])
-            _descriptionInput.text = DEFAULT_DESCRIPTION;
-}
-
 -(void)removeKeyboard {
     [self endEditing:YES];
 }
@@ -172,7 +164,7 @@
 -(void)resetOptions {
     if (didCreateTask) {
         _titleInput.text = @"";
-        _descriptionInput.text = @"Task Description";
+        _descriptionInput.text = @"";
         _timePicker.date = [NSDate new];
         startTime = _timePicker.date;
         endTime = _timePicker.date;
@@ -182,10 +174,28 @@
     }
 }
 
+-(void)attemptToCreateTask {
+    if (_titleInput.text.length == 0)
+        [self displayErrorWithMessage:@"Incomplete Form"];
+    else if ([endTime compare:startTime] == NSOrderedAscending)
+        [self displayErrorWithMessage:@"Invalid Dates"];
+    else
+        [self createTask];
+}
+
+-(void)displayErrorWithMessage:(NSString *)text {
+    [_confirmTask setBackgroundColor:[ColorOptions secondaryRed]];
+    [_confirmTask setTitle:text forState:UIControlStateNormal];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_confirmTask setBackgroundColor:confirmColor];
+        [_confirmTask setTitle:confirmText forState:UIControlStateNormal];
+    });
+}
+
 -(void)createTask {
     [CoreDataHandler createTaskWithName:_titleInput.text withDescription:_descriptionInput.text startsAt:startTime endsAt:endTime];
     _successView.hidden = NO;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [[InterfaceController sharedInstance] popToRoot];
     });
     [CoreDataHandler printAllTasks];

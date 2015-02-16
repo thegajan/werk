@@ -26,4 +26,8 @@
     return [ColorOptions colorFromHex:0x2ECC71]; // Emerald
 }
 
++(UIColor *)secondaryRed {
+    return [ColorOptions colorFromHex:0xC0392B]; // Pomegranate
+}
+
 @end
