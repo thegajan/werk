@@ -470,3 +470,28 @@ textarea {
 .box {
     padding: 5px;
 }
+#fail{
+    margin-top: 200px;
+    display: none;
+    color: #c0392b;
+    font-size: 35px;
+}
+#successful{
+    margin-top: 200px;
+    display: none;
+    color: #2ecc71;
+    font-size: 40px;
+}
+.icon--ei-check{
+    fill: #2ecc71;
+    width: 100px;
+    height: 100px;
+}
+.icon--ei-close-o{
+    fill: #c0392b;
+    width: 100px;
+    height: 100px;
+}
+#add-task-content{
+    /*display: none;*/
+}
