@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/header.css" afterPath="$PROJECT_DIR$/css/header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/header.js" afterPath="$PROJECT_DIR$/js/header.js" />
     </list>
     <ignored path="werk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,19 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="header.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="30" selection-start="90" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+            <state line="25" column="35" selection-start="907" selection-end="907" vertical-scroll-proportion="0.6528418" vertical-offset="0" max-vertical-offset="651">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="56" selection-start="9514" selection-end="9514" vertical-scroll-proportion="0.456" vertical-offset="2316" max-vertical-offset="3094">
+            <state line="127" column="78" selection-start="8072" selection-end="8076" vertical-scroll-proportion="-3.7692308" vertical-offset="2061" max-vertical-offset="3094">
               <folding>
                 <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
               </folding>
@@ -101,13 +100,13 @@
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/js/header.js" />
         <option value="$PROJECT_DIR$/connManager.php" />
         <option value="$PROJECT_DIR$/addTask.php" />
         <option value="$PROJECT_DIR$/mobile_php/add_task.php" />
         <option value="$PROJECT_DIR$/mobile_php/addTask.php" />
         <option value="$PROJECT_DIR$/css/header.css" />
         <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/js/header.js" />
       </list>
     </option>
   </component>
@@ -440,7 +439,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -692,13 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="30" selection-start="90" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="478" column="11" selection-start="8945" selection-end="8955" vertical-scroll-proportion="0.0" vertical-offset="7951" max-vertical-offset="8602">
@@ -708,10 +700,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="56" selection-start="9514" selection-end="9514" vertical-scroll-proportion="0.456" vertical-offset="2316" max-vertical-offset="3094">
+        <state line="127" column="78" selection-start="8072" selection-end="8076" vertical-scroll-proportion="-3.7692308" vertical-offset="2061" max-vertical-offset="3094">
           <folding>
             <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="35" selection-start="907" selection-end="907" vertical-scroll-proportion="0.6528418" vertical-offset="0" max-vertical-offset="651">
+          <folding />
         </state>
       </provider>
     </entry>
