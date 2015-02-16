@@ -162,6 +162,7 @@
 -(void)createTask {
     [CoreDataHandler createTaskWithName:_titleInput.text withDescription:_descriptionInput.text startsAt:startTime endsAt:endTime];
     [[InterfaceController sharedInstance] popToRoot];
+    [CoreDataHandler printAllTasks];
 }
 
 @end
