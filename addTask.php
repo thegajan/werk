@@ -20,7 +20,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
 //            echo $taskName . " " . $description;
             $startTime = $startDate . " " . $startHour . ":" . $startMinute . ":00" . " " . $startTOD;
             $endTime = $endDate . " " . $endHour . ":" . $endMinute . ":00" . " " . $endTOD;
-            echo $startTime . " " . $endTime;
+//            echo $startTime . " " . $endTime;
             function validateDate($date)
             {
                 $d = DateTime::createFromFormat('m/d/Y', $date);
