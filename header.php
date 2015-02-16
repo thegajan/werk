@@ -106,7 +106,7 @@ $_SESSION['token'] = $token; //store it as session variable
                             var endTOD = document.getElementById('endTOD').value.trim();
                             var a = startDate + " " + startHour + ":" + startMinute + ":00 " + startTOD;
                             var c = endDate + " " + endHour + ":" + endMinute + ":00 " + endTOD;
-                            if (taskName.length == 0 || description.length == 0 || str.length == 0 || startHour.length == 0 || startMinute.length == 0 || startTOD.length == 0 || str1.length == 0 || endHour.length == 0 || endMinute.length == 0 || endTOD.length == 0) {
+                            if (taskName.length == 0 || str.length == 0 || startHour.length == 0 || startMinute.length == 0 || startTOD.length == 0 || str1.length == 0 || endHour.length == 0 || endMinute.length == 0 || endTOD.length == 0) {
                                 $('#submit-add').css({'background-color': '#C0392B', 'border': '1px solid #C0392B'}).val('Incomplete Form!');
                                 setTimeout(function () {
                                     $('#submit-add').css({'background-color': '#2ECC71', 'border': '1px solid #2ECC71'}).val('Create Task');

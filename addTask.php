@@ -29,7 +29,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                 return $d && $d->format('m/d/Y') == $date;
             }
 //            echo $startDate . "sadas " . $endDate . "asds " . var_dump(validateDate($startDate)) . " " . var_dump(validateDate($endDate));
-            if (strlen($taskName) == 0 || strlen($description) == 0 || validateDate($startDate) == false || validateDate($endDate) == false || $startHour > 12 || $startHour < 1 || $startMinute < 0 || $startMinute > 59 || $endHour > 12 || $endHour < 1 || $endMinute < 0 || $endMinute > 59 || $startTime > $endTime || $startTime < $currentDate || $endTime < $currentDate) {
+            if (strlen($taskName) == 0 || validateDate($startDate) == false || validateDate($endDate) == false || $startHour > 12 || $startHour < 1 || $startMinute < 0 || $startMinute > 59 || $endHour > 12 || $endHour < 1 || $endMinute < 0 || $endMinute > 59 || $startTime > $endTime || $startTime < $currentDate || $endTime < $currentDate) {
                 echo "form not complete";
             } else{
                 include_once 'connManager.php';
