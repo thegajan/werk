@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/header.js" afterPath="$PROJECT_DIR$/js/header.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addTask.php" afterPath="$PROJECT_DIR$/addTask.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,22 +27,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="header.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="35" selection-start="907" selection-end="907" vertical-scroll-proportion="0.6528418" vertical-offset="0" max-vertical-offset="651">
+            <state line="25" column="35" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="header.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="78" selection-start="8072" selection-end="8076" vertical-scroll-proportion="-3.7692308" vertical-offset="2061" max-vertical-offset="3094">
+            <state line="174" column="49" selection-start="11275" selection-end="11275" vertical-scroll-proportion="0.5648" vertical-offset="2775" max-vertical-offset="3400">
               <folding>
                 <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addTask.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addTask.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="39" selection-start="1904" selection-end="1921" vertical-scroll-proportion="-1.8076923" vertical-offset="497" max-vertical-offset="1224">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,15 +60,6 @@
         <entry file="file://$PROJECT_DIR$/css/header.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="478" column="11" selection-start="8945" selection-end="8955" vertical-scroll-proportion="0.0" vertical-offset="7543" max-vertical-offset="8602">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addTask.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addTask.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="33" selection-start="2521" selection-end="2528" vertical-scroll-proportion="-11.115385" vertical-offset="459" max-vertical-offset="1088">
               <folding />
             </state>
           </provider>
@@ -101,12 +103,12 @@
         <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/connManager.php" />
-        <option value="$PROJECT_DIR$/addTask.php" />
         <option value="$PROJECT_DIR$/mobile_php/add_task.php" />
         <option value="$PROJECT_DIR$/mobile_php/addTask.php" />
         <option value="$PROJECT_DIR$/css/header.css" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/js/header.js" />
+        <option value="$PROJECT_DIR$/addTask.php" />
+        <option value="$PROJECT_DIR$/header.php" />
       </list>
     </option>
   </component>
@@ -677,16 +679,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addTask.php">
+    <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="33" selection-start="2521" selection-end="2528" vertical-scroll-proportion="-11.115385" vertical-offset="459" max-vertical-offset="1088">
+        <state line="27" column="0" selection-start="420" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="799">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
+    <entry file="file://$PROJECT_DIR$/js/header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="420" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="799">
+        <state line="25" column="35" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <folding />
         </state>
       </provider>
@@ -698,19 +700,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
+    <entry file="file://$PROJECT_DIR$/addTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="78" selection-start="8072" selection-end="8076" vertical-scroll-proportion="-3.7692308" vertical-offset="2061" max-vertical-offset="3094">
-          <folding>
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="32" column="39" selection-start="1904" selection-end="1921" vertical-scroll-proportion="-1.8076923" vertical-offset="497" max-vertical-offset="1224">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/header.js">
+    <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="35" selection-start="907" selection-end="907" vertical-scroll-proportion="0.6528418" vertical-offset="0" max-vertical-offset="651">
-          <folding />
+        <state line="174" column="49" selection-start="11275" selection-end="11275" vertical-scroll-proportion="0.5648" vertical-offset="2775" max-vertical-offset="3400">
+          <folding>
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -21,13 +21,15 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             $startTime = $startDate . " " . $startHour . ":" . $startMinute . ":00" . " " . $startTOD;
             $endTime = $endDate . " " . $endHour . ":" . $endMinute . ":00" . " " . $endTOD;
 //            echo $startTime . " " . $endTime;
+            date_default_timezone_set ('America/Los_Angeles');
+            $currentDate = date('m/d/Y h:i:s A');
             function validateDate($date)
             {
                 $d = DateTime::createFromFormat('m/d/Y', $date);
                 return $d && $d->format('m/d/Y') == $date;
             }
 //            echo $startDate . "sadas " . $endDate . "asds " . var_dump(validateDate($startDate)) . " " . var_dump(validateDate($endDate));
-            if (strlen($taskName) == 0 || strlen($description) == 0 || validateDate($startDate) == false || validateDate($endDate) == false || $startHour > 12 || $startHour < 1 || $startMinute < 0 || $startMinute > 59 || $endHour > 12 || $endHour < 1 || $endMinute < 0 || $endMinute > 59) {
+            if (strlen($taskName) == 0 || strlen($description) == 0 || validateDate($startDate) == false || validateDate($endDate) == false || $startHour > 12 || $startHour < 1 || $startMinute < 0 || $startMinute > 59 || $endHour > 12 || $endHour < 1 || $endMinute < 0 || $endMinute > 59 || $startTime > $endTime || $startTime < $currentDate || $endTime < $currentDate) {
                 echo "form not complete";
             } else{
                 include_once 'connManager.php';
@@ -44,7 +46,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                 if ($pass > 0) {
                     echo "success";
                 } else {
-                    echo error_reporting(E_ALL);
+                    echo "error";
                 }
             }
         } else {
