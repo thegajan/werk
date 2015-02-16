@@ -41,6 +41,7 @@
 		D931A4A51A8DE2DB000B8E8B /* ColorOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = D931A4A41A8DE2DB000B8E8B /* ColorOptions.m */; };
 		D96C18991A9084CD00202BE1 /* CoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D96C18981A9084CD00202BE1 /* CoreDataHandler.m */; };
 		D995A1841A913ECA005BC74F /* AddTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = D995A1831A913ECA005BC74F /* AddTaskView.m */; };
+		D9C4BC031A91CC7900F27EBC /* SyncUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4BC021A91CC7900F27EBC /* SyncUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		D96C18981A9084CD00202BE1 /* CoreDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHandler.m; sourceTree = "<group>"; };
 		D995A1821A913ECA005BC74F /* AddTaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskView.h; sourceTree = "<group>"; };
 		D995A1831A913ECA005BC74F /* AddTaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskView.m; sourceTree = "<group>"; };
+		D9C4BC011A91CC7900F27EBC /* SyncUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncUtility.h; sourceTree = "<group>"; };
+		D9C4BC021A91CC7900F27EBC /* SyncUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncUtility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +223,7 @@
 				D92928E61A8F3EED00CCA1CF /* TaskCreationUI */,
 				D931A4A81A8DE9C3000B8E8B /* UIManagement */,
 				D92928E21A8F3DB300CCA1CF /* Core Data */,
+				D9C4BC001A91CBF700F27EBC /* Syncing */,
 				D931A4A71A8DE4BF000B8E8B /* UIOptions */,
 				D931A48A1A8DDD1D000B8E8B /* Images.xcassets */,
 				D931A48C1A8DDD1D000B8E8B /* LaunchScreen.xib */,
@@ -280,6 +284,15 @@
 				D92928EB1A8F3FA300CCA1CF /* InterfaceController.m */,
 			);
 			name = UIManagement;
+			sourceTree = "<group>";
+		};
+		D9C4BC001A91CBF700F27EBC /* Syncing */ = {
+			isa = PBXGroup;
+			children = (
+				D9C4BC011A91CC7900F27EBC /* SyncUtility.h */,
+				D9C4BC021A91CC7900F27EBC /* SyncUtility.m */,
+			);
+			name = Syncing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +415,7 @@
 				D92928DE1A8F12DB00CCA1CF /* GraphsViewController.m in Sources */,
 				D96C18991A9084CD00202BE1 /* CoreDataHandler.m in Sources */,
 				D92928EC1A8F3FA300CCA1CF /* InterfaceController.m in Sources */,
+				D9C4BC031A91CC7900F27EBC /* SyncUtility.m in Sources */,
 				D92928E11A8F3DAB00CCA1CF /* Account.m in Sources */,
 				D931A4801A8DDD1D000B8E8B /* AppDelegate.m in Sources */,
 				D995A1841A913ECA005BC74F /* AddTaskView.m in Sources */,
