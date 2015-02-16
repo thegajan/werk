@@ -17,4 +17,6 @@
 @property (strong, nonatomic) UISegmentedControl * timeSelection;
 @property (strong, nonatomic) UIButton * confirmTask;
 
+-(void)resetOptions;
+
 @end

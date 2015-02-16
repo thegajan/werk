@@ -17,6 +17,7 @@
     NSDate * endTime;
     NSMutableArray * vertConstraints;
     NSMutableArray * horizConstraints;
+    BOOL didCreateTask;
 }
 
 @end
@@ -26,6 +27,7 @@
 -(id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        didCreateTask = NO;
         _titleInput = [UITextField new];
         _descriptionInput = [UITextView new];
         _timePicker = [UIDatePicker new];
@@ -159,10 +161,23 @@
     return NO;
 }
 
+-(void)resetOptions {
+    if (didCreateTask) {
+        _titleInput.text = @"";
+        _descriptionInput.text = @"Task Description";
+        _timePicker.date = [NSDate new];
+        startTime = _timePicker.date;
+        endTime = _timePicker.date;
+        _timeSelection.selectedSegmentIndex = 0;
+        didCreateTask = NO;
+    }
+}
+
 -(void)createTask {
     [CoreDataHandler createTaskWithName:_titleInput.text withDescription:_descriptionInput.text startsAt:startTime endsAt:endTime];
     [[InterfaceController sharedInstance] popToRoot];
     [CoreDataHandler printAllTasks];
+    didCreateTask = YES;
 }
 
 @end

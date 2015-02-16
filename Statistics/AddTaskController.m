@@ -22,6 +22,10 @@
     _screenTapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyboard)];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [(AddTaskView *)self.view resetOptions];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addGestureRecognizer:_screenTapped];
