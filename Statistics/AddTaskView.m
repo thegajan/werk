@@ -10,6 +10,7 @@
 #import "CoreDataHandler.h"
 #import "InterfaceController.h"
 #import "ColorOptions.h"
+#import "SuccessView.h"
 
 @interface AddTaskView () {
     NSString * DEFAULT_DESCRIPTION;
@@ -33,6 +34,7 @@
         _timePicker = [UIDatePicker new];
         _timeSelection = [[UISegmentedControl alloc] initWithItems:@[@"Start", @"End"]];
         _confirmTask = [UIButton new];
+        _successView = [SuccessView new];
         
         _titleInput.delegate = self;
         _descriptionInput.delegate = self;
@@ -42,6 +44,7 @@
         [_timePicker setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_timeSelection setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_confirmTask setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [_successView setTranslatesAutoresizingMaskIntoConstraints:NO];
         
         DEFAULT_DESCRIPTION = @"Task Description";
         [_confirmTask addTarget:self action:@selector(createTask) forControlEvents:UIControlEventTouchUpInside];
@@ -56,6 +59,7 @@
         [self addSubview:_timePicker];
         [self addSubview:_timeSelection];
         [self addSubview:_confirmTask];
+        [self addSubview:_successView];
         
         [self loadBasicUI];
     }
@@ -98,6 +102,10 @@
     
     vertConstraints = [NSMutableArray new];
     horizConstraints = [NSMutableArray new];
+    
+    _successView.hidden = YES;
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_successView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_successView)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_successView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_successView)]];
     
     [vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-12-[_titleInput(66)]-12-[_descriptionInput]-12-[_timeSelection(33)][_timePicker][_confirmTask(54)]-12-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput, _descriptionInput, _timePicker, _timeSelection, _confirmTask)]];
     [vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_titleInput]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput)]];
@@ -169,13 +177,17 @@
         startTime = _timePicker.date;
         endTime = _timePicker.date;
         _timeSelection.selectedSegmentIndex = 0;
+        _successView.hidden = YES;
         didCreateTask = NO;
     }
 }
 
 -(void)createTask {
     [CoreDataHandler createTaskWithName:_titleInput.text withDescription:_descriptionInput.text startsAt:startTime endsAt:endTime];
-    [[InterfaceController sharedInstance] popToRoot];
+    _successView.hidden = NO;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[InterfaceController sharedInstance] popToRoot];
+    });
     [CoreDataHandler printAllTasks];
     didCreateTask = YES;
 }

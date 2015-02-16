@@ -16,7 +16,7 @@
                     <attributedString key="attributedText">
                         <fragment content="Statistics">
                             <attributes>
-                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <font key="NSFont" size="36" name="HelveticaNeue-Bold"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
                             </attributes>

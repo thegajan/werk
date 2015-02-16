@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class SuccessView;
+
 @interface AddTaskView : UIView <UITextFieldDelegate, UITextViewDelegate, UIPickerViewDelegate>
 
 @property (strong, nonatomic) UITextField * titleInput;
@@ -16,6 +18,7 @@
 @property (strong, nonatomic) UIButton * selectStart;
 @property (strong, nonatomic) UISegmentedControl * timeSelection;
 @property (strong, nonatomic) UIButton * confirmTask;
+@property (strong, nonatomic) SuccessView * successView;
 
 -(void)resetOptions;
 

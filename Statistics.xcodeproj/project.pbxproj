@@ -41,6 +41,7 @@
 		D931A4A51A8DE2DB000B8E8B /* ColorOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = D931A4A41A8DE2DB000B8E8B /* ColorOptions.m */; };
 		D96C18991A9084CD00202BE1 /* CoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D96C18981A9084CD00202BE1 /* CoreDataHandler.m */; };
 		D995A1841A913ECA005BC74F /* AddTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = D995A1831A913ECA005BC74F /* AddTaskView.m */; };
+		D9FF04D61A91D89B0010436C /* SuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FF04D51A91D89B0010436C /* SuccessView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		D96C18981A9084CD00202BE1 /* CoreDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHandler.m; sourceTree = "<group>"; };
 		D995A1821A913ECA005BC74F /* AddTaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskView.h; sourceTree = "<group>"; };
 		D995A1831A913ECA005BC74F /* AddTaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskView.m; sourceTree = "<group>"; };
+		D9FF04D41A91D89B0010436C /* SuccessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessView.h; sourceTree = "<group>"; };
+		D9FF04D51A91D89B0010436C /* SuccessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				D92928E81A8F3F0A00CCA1CF /* AddTaskController.m */,
 				D995A1821A913ECA005BC74F /* AddTaskView.h */,
 				D995A1831A913ECA005BC74F /* AddTaskView.m */,
+				D9FF04D41A91D89B0010436C /* SuccessView.h */,
+				D9FF04D51A91D89B0010436C /* SuccessView.m */,
 			);
 			name = TaskCreationUI;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 			files = (
 				D92928DE1A8F12DB00CCA1CF /* GraphsViewController.m in Sources */,
 				D96C18991A9084CD00202BE1 /* CoreDataHandler.m in Sources */,
+				D9FF04D61A91D89B0010436C /* SuccessView.m in Sources */,
 				D92928EC1A8F3FA300CCA1CF /* InterfaceController.m in Sources */,
 				D92928E11A8F3DAB00CCA1CF /* Account.m in Sources */,
 				D931A4801A8DDD1D000B8E8B /* AppDelegate.m in Sources */,
