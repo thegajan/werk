@@ -17,6 +17,6 @@
     </entity>
     <elements>
         <element name="Account" positionX="-63" positionY="18" width="128" height="103"/>
-        <element name="Task" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Task" positionX="-63" positionY="-18" width="128" height="148"/>
     </elements>
 </model>

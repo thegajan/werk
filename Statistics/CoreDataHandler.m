@@ -45,7 +45,9 @@
             task.task_description = description;
             task.t_start = start;
             task.t_end = end;
-            task.length = [NSNumber numberWithDouble:[end timeIntervalSinceDate:start]];
+            NSCalendar * calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+            NSDateComponents * dc = [calendar components:NSCalendarUnitMinute fromDate:start toDate:end options:0];
+            task.length = [NSNumber numberWithInteger:dc.minute * 60];
             task.account = cdh.acc;
             [CoreDataHandler saveContext];
         }
@@ -66,6 +68,25 @@
         // TODO: Setup account
     }
     return account;
+}
+
++(void)printAllTasks {
+    NSManagedObjectContext * moc = [[CoreDataHandler sharedInstance] moc];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:moc];
+    [fetchRequest setEntity:entity];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"t_start"
+    ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+
+    NSError *error = nil;
+    NSArray *fetchedObjects = [moc executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects == nil) {
+        NSLog(@"COULD NOT FETCH TASKS");
+    }
+    for (Task * t in fetchedObjects) {
+        NSLog(@"%@", t);
+    }
 }
 
 @end
