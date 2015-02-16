@@ -14,14 +14,14 @@
 #import "PHTextView.h"
 
 @interface AddTaskView () {
-    NSDate * startTime;
-    NSDate * endTime;
-    NSMutableArray * vertConstraints;
-    NSMutableArray * horizConstraints;
-    BOOL didCreateTask;
+    NSDate * _startTime;
+    NSDate * _endTime;
+    NSMutableArray * _vertConstraints;
+    NSMutableArray * _horizConstraints;
+    BOOL _didCreateTask;
     
-    NSString * confirmText;
-    UIColor * confirmColor;
+    NSString * _confirmText;
+    UIColor * _confirmColor;
 }
 
 @end
@@ -31,7 +31,7 @@
 -(id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        didCreateTask = NO;
+        _didCreateTask = NO;
         _titleInput = [UITextField new];
         _descriptionInput = [PHTextView new];
         _timePicker = [UIDatePicker new];
@@ -52,8 +52,8 @@
         [_timePicker addTarget:self action:@selector(timeChanged:) forControlEvents:UIControlEventValueChanged];
         [_timeSelection addTarget:self action:@selector(timeSelectionChanged:) forControlEvents:UIControlEventValueChanged];
         
-        startTime = _timePicker.date;
-        endTime = _timePicker.date;
+        _startTime = _timePicker.date;
+        _endTime = _timePicker.date;
         
         [self addSubview:_titleInput];
         [self addSubview:_descriptionInput];
@@ -70,8 +70,8 @@
 -(void)loadBasicUI {
     self.backgroundColor = [ColorOptions mainWhite];
     
-    confirmText = @"Create Task";
-    confirmColor = [ColorOptions secondaryGreen];
+    _confirmText = @"Create Task";
+    _confirmColor = [ColorOptions secondaryGreen];
     
     _titleInput.backgroundColor = [ColorOptions mainWhite];
     _titleInput.layer.cornerRadius = 9.0;
@@ -98,58 +98,58 @@
     _timeSelection.tintColor = [ColorOptions mainRed];
     [_timeSelection setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Exo2-Black" size:18]} forState:UIControlStateNormal];
     
-    _confirmTask.backgroundColor = confirmColor;
+    _confirmTask.backgroundColor = _confirmColor;
     _confirmTask.layer.cornerRadius = 9.0;
     _confirmTask.titleLabel.font = [UIFont fontWithName:@"Exo2-Light" size:24];
     [_confirmTask setTitleColor:[ColorOptions mainWhite] forState:UIControlStateNormal];
-    [_confirmTask setTitle:confirmText forState:UIControlStateNormal];
+    [_confirmTask setTitle:_confirmText forState:UIControlStateNormal];
     
-    vertConstraints = [NSMutableArray new];
-    horizConstraints = [NSMutableArray new];
+    _vertConstraints = [NSMutableArray new];
+    _horizConstraints = [NSMutableArray new];
     
     _successView.hidden = YES;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_successView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_successView)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_successView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_successView)]];
     
-    [vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-12-[_titleInput(66)]-12-[_descriptionInput]-12-[_timeSelection(33)][_timePicker][_confirmTask(54)]-12-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput, _descriptionInput, _timePicker, _timeSelection, _confirmTask)]];
-    [vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_titleInput]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput)]];
-    [vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_descriptionInput]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_descriptionInput)]];
-    [vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_timePicker]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timePicker)]];
-    [vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_timeSelection]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timeSelection)]];
-    [vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_confirmTask]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_confirmTask)]];
+    [_vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-12-[_titleInput(66)]-12-[_descriptionInput]-12-[_timeSelection(33)][_timePicker][_confirmTask(54)]-12-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput, _descriptionInput, _timePicker, _timeSelection, _confirmTask)]];
+    [_vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_titleInput]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput)]];
+    [_vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_descriptionInput]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_descriptionInput)]];
+    [_vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_timePicker]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timePicker)]];
+    [_vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_timeSelection]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timeSelection)]];
+    [_vertConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_confirmTask]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_confirmTask)]];
 
-    [horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-8-[_titleInput(>=44,<=66)]-[_timeSelection(33)][_timePicker(>=60,<=200)][_confirmTask(54)]-8-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput, _timePicker, _timeSelection, _confirmTask)]];
-    [horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-8-[_descriptionInput]-[_confirmTask(54)]-8-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_descriptionInput, _confirmTask)]];
-    [horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_titleInput]-[_descriptionInput(==_titleInput)]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput, _descriptionInput)]];
-    [horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_timePicker]-[_descriptionInput(==_timePicker)]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timePicker, _descriptionInput)]];
-    [horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_timeSelection]-[_descriptionInput(==_timeSelection)]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timeSelection, _descriptionInput)]];
-    [horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_confirmTask]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_confirmTask)]];
+    [_horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-8-[_titleInput(>=44,<=66)]-[_timeSelection(33)][_timePicker(>=60,<=200)][_confirmTask(54)]-8-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput, _timePicker, _timeSelection, _confirmTask)]];
+    [_horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-8-[_descriptionInput]-[_confirmTask(54)]-8-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_descriptionInput, _confirmTask)]];
+    [_horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_titleInput]-[_descriptionInput(==_titleInput)]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleInput, _descriptionInput)]];
+    [_horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_timePicker]-[_descriptionInput(==_timePicker)]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timePicker, _descriptionInput)]];
+    [_horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_timeSelection]-[_descriptionInput(==_timeSelection)]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timeSelection, _descriptionInput)]];
+    [_horizConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_confirmTask]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_confirmTask)]];
 }
 
 -(void)updateConstraints {
     [super updateConstraints];
     if (self.frame.size.height > self.frame.size.width) {
-        [NSLayoutConstraint deactivateConstraints:horizConstraints];
-        [NSLayoutConstraint activateConstraints:vertConstraints];
+        [NSLayoutConstraint deactivateConstraints:_horizConstraints];
+        [NSLayoutConstraint activateConstraints:_vertConstraints];
     }
     else {
-        [NSLayoutConstraint deactivateConstraints:vertConstraints];
-        [NSLayoutConstraint activateConstraints:horizConstraints];
+        [NSLayoutConstraint deactivateConstraints:_vertConstraints];
+        [NSLayoutConstraint activateConstraints:_horizConstraints];
     }
 }
 
 -(void)timeChanged:(id)sender {
     if (_timeSelection.selectedSegmentIndex == 0) // Start Time
-        startTime = _timePicker.date;
+        _startTime = _timePicker.date;
     else if (_timeSelection.selectedSegmentIndex == 1) // End Time
-        endTime = _timePicker.date;
+        _endTime = _timePicker.date;
 }
 
 -(void)timeSelectionChanged:(id)sender {
     if (_timeSelection.selectedSegmentIndex == 0) // Start Time
-        _timePicker.date = startTime;
+        _timePicker.date = _startTime;
     else if (_timeSelection.selectedSegmentIndex == 1) // End Time
-        _timePicker.date = endTime;
+        _timePicker.date = _endTime;
 }
 
 -(void)removeKeyboard {
@@ -162,22 +162,22 @@
 }
 
 -(void)resetOptions {
-    if (didCreateTask) {
+    if (_didCreateTask) {
         _titleInput.text = @"";
         _descriptionInput.text = @"";
         _timePicker.date = [NSDate new];
-        startTime = _timePicker.date;
-        endTime = _timePicker.date;
+        _startTime = _timePicker.date;
+        _endTime = _timePicker.date;
         _timeSelection.selectedSegmentIndex = 0;
         _successView.hidden = YES;
-        didCreateTask = NO;
+        _didCreateTask = NO;
     }
 }
 
 -(void)attemptToCreateTask {
     if (_titleInput.text.length == 0)
         [self displayErrorWithMessage:@"Incomplete Form"];
-    else if ([endTime compare:startTime] == NSOrderedAscending)
+    else if ([_endTime compare:_startTime] == NSOrderedAscending)
         [self displayErrorWithMessage:@"Invalid Dates"];
     else
         [self createTask];
@@ -187,19 +187,19 @@
     [_confirmTask setBackgroundColor:[ColorOptions secondaryRed]];
     [_confirmTask setTitle:text forState:UIControlStateNormal];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_confirmTask setBackgroundColor:confirmColor];
-        [_confirmTask setTitle:confirmText forState:UIControlStateNormal];
+        [_confirmTask setBackgroundColor:_confirmColor];
+        [_confirmTask setTitle:_confirmText forState:UIControlStateNormal];
     });
 }
 
 -(void)createTask {
-    [CoreDataHandler createTaskWithName:_titleInput.text withDescription:_descriptionInput.text startsAt:startTime endsAt:endTime];
+    [CoreDataHandler createTaskWithName:_titleInput.text withDescription:_descriptionInput.text startsAt:_startTime endsAt:_endTime];
     _successView.hidden = NO;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [[InterfaceController sharedInstance] popToRoot];
     });
     [CoreDataHandler printAllTasks];
-    didCreateTask = YES;
+    _didCreateTask = YES;
 }
 
 @end
