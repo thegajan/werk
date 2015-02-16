@@ -3,37 +3,37 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "obama-horn_-1280x960-5.png",
+      "filename" : "icon1-5.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "obama-horn_-1280x960-4.png",
+      "filename" : "icon1-3.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "obama-horn_-1280x960-3.png",
+      "filename" : "icon1-4.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "obama-horn_-1280x960-2.png",
+      "filename" : "icon1-2.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "obama-horn_-1280x960-1.png",
+      "filename" : "icon1-1.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "obama-horn_-1280x960.png",
+      "filename" : "icon1.png",
       "scale" : "3x"
     }
   ],

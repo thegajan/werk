@@ -7,6 +7,7 @@
         <relationship name="task_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="account" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES">
+        <attribute name="last_changed" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="length" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="t_end" optional="YES" attributeType="Date" syncable="YES"/>
@@ -17,6 +18,6 @@
     </entity>
     <elements>
         <element name="Account" positionX="-63" positionY="18" width="128" height="103"/>
-        <element name="Task" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Task" positionX="-63" positionY="-18" width="128" height="163"/>
     </elements>
 </model>
