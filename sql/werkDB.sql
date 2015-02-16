@@ -32,6 +32,7 @@ CREATE TABLE `task_master` (
   `creator` int(11) NOT NULL,
   `burst_notifications` varchar(45) DEFAULT 'No',
   `success` varchar(45) DEFAULT NULL,
+  `last_updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-15 15:08:34
+-- Dump completed on 2015-02-16 13:40:52

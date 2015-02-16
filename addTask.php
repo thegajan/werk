@@ -33,7 +33,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                 echo "form not complete";
             } else{
                 include_once 'connManager.php';
-                $sql = "INSERT INTO task_master (task_name, task_description, time_start, time_end, creator) VALUES (\"" . $taskName . "\", \"" . $description . "\", STR_TO_DATE('" . $startTime . "','%c/%e/%Y %r'), STR_TO_DATE('" . $endTime . "','%c/%e/%Y %r'), '" . $creator . "')";
+                $sql = "INSERT INTO task_master (task_name, task_description, time_start, time_end, creator, last_updated) VALUES (\"" . $taskName . "\", \"" . $description . "\", STR_TO_DATE('" . $startTime . "','%c/%e/%Y %r'), STR_TO_DATE('" . $endTime . "','%c/%e/%Y %r'), '" . $creator . "', NOW())";
                 $conn = new connManager();
                 $Connection = $conn->GetConnection();
                 if (!$Connection) {

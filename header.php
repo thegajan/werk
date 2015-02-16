@@ -9,8 +9,8 @@ $_SESSION['token'] = $token; //store it as session variable
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600' rel='stylesheet'
           type='text/css'>
     <meta charset="utf-8"/>
-    <!--        <link rel="shortcut icon" href="img_fontss/favicon.jpg" type="image/x-icon">-->
-    <title>A Time Productivity App</title>
+            <link rel="shortcut icon" href="img_fonts/logo.png" type="image/x-icon">
+    <title>Werk | A Time Productivity App</title>
     <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.11.3.custom/jquery-ui.js"></script>
