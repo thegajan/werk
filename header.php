@@ -104,10 +104,15 @@ $_SESSION['token'] = $token; //store it as session variable
                             var endHour = document.getElementById('endHour').value.trim();
                             var endMinute = document.getElementById('endMinute').value.trim();
                             var endTOD = document.getElementById('endTOD').value.trim();
-                            var a = startDate + " " + startHour + ":" + startMinute + ":00" + startTOD;
-                            var c = endDate + " " + endHour + ":" + endMinute + ":00" + endTOD;
-                            if (taskName.length == 0 || description.length == 0 || str.length == 0 || startHour.length == 0 || startHour > 12 || startHour < 1 || startMinute.length == 0 || startMinute > 59 || startMinute < 0 || startTOD.length == 0 || str1.length == 0 || endHour.length == 0 || endHour > 59 || endHour < 0 || endMinute.length == 0 || endMinute > 59 || endMinute < 0 || endTOD.length == 0 || a > c) {
-                                $('#submit-add').css({'background-color': '#C0392B', 'border': '1px solid #C0392B'}).val('Invalid Form!');
+                            var a = startDate + " " + startHour + ":" + startMinute + ":00 " + startTOD;
+                            var c = endDate + " " + endHour + ":" + endMinute + ":00 " + endTOD;
+                            if (taskName.length == 0 || description.length == 0 || str.length == 0 || startHour.length == 0 || startMinute.length == 0 || startTOD.length == 0 || str1.length == 0 || endHour.length == 0 || endMinute.length == 0 || endTOD.length == 0) {
+                                $('#submit-add').css({'background-color': '#C0392B', 'border': '1px solid #C0392B'}).val('Incomplete Form!');
+                                setTimeout(function () {
+                                    $('#submit-add').css({'background-color': '#2ECC71', 'border': '1px solid #2ECC71'}).val('Create Task');
+                                }, 1500);
+                            } else if (a > c || startHour > 12 || startHour < 1 || startMinute > 59 || startMinute < 0 || endHour > 59 || endHour < 1 || endMinute > 59 || endMinute < 0) {
+                                $('#submit-add').css({'background-color': '#C0392B', 'border': '1px solid #C0392B'}).val('Invalid Dates!');
                                 setTimeout(function () {
                                     $('#submit-add').css({'background-color': '#2ECC71', 'border': '1px solid #2ECC71'}).val('Create Task');
                                 }, 1500);

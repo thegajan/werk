@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addTask.php" afterPath="$PROJECT_DIR$/addTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +37,7 @@
       <file leaf-file-name="header.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="49" selection-start="11275" selection-end="11275" vertical-scroll-proportion="0.5648" vertical-offset="2775" max-vertical-offset="3400">
+            <state line="107" column="85" selection-start="6245" selection-end="6245" vertical-scroll-proportion="0.2384" vertical-offset="1687" max-vertical-offset="3519">
               <folding>
                 <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
               </folding>
@@ -709,7 +707,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="49" selection-start="11275" selection-end="11275" vertical-scroll-proportion="0.5648" vertical-offset="2775" max-vertical-offset="3400">
+        <state line="107" column="85" selection-start="6245" selection-end="6245" vertical-scroll-proportion="0.2384" vertical-offset="1687" max-vertical-offset="3519">
           <folding>
             <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
           </folding>
