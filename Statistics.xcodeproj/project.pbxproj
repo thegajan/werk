@@ -230,6 +230,7 @@
 				D92928E61A8F3EED00CCA1CF /* TaskCreationUI */,
 				D931A4A81A8DE9C3000B8E8B /* UIManagement */,
 				D92928E21A8F3DB300CCA1CF /* Core Data */,
+				D9C4BC001A91CBF700F27EBC /* Syncing */,
 				D931A4A71A8DE4BF000B8E8B /* UIOptions */,
 				D931A48A1A8DDD1D000B8E8B /* Images.xcassets */,
 				D931A48C1A8DDD1D000B8E8B /* LaunchScreen.xib */,
@@ -290,6 +291,15 @@
 				D92928EB1A8F3FA300CCA1CF /* InterfaceController.m */,
 			);
 			name = UIManagement;
+			sourceTree = "<group>";
+		};
+		D9C4BC001A91CBF700F27EBC /* Syncing */ = {
+			isa = PBXGroup;
+			children = (
+				D9C4BC011A91CC7900F27EBC /* SyncUtility.h */,
+				D9C4BC021A91CC7900F27EBC /* SyncUtility.m */,
+			);
+			name = Syncing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +423,7 @@
 				D96C18991A9084CD00202BE1 /* CoreDataHandler.m in Sources */,
 				D9FF04D61A91D89B0010436C /* SuccessView.m in Sources */,
 				D92928EC1A8F3FA300CCA1CF /* InterfaceController.m in Sources */,
+				D9C4BC031A91CC7900F27EBC /* SyncUtility.m in Sources */,
 				D92928E11A8F3DAB00CCA1CF /* Account.m in Sources */,
 				D931A4801A8DDD1D000B8E8B /* AppDelegate.m in Sources */,
 				D91275111A927B530009DEDD /* PHTextView.m in Sources */,
