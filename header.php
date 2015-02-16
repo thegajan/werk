@@ -96,7 +96,7 @@ $_SESSION['token'] = $token; //store it as session variable
                         var endHour = document.getElementById('endHour').value;
                         var endMinute = document.getElementById('endMinute').value;
                         var endTOD = document.getElementById('endTOD').value;
-                        alert(str + " " + str1);
+//                        alert(str + " " + str1);
 <!--                        var form_data = {-->
 <!--                            data: {taskName: taskName, description: description, sur: str, startHour: startHour, startMinute: startMinute, startTOD: startTOD, sur1: str1, endHour: endHour, endMinute: endMinute, endTOD: endTOD},-->
 <!--                            token: '--><?php //echo $token; ?><!--',-->

@@ -17,9 +17,10 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             $endMinute = $_POST['endMinute'];
             $endTOD = $_POST['endTOD'];
             $creator = "1";
-            echo $taskName . " " . $description;
+//            echo $taskName . " " . $description;
             $startTime = $startDate . " " . $startHour . ":" . $startMinute . ":00" . " " . $startTOD;
             $endTime = $endDate . " " . $endHour . ":" . $endMinute . ":00" . " " . $endTOD;
+            echo $startTime . " " . $endTime;
             function validateDate($date)
             {
                 $d = DateTime::createFromFormat('m/d/Y', $date);
@@ -30,7 +31,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                 echo "form not complete";
             } else{
                 include_once 'connManager.php';
-                $sql = "INSERT INTO event_master (task_name, task_description, time_start, time_end, creator) VALUES (\"" . $taskName . "\", \"" . $description . "\", STR_TO_DATE('" . $startTime . "','%c/%e/%Y %r'), STR_TO_DATE('" . $endTime . "','%c/%e/%Y %r'), '" . $creator . "')";
+                $sql = "INSERT INTO task_master (task_name, task_description, time_start, time_end, creator) VALUES (\"" . $taskName . "\", \"" . $description . "\", STR_TO_DATE('" . $startTime . "','%c/%e/%Y %r'), STR_TO_DATE('" . $endTime . "','%c/%e/%Y %r'), '" . $creator . "')";
                 $conn = new connManager();
                 $Connection = $conn->GetConnection();
                 if (!$Connection) {
@@ -43,7 +44,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                 if ($pass > 0) {
                     echo "success";
                 } else {
-                    echo "failed";
+                    echo error_reporting(E_ALL);
                 }
             }
         } else {
