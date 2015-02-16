@@ -16,5 +16,6 @@
 +(UIColor *)mainRed;
 +(UIColor *)mainWhite;
 +(UIColor *)secondaryGreen;
++(UIColor *)secondaryRed;
 
 @end

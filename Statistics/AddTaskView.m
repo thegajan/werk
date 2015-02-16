@@ -19,6 +19,9 @@
     NSMutableArray * vertConstraints;
     NSMutableArray * horizConstraints;
     BOOL didCreateTask;
+    
+    NSString * confirmText;
+    UIColor * confirmColor;
 }
 
 @end
@@ -67,6 +70,9 @@
 -(void)loadBasicUI {
     self.backgroundColor = [ColorOptions mainWhite];
     
+    confirmText = @"Create Task";
+    confirmColor = [ColorOptions secondaryGreen];
+    
     _titleInput.backgroundColor = [ColorOptions mainWhite];
     _titleInput.layer.cornerRadius = 9.0;
     _titleInput.layer.borderColor = [ColorOptions mainRed].CGColor;
@@ -92,11 +98,11 @@
     _timeSelection.tintColor = [ColorOptions mainRed];
     [_timeSelection setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Exo2-Black" size:18]} forState:UIControlStateNormal];
     
-    _confirmTask.backgroundColor = [ColorOptions secondaryGreen];
+    _confirmTask.backgroundColor = confirmColor;
     _confirmTask.layer.cornerRadius = 9.0;
     _confirmTask.titleLabel.font = [UIFont fontWithName:@"Exo2-Light" size:24];
     [_confirmTask setTitleColor:[ColorOptions mainWhite] forState:UIControlStateNormal];
-    [_confirmTask setTitle:@"Create Task" forState:UIControlStateNormal];
+    [_confirmTask setTitle:confirmText forState:UIControlStateNormal];
     
     vertConstraints = [NSMutableArray new];
     horizConstraints = [NSMutableArray new];
@@ -158,7 +164,7 @@
 -(void)resetOptions {
     if (didCreateTask) {
         _titleInput.text = @"";
-        _descriptionInput.text = @"Task Description";
+        _descriptionInput.text = @"";
         _timePicker.date = [NSDate new];
         startTime = _timePicker.date;
         endTime = _timePicker.date;
@@ -169,7 +175,21 @@
 }
 
 -(void)attemptToCreateTask {
-    
+    if (_titleInput.text.length == 0)
+        [self displayErrorWithMessage:@"Incomplete Form"];
+    else if ([endTime compare:startTime] == NSOrderedAscending)
+        [self displayErrorWithMessage:@"Invalid Dates"];
+    else
+        [self createTask];
+}
+
+-(void)displayErrorWithMessage:(NSString *)text {
+    [_confirmTask setBackgroundColor:[ColorOptions secondaryRed]];
+    [_confirmTask setTitle:text forState:UIControlStateNormal];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_confirmTask setBackgroundColor:confirmColor];
+        [_confirmTask setTitle:confirmText forState:UIControlStateNormal];
+    });
 }
 
 -(void)createTask {
