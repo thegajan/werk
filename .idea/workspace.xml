@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobile_php/addTaskApi.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile_php/addTask.php" afterPath="$PROJECT_DIR$/mobile_php/addTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -26,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="addTaskApi.txt" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
+      <file leaf-file-name="addTask.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="31" selection-start="297" selection-end="297" vertical-scroll-proportion="0.23502304" vertical-offset="0" max-vertical-offset="651">
+            <state line="37" column="36" selection-start="1449" selection-end="1449" vertical-scroll-proportion="1.0608" vertical-offset="0" max-vertical-offset="1411">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addTask.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
+      <file leaf-file-name="addTaskApi.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="315" selection-end="499" vertical-scroll-proportion="-5.8846154" vertical-offset="17" max-vertical-offset="1360">
+            <state line="9" column="31" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
               <folding />
             </state>
           </provider>
@@ -72,12 +72,12 @@
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/connManager.php" />
         <option value="$PROJECT_DIR$/mobile_php/add_task.php" />
-        <option value="$PROJECT_DIR$/mobile_php/addTask.php" />
         <option value="$PROJECT_DIR$/css/header.css" />
         <option value="$PROJECT_DIR$/js/header.js" />
         <option value="$PROJECT_DIR$/addTask.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/mobile_php/addTaskApi.txt" />
+        <option value="$PROJECT_DIR$/mobile_php/addTask.php" />
       </list>
     </option>
   </component>
@@ -406,13 +406,18 @@
       <created>1424039100032</created>
       <updated>1424039100032</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="api">
+      <created>1424211218112</created>
+      <updated>1424211218112</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -428,7 +433,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -460,7 +464,8 @@
     <MESSAGE value="need new db creds" />
     <MESSAGE value="awesome encrypted ajax :D + fixed fonts issues" />
     <MESSAGE value="FUCKING SHIT" />
-    <option name="LAST_COMMIT_MESSAGE" value="FUCKING SHIT" />
+    <MESSAGE value="api" />
+    <option name="LAST_COMMIT_MESSAGE" value="api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -760,16 +765,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
+    <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="315" selection-end="499" vertical-scroll-proportion="-5.8846154" vertical-offset="17" max-vertical-offset="1360">
+        <state line="9" column="31" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
+    <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="297" selection-end="297" vertical-scroll-proportion="0.23502304" vertical-offset="0" max-vertical-offset="651">
+        <state line="37" column="36" selection-start="1449" selection-end="1449" vertical-scroll-proportion="1.0608" vertical-offset="0" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>

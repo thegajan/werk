@@ -8,6 +8,9 @@ $lastUpdated = $taskInfo['last_updated'];
 $creator = ['creator_id'];
 $creator = '1';
 foreach ($taskInfo as $a) {
+    if(count($a) == 1){
+        continue;
+    }
     $taskName = $a['taskName'];
     $description = $a['description'];
     $startDate = $a['startDate'];
