@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile_php/addTask.php" afterPath="$PROJECT_DIR$/mobile_php/addTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile_php/addTaskApi.txt" afterPath="$PROJECT_DIR$/mobile_php/addTaskApi.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -26,10 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="addTask.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="15" selection-start="288" selection-end="288" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1411">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="addTaskApi.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="43" selection-start="279" selection-end="279" vertical-scroll-proportion="0.20890938" vertical-offset="0" max-vertical-offset="651">
+            <state line="2" column="78" selection-start="126" selection-end="126" vertical-scroll-proportion="0.052227344" vertical-offset="0" max-vertical-offset="651">
               <folding />
             </state>
           </provider>
@@ -409,7 +419,11 @@
       <created>1424212216638</created>
       <updated>1424212216639</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="fixed array issues i think">
+      <created>1424212260409</created>
+      <updated>1424212260410</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -760,21 +774,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="78" selection-start="8861" selection-end="8861" vertical-scroll-proportion="3.9168" vertical-offset="0" max-vertical-offset="3519">
+        <state line="135" column="78" selection-start="8860" selection-end="8861" vertical-scroll-proportion="0.9872" vertical-offset="1831" max-vertical-offset="3519">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.7616" vertical-offset="0" max-vertical-offset="1411">
+        <state line="8" column="15" selection-start="288" selection-end="288" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="43" selection-start="279" selection-end="279" vertical-scroll-proportion="0.20890938" vertical-offset="0" max-vertical-offset="651">
+        <state line="2" column="78" selection-start="126" selection-end="126" vertical-scroll-proportion="0.052227344" vertical-offset="0" max-vertical-offset="651">
           <folding />
         </state>
       </provider>

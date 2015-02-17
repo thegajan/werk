@@ -5,7 +5,7 @@ $taskInfo = json_decode($jsonFromPhone, true);
 include_once '../connManager.php';
 $endArray = array();
 $lastUpdated = $taskInfo['last_updated'];
-$creator = ['creator_id'];
+//$creator = ['creator_id'];
 $creator = '1';
 foreach ($taskInfo as $a) {
     if(count($a) == 1){
