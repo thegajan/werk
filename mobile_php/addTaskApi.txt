@@ -1,6 +1,19 @@
 ----- Adding A Task API INFO-----
 ARRAY FORMAT:
-    [{"last_updated":"yyyy/mm/dd hh:mm:ss (24 hour time)"}, {"creator_id": id},{task 1},{task 2}...}]
+{
+  "last_updated" : "12\/31\/1969 04:00:00 PM",
+  "info" : [
+    {
+      "status" : "create",
+      "id" : 1,
+      "taskName" : "abc",
+      "startDate" : "02\/17\/2015 02:57:43 PM",
+      "description" : "",
+      "endDate" : "02\/18\/2015 02:57:43 AM"
+    }
+  ],
+  "creator_id" : 0
+}
 KEYS:
     taskName
     description
