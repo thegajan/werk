@@ -7,7 +7,9 @@ $endArray = array();
 $lastUpdated = $taskInfo['last_updated'];
 //$creator = ['creator_id'];
 $creator = '1';
-foreach ($taskInfo as $a) {
+$resultArray = array();
+$tempArray = array();
+foreach ($taskInfo['info'] as $a) {
     if(count($a) == 1){
         continue;
     }
@@ -18,7 +20,7 @@ foreach ($taskInfo as $a) {
     $status = $a['status'];
     $oldId = $a['id'];
     if ($status == 'create') {
-        $sql = "INSERT INTO task_master (task_name, task_description, time_start, time_end, creator, last_updated) VALUES (\"" . $taskName . "\", \"" . $description . "\", STR_TO_DATE('" . $startDate . "','%c/%e/%Y %r'), STR_TO_DATE('" . $endDate . "','%c/%e/%Y %r'), '" . $creator . "', NOW())";
+        $sql = "INSERT INTO task_master (task_name, task_description, time_start, time_end, creator, last_updated) VALUES (\"" . $taskName . "\", \"" . $description . "\", '" . $startDate . "', '" . $endDate . "', '" . $creator . "', NOW())";
         $conn = new connManager();
         $Connection = $conn->GetConnection();
         if (!$Connection) {
@@ -56,21 +58,23 @@ foreach ($taskInfo as $a) {
     } else {
         echo json_encode(array('status' => 'nothing'));
     }
-    $sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND last_updated >'" . $lastUpdated;
-    $conn = new connManager();
-    $Connection = $conn->GetConnection();
-    if (!$Connection) {
-        echo "Failed to connect to MySQL: " . mysql_error();
-    }
-    $result = mysql_query($sql);
-    $resultArray = array();
-    while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-        $resultArray = $row;
-    }
-    mysql_free_result($result);
-    mysql_close($Connection);
-    $newJson = array_push($endArray, $resultArray);
-    $newJson = json_encode($newJson);
-    echo $newJson;
 }
+$sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND last_updated > '" . $lastUpdated . "'";
+$conn = new connManager();
+$Connection = $conn->GetConnection();
+if (!$Connection) {
+    echo "Failed to connect to MySQL: " . mysql_error();
+}
+$result = mysql_query($sql);
+//    mysql_free_result($result);
+while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+    $resultArray = $row;
+}
+mysql_close($Connection);
+$newJson = array_push($endArray, $resultArray);
+//$newJson = json_encode($newJson);
+$newJson = $endArray;
+echo 'dick bag';
+echo $lastUpdated;
+echo $newJson;
 ?>

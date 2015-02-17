@@ -15,9 +15,10 @@ ARRAY FORMAT:
   "creator_id" : 0
 }
 KEYS:
+    last_updated - yyyy/mm/dd hh:mm:ss
     taskName
     description
-    startDate - mm/dd/yyyy hh:mm:ss A
+    startDate - yyyy/mm/dd hh:mm:ss
     endDate - "
     status - "create" or "delete" (strings)
     id - the old id of the task

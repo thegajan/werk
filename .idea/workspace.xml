@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile_php/addTask.php" afterPath="$PROJECT_DIR$/mobile_php/addTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile_php/addTaskApi.txt" afterPath="$PROJECT_DIR$/mobile_php/addTaskApi.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,7 +30,7 @@
       <file leaf-file-name="addTask.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="15" selection-start="288" selection-end="288" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1411">
+            <state line="6" column="38" selection-start="240" selection-end="240" vertical-scroll-proportion="-1.1538461" vertical-offset="72" max-vertical-offset="1462">
               <folding />
             </state>
           </provider>
@@ -38,7 +39,7 @@
       <file leaf-file-name="addTaskApi.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="336" selection-end="336" vertical-scroll-proportion="0.41781875" vertical-offset="0" max-vertical-offset="651">
+            <state line="17" column="38" selection-start="380" selection-end="380" vertical-scroll-proportion="0.4439324" vertical-offset="0" max-vertical-offset="651">
               <folding />
             </state>
           </provider>
@@ -426,7 +427,11 @@
       <created>1424213480894</created>
       <updated>1424213480894</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fixed array issues i think">
+      <created>1424213925095</created>
+      <updated>1424213925095</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -784,14 +789,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="15" selection-start="288" selection-end="288" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1411">
+        <state line="6" column="38" selection-start="240" selection-end="240" vertical-scroll-proportion="-1.1538461" vertical-offset="72" max-vertical-offset="1462">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="336" selection-end="336" vertical-scroll-proportion="0.41781875" vertical-offset="0" max-vertical-offset="651">
+        <state line="17" column="38" selection-start="380" selection-end="380" vertical-scroll-proportion="0.4439324" vertical-offset="0" max-vertical-offset="651">
           <folding />
         </state>
       </provider>
