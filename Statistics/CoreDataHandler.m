@@ -70,23 +70,4 @@
     return account;
 }
 
-+(void)printAllTasks {
-    NSManagedObjectContext * moc = [[CoreDataHandler sharedInstance] moc];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:moc];
-    [fetchRequest setEntity:entity];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"t_start"
-    ascending:YES];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
-
-    NSError *error = nil;
-    NSArray *fetchedObjects = [moc executeFetchRequest:fetchRequest error:&error];
-    if (fetchedObjects == nil) {
-        NSLog(@"COULD NOT FETCH TASKS");
-    }
-    for (Task * t in fetchedObjects) {
-        NSLog(@"%@", t);
-    }
-}
-
 @end
