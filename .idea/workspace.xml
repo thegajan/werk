@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile_php/addTask.php" afterPath="$PROJECT_DIR$/mobile_php/addTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile_php/addTaskApi.txt" afterPath="$PROJECT_DIR$/mobile_php/addTaskApi.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -39,7 +38,7 @@
       <file leaf-file-name="addTaskApi.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="38" selection-start="380" selection-end="380" vertical-scroll-proportion="0.4439324" vertical-offset="0" max-vertical-offset="651">
+            <state line="3" column="39" selection-start="89" selection-end="89" vertical-scroll-proportion="0.078341015" vertical-offset="0" max-vertical-offset="651">
               <folding />
             </state>
           </provider>
@@ -431,7 +430,11 @@
       <created>1424213925095</created>
       <updated>1424213925095</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="fixed array issues i think">
+      <created>1424216202637</created>
+      <updated>1424216202637</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -796,7 +799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="38" selection-start="380" selection-end="380" vertical-scroll-proportion="0.4439324" vertical-offset="0" max-vertical-offset="651">
+        <state line="3" column="39" selection-start="89" selection-end="89" vertical-scroll-proportion="0.078341015" vertical-offset="0" max-vertical-offset="651">
           <folding />
         </state>
       </provider>
