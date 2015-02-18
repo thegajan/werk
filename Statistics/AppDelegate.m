@@ -71,6 +71,7 @@
     tbc.navigationItem.rightBarButtonItems = @[negativeSpace, settings, addTask];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[SyncUtility sharedInstance] syncDatabases];
     [[SyncUtility sharedInstance] startSyncLoop];
     
     return YES;

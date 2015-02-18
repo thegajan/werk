@@ -8,6 +8,7 @@
 
 #import "CoreDataHandler.h"
 #import "Task.h"
+#import "Account.h"
 
 @implementation CoreDataHandler
 
@@ -49,6 +50,9 @@
             NSDateComponents * dc = [calendar components:NSCalendarUnitMinute fromDate:start toDate:end options:0];
             task.length = [NSNumber numberWithInteger:dc.minute * 60];
             task.account = cdh.acc;
+            task.last_changed = [NSDate new];
+            task.should_delete = [NSNumber numberWithBool:NO];
+            task.local_id = [CoreDataHandler getNextLocalID];
             [CoreDataHandler saveContext];
         }
         else {
@@ -60,10 +64,18 @@
     }
 }
 
++(NSNumber *)getNextLocalID {
+    NSNumber * n = [[CoreDataHandler sharedInstance] acc].last_event_id;
+    [[[CoreDataHandler sharedInstance] acc] setLast_event_id:[NSNumber numberWithInteger:n.integerValue + 1]];
+    return n;
+}
+
 +(Account *)getAccount {
     Account * account = [CoreDataHandler sharedInstance].acc;
     if (!account) {
         account = [NSEntityDescription insertNewObjectForEntityForName:@"Account" inManagedObjectContext:[[CoreDataHandler sharedInstance] moc]];
+        account.last_synced = [NSDate dateWithTimeIntervalSince1970:0];
+        account.last_event_id = @1;
         [CoreDataHandler saveContext];
         // TODO: Setup account
     }
