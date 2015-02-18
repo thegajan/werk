@@ -1,0 +1,42 @@
+.task-content-div {
+    display: inline-block;
+}
+
+#curr-task-content-stuff table tbody tr {
+    border-bottom: 1px solid #ecf0f1;
+}
+
+#curr-task-content-stuff table tbody tr td {
+    padding: 11px 5px 10px;
+    font-family: 'open sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+#curr-task-content-stuff table {
+    width: 100%;
+}
+
+.icon-menu {
+    float: right;
+    cursor: pointer;
+}
+
+.task-left {
+    display: inline-block;
+}
+
+.icon--ei-star:hover {
+    /*stroke: #f1c40f;*/
+    fill: none;;
+    stroke: #f1c40f;
+    stroke-width: 1px;
+    stroke-dasharray: 2, 2;
+    stroke-linejoin: miter;
+}
+
+.icon-menu .icon--ei-chevron-down:hover {
+    fill: #DB4437;
+}
