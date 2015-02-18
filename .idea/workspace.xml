@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="all dis shit works now">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addTask.php" afterPath="$PROJECT_DIR$/addTask.php" />
+    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile_php/addTask.php" afterPath="$PROJECT_DIR$/mobile_php/addTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,7 +29,7 @@
       <file leaf-file-name="addTask.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="42" selection-start="2644" selection-end="2644" vertical-scroll-proportion="0.592" vertical-offset="905" max-vertical-offset="1547">
+            <state line="83" column="35" selection-start="2892" selection-end="2892" vertical-scroll-proportion="0.8368" vertical-offset="905" max-vertical-offset="1547">
               <folding />
             </state>
           </provider>
@@ -60,7 +59,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="features/mainUI" />
       </map>
     </option>
   </component>
@@ -442,7 +441,11 @@
       <created>1424216241413</created>
       <updated>1424216241413</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="all dis shit works now">
+      <created>1424219446626</created>
+      <updated>1424219446626</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -499,7 +502,8 @@
     <MESSAGE value="api" />
     <MESSAGE value="fixed array issues i think" />
     <MESSAGE value="fixed array issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed array issues" />
+    <MESSAGE value="all dis shit works now" />
+    <option name="LAST_COMMIT_MESSAGE" value="all dis shit works now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -808,7 +812,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="42" selection-start="2644" selection-end="2644" vertical-scroll-proportion="0.592" vertical-offset="905" max-vertical-offset="1547">
+        <state line="83" column="35" selection-start="2892" selection-end="2892" vertical-scroll-proportion="0.8368" vertical-offset="905" max-vertical-offset="1547">
           <folding />
         </state>
       </provider>

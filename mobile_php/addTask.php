@@ -11,9 +11,9 @@ $resultArray = array();
 $tempArray = array();
 $newJson = array();
 $otherArray = array();
-date_default_timezone_set ('UTC');
+date_default_timezone_set('UTC');
 foreach ($taskInfo['info'] as $a) {
-    if(count($a) == 1){
+    if (count($a) == 1) {
         continue;
     }
     $taskName = $a['taskName'];
@@ -81,5 +81,5 @@ $newJson = array_merge($endArray, $resultArray);
 //$newJson = $endArray;
 //echo 'dick bag';
 //echo $lastUpdated;
-echo json_encode($newJson);
+echo "[" . json_encode($newJson) . "]";
 ?>
