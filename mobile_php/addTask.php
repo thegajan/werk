@@ -75,11 +75,21 @@ while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
     array_push($otherArray, $resultArray);
 }
 mysql_close($Connection);
-$newJson = array_merge($endArray, $resultArray);
+
+//if (count($endArray) == 0) {
+//    $newJson = $otherArray;
+//    echo "[" . json_encode($newJson) . "]";
+//
+//} elseif(count($endArray) == 0 and count($otherArray)==0){
+//    echo '[]';
+//}
+//else {
+    $newJson = array_merge($endArray, $otherArray);
+    echo json_encode($newJson);
+//}
 //echo json_encode($resultArray);
 //$newJson = json_encode($newJson);
 //$newJson = $endArray;
 //echo 'dick bag';
 //echo $lastUpdated;
-echo "[" . json_encode($newJson) . "]";
 ?>

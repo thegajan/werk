@@ -29,7 +29,7 @@
       <file leaf-file-name="addTask.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="35" selection-start="2892" selection-end="2892" vertical-scroll-proportion="0.8368" vertical-offset="905" max-vertical-offset="1547">
+            <state line="75" column="1" selection-start="2647" selection-end="2647" vertical-scroll-proportion="0.5104" vertical-offset="973" max-vertical-offset="1717">
               <folding />
             </state>
           </provider>
@@ -445,7 +445,11 @@
       <created>1424219446626</created>
       <updated>1424219446626</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="all dis shit works now">
+      <created>1424221125582</created>
+      <updated>1424221125582</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -812,7 +816,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="35" selection-start="2892" selection-end="2892" vertical-scroll-proportion="0.8368" vertical-offset="905" max-vertical-offset="1547">
+        <state line="75" column="1" selection-start="2647" selection-end="2647" vertical-scroll-proportion="0.5104" vertical-offset="973" max-vertical-offset="1717">
           <folding />
         </state>
       </provider>
