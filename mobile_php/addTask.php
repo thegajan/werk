@@ -6,9 +6,12 @@ include_once '../connManager.php';
 $endArray = array();
 $lastUpdated = $taskInfo['last_updated'];
 //$creator = ['creator_id'];
-$creator = '1';
+$creator = 1;
 $resultArray = array();
 $tempArray = array();
+$newJson = array();
+$otherArray = array();
+date_default_timezone_set ('UTC');
 foreach ($taskInfo['info'] as $a) {
     if(count($a) == 1){
         continue;
@@ -69,12 +72,14 @@ $result = mysql_query($sql);
 //    mysql_free_result($result);
 while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
     $resultArray = $row;
+    array_push($otherArray, $resultArray);
 }
 mysql_close($Connection);
-$newJson = array_push($endArray, $resultArray);
+$newJson = array_merge($endArray, $resultArray);
+//echo json_encode($resultArray);
 //$newJson = json_encode($newJson);
-$newJson = $endArray;
-echo 'dick bag';
-echo $lastUpdated;
-echo $newJson;
+//$newJson = $endArray;
+//echo 'dick bag';
+//echo $lastUpdated;
+echo json_encode($newJson);
 ?>
