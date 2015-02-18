@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img_fonts/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Statistics/PHTextView.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Statistics/PHTextView.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/AddTaskView.h" afterPath="$PROJECT_DIR$/Statistics/AddTaskView.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/AddTaskView.m" afterPath="$PROJECT_DIR$/Statistics/AddTaskView.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/ColorOptions.h" afterPath="$PROJECT_DIR$/Statistics/ColorOptions.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/ColorOptions.m" afterPath="$PROJECT_DIR$/Statistics/ColorOptions.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/Info.plist" afterPath="$PROJECT_DIR$/Statistics/Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addTask.php" afterPath="$PROJECT_DIR$/addTask.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Statistics.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/werkDB.sql" afterPath="$PROJECT_DIR$/sql/werkDB.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile_php/addTask.php" afterPath="$PROJECT_DIR$/mobile_php/addTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -36,7 +25,29 @@
     <favorites_list name="werk" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="addTask.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="1" selection-start="2647" selection-end="2647" vertical-scroll-proportion="0.5104" vertical-offset="973" max-vertical-offset="1717">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="werk.task_master" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/7568e52d/7ccdfd08-a1c4-4731-b5e3-45da58867dbc/werk..task_master">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -44,10 +55,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="features/mainUI" />
       </map>
     </option>
   </component>
@@ -63,11 +75,12 @@
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/connManager.php" />
         <option value="$PROJECT_DIR$/mobile_php/add_task.php" />
-        <option value="$PROJECT_DIR$/mobile_php/addTask.php" />
         <option value="$PROJECT_DIR$/css/header.css" />
         <option value="$PROJECT_DIR$/js/header.js" />
-        <option value="$PROJECT_DIR$/addTask.php" />
         <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/mobile_php/addTaskApi.txt" />
+        <option value="$PROJECT_DIR$/addTask.php" />
+        <option value="$PROJECT_DIR$/mobile_php/addTask.php" />
       </list>
     </option>
   </component>
@@ -206,7 +219,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="844" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="options.lastSelected" value="settings.github" />
+    <property name="options.lastSelected" value="editor" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -396,24 +409,60 @@
       <created>1424039100032</created>
       <updated>1424039100032</updated>
     </task>
-    <task id="LOCAL-00031" summary="Changed description">
-      <created>1424114276120</created>
-      <updated>1424114276120</updated>
+    <task id="LOCAL-00031" summary="api">
+      <created>1424211218112</created>
+      <updated>1424211218112</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fixed array issues i think">
+      <created>1424212085322</created>
+      <updated>1424212085322</updated>
+    </task>
+    <task id="LOCAL-00033" summary="fixed array issues i think">
+      <created>1424212216638</created>
+      <updated>1424212216639</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fixed array issues i think">
+      <created>1424212260409</created>
+      <updated>1424212260410</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fixed array issues i think">
+      <created>1424213480894</created>
+      <updated>1424213480894</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fixed array issues i think">
+      <created>1424213925095</created>
+      <updated>1424213925095</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fixed array issues i think">
+      <created>1424216202637</created>
+      <updated>1424216202637</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fixed array issues">
+      <created>1424216241413</created>
+      <updated>1424216241413</updated>
+    </task>
+    <task id="LOCAL-00039" summary="all dis shit works now">
+      <created>1424219446626</created>
+      <updated>1424219446626</updated>
+    </task>
+    <task id="LOCAL-00040" summary="all dis shit works now">
+      <created>1424221125582</created>
+      <updated>1424221125582</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1669107" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3988183" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -454,19 +503,126 @@
     <MESSAGE value="need new db creds" />
     <MESSAGE value="awesome encrypted ajax :D + fixed fonts issues" />
     <MESSAGE value="FUCKING SHIT" />
-    <MESSAGE value="Changed description" />
-    <MESSAGE value="updated favicon and sql" />
-    <MESSAGE value="updated sql" />
-    <MESSAGE value="sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="sql" />
+    <MESSAGE value="api" />
+    <MESSAGE value="fixed array issues i think" />
+    <MESSAGE value="fixed array issues" />
+    <MESSAGE value="all dis shit works now" />
+    <option name="LAST_COMMIT_MESSAGE" value="all dis shit works now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="35" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="37" selection-start="7522" selection-end="7522" vertical-scroll-proportion="0.0" vertical-offset="2023" max-vertical-offset="3315">
+        <state line="123" column="46" selection-start="7747" selection-end="7747" vertical-scroll-proportion="0.0" vertical-offset="2091" max-vertical-offset="3332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="39" selection-start="1904" selection-end="1921" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="478" column="11" selection-start="8945" selection-end="8955" vertical-scroll-proportion="0.0" vertical-offset="8126" max-vertical-offset="8534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/7568e52d/7ccdfd08-a1c4-4731-b5e3-45da58867dbc/werk..task_master">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="35" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="266" selection-start="7983" selection-end="7983" vertical-scroll-proportion="0.0" vertical-offset="2091" max-vertical-offset="3315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="39" selection-start="1904" selection-end="1921" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="478" column="11" selection-start="8945" selection-end="8955" vertical-scroll-proportion="0.0" vertical-offset="8126" max-vertical-offset="8534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/7568e52d/7ccdfd08-a1c4-4731-b5e3-45da58867dbc/werk..task_master">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="35" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="85" selection-start="6245" selection-end="6245" vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="3315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="39" selection-start="1904" selection-end="1921" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="478" column="11" selection-start="8945" selection-end="8955" vertical-scroll-proportion="0.0" vertical-offset="8126" max-vertical-offset="8534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/7568e52d/7ccdfd08-a1c4-4731-b5e3-45da58867dbc/werk..task_master">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <folding />
         </state>
       </provider>
@@ -598,14 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/7568e52d/7ccdfd08-a1c4-4731-b5e3-45da58867dbc/werk..task_master">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="35" selection-start="723" selection-end="723" vertical-scroll-proportion="0.5168" vertical-offset="0" max-vertical-offset="625" />
@@ -616,36 +764,59 @@
         <state line="6" column="32" selection-start="191" selection-end="191" vertical-scroll-proportion="0.1632" vertical-offset="0" max-vertical-offset="625" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="224" selection-start="564" selection-end="564" vertical-scroll-proportion="0.2992" vertical-offset="0" max-vertical-offset="625" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="0" selection-start="420" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="799" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="478" column="11" selection-start="8945" selection-end="8955" vertical-scroll-proportion="0.0" vertical-offset="7951" max-vertical-offset="8602" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="35" selection-start="907" selection-end="907" vertical-scroll-proportion="0.6528418" vertical-offset="0" max-vertical-offset="651" />
+        <state line="25" column="35" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addTask.php">
+    <entry file="file://$PROJECT_DIR$/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="302" selection-start="2265" selection-end="2265" vertical-scroll-proportion="0.2864" vertical-offset="501" max-vertical-offset="1207">
+        <state line="478" column="11" selection-start="8945" selection-end="8955" vertical-scroll-proportion="0.0" vertical-offset="7951" max-vertical-offset="8602">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="18" selection-start="555" selection-end="555" vertical-scroll-proportion="0.1904" vertical-offset="85" max-vertical-offset="3502">
+        <state line="135" column="78" selection-start="8860" selection-end="8861" vertical-scroll-proportion="0.9872" vertical-offset="1831" max-vertical-offset="3519">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="39" selection-start="89" selection-end="89" vertical-scroll-proportion="0.078341015" vertical-offset="0" max-vertical-offset="651">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="26" selection-start="1063" selection-end="1110" vertical-scroll-proportion="0.2992" vertical-offset="204" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/7568e52d/7ccdfd08-a1c4-4731-b5e3-45da58867dbc/werk..task_master">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="1" selection-start="2647" selection-end="2647" vertical-scroll-proportion="0.5104" vertical-offset="973" max-vertical-offset="1717">
           <folding />
         </state>
       </provider>
