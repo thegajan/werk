@@ -20,7 +20,7 @@
 +(void)createTaskWithName:(NSString *)name withDescription:(NSString *)description startsAt:(NSDate *)start endsAt:(NSDate *)end;
 +(void)saveContext;
 +(Account *)getAccount;
-+(void)printAllTasks;
++(NSNumber *)getNextLocalID {
 
 
 @end

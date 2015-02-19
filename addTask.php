@@ -21,7 +21,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             $startTime = $startDate . " " . $startHour . ":" . $startMinute . ":00" . " " . $startTOD;
             $endTime = $endDate . " " . $endHour . ":" . $endMinute . ":00" . " " . $endTOD;
 //            echo $startTime . " " . $endTime;
-            date_default_timezone_set ('America/Los_Angeles');
+            date_default_timezone_set ('UTC');
             $currentDate = date('m/d/Y h:i:s A');
             function validateDate($date)
             {

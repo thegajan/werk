@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SyncUtility : NSObject
+@interface SyncUtility : NSObject <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
+@property (strong, nonatomic) NSMutableData * downloadData;
+
+-(void)syncDatabases;
+-(void)startSyncLoop;
 +(SyncUtility *)sharedInstance;
 
 @end

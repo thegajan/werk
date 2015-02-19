@@ -14,6 +14,7 @@
 #import "AddTaskController.h"
 #import "ColorOptions.h"
 #import "CoreDataHandler.h"
+#import "SyncUtility.h"
 
 @interface AppDelegate ()
 
@@ -70,6 +71,8 @@
     tbc.navigationItem.rightBarButtonItems = @[negativeSpace, settings, addTask];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[SyncUtility sharedInstance] syncDatabases];
+    [[SyncUtility sharedInstance] startSyncLoop];
     
     return YES;
 }
