@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addTask.php" afterPath="$PROJECT_DIR$/addTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile_php/addTask.php" afterPath="$PROJECT_DIR$/mobile_php/addTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -36,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="currTask.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/currTask.css">
+      <file leaf-file-name="addTask.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="20" selection-start="311" selection-end="311" vertical-scroll-proportion="0.13824885" vertical-offset="131" max-vertical-offset="782">
+            <state line="13" column="0" selection-start="376" selection-end="376" vertical-scroll-proportion="0.3536" vertical-offset="0" max-vertical-offset="1717">
               <folding />
             </state>
           </provider>
@@ -417,7 +416,11 @@
       <created>1424329495454</created>
       <updated>1424329495454</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Alex FUCK YOU">
+      <created>1424333145679</created>
+      <updated>1424333145679</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -479,7 +482,8 @@
     <MESSAGE value="fuck this shit in the pussy" />
     <MESSAGE value="FUCKING SHIT HOLES" />
     <MESSAGE value="FUCKING SHIT HOLES FOUND" />
-    <option name="LAST_COMMIT_MESSAGE" value="FUCKING SHIT HOLES FOUND" />
+    <MESSAGE value="Alex FUCK YOU" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alex FUCK YOU" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -710,26 +714,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="89" selection-start="1813" selection-end="1813" vertical-scroll-proportion="-1.3076923" vertical-offset="918" max-vertical-offset="1887">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/countDown.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="31" selection-start="54" selection-end="54" vertical-scroll-proportion="0.052227344" vertical-offset="0" max-vertical-offset="22508">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="376" selection-end="376" vertical-scroll-proportion="-1.0128" vertical-offset="854" max-vertical-offset="1734">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,7 +732,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/currTask.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="311" selection-end="311" vertical-scroll-proportion="0.13824885" vertical-offset="131" max-vertical-offset="782">
+        <state line="7" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="-0.01843318" vertical-offset="131" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="89" selection-start="1813" selection-end="1813" vertical-scroll-proportion="-1.3076923" vertical-offset="918" max-vertical-offset="1887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="376" selection-end="376" vertical-scroll-proportion="0.3536" vertical-offset="0" max-vertical-offset="1717">
           <folding />
         </state>
       </provider>
