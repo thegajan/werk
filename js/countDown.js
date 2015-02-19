@@ -112,7 +112,8 @@ var countdown = (
          * @const
          * @type {number}
          */
-        var DEFAULTS		= YEARS|MONTHS|DAYS|HOURS|MINUTES|SECONDS;
+//        var DEFAULTS		= YEARS|MONTHS|DAYS|HOURS|MINUTES|SECONDS;
+        var DEFAULTS        = DAYS|HOURS|MINUTES|SECONDS;
 
         /**
          * @private
@@ -1291,9 +1292,9 @@ var countdown = (
          * @public
          */
         var resetLabels = countdown.resetLabels = function() {
-            LABELS_SINGLUAR = ' millisecond| second| minute| hour| day| week| month| year| decade| century| millennium'.split('|');
-            LABELS_PLURAL = ' milliseconds| seconds| minutes| hours| days| weeks| months| years| decades| centuries| millennia'.split('|');
-            LABEL_LAST = ' and ';
+            LABELS_SINGLUAR = ' millisecond| s| m | h | d| week| month| year| decade| century| millennium'.split('|');
+            LABELS_PLURAL = ' milliseconds| s| m | h | d| weeks| months| years| decades| centuries| millennia'.split('|');
+            LABEL_LAST = ' ';
             LABEL_DELIM = ', ';
             LABEL_NOW = '';
             formatNumber = function(value) { return value; };

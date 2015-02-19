@@ -1,5 +1,6 @@
 .icon__cnt {
     cursor: pointer;
+    z-index: 20;
 }
 
 #side-menu {
@@ -58,7 +59,7 @@
     float: right;
     height: 91.5vh;
     border-left: 1px solid #ecf0f1;
-    width: 400px;
+    width: 450px;
 }
 
 .header {
@@ -72,6 +73,7 @@
 }
 
 .icons {
+    z-index: -1;
     cursor: pointer;
     fill: #DB4437;
     width: 27px;
