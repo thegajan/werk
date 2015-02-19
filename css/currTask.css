@@ -12,7 +12,6 @@
     font-weight: 300;
     font-size: 20px;
     cursor: pointer;
-
 }
 
 #curr-task-content-stuff table {
@@ -20,6 +19,7 @@
 }
 
 .icon-menu {
+    z-index: -1;
     float: right;
     cursor: pointer;
 }
@@ -39,4 +39,20 @@
 
 .icon-menu .icon--ei-chevron-down:hover {
     fill: #DB4437;
+}
+
+.icon--ei-star {
+    z-index: -1;
+}
+
+.icon--ei-chevron-down {
+    z-index: -1;
+}
+
+.heads {
+    display: inline-block;
+}
+
+.timer {
+    font-size: 20px;
 }

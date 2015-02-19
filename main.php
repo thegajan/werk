@@ -2,6 +2,7 @@
 include_once "header.php";
 ?>
 <body>
+<script type="text/javascript" src="js/countDown.js"></script>
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/currTask.css">
 <!--<section>-->
@@ -54,7 +55,8 @@ include_once "header.php";
             <div id="curr-task-header">
                 <h1 class="header">Current Tasks</h1>
 
-                <div data-icon="ei-chevron-down" class="icons header-icons"></div>
+                <img src="img_fonts/android-more-vertical.svg" class="icons header-icons"></img>
+
                 <div data-icon="ei-search" class="icons header-icons"></div>
             </div>
             <div id="curr-task-content-stuff" class="task-content">
@@ -64,7 +66,18 @@ include_once "header.php";
                         <td>
                             <div class="task-content-div"><input type="checkbox" class="task-left">
 
-                                <h1 class="task-left">Name</h1></div>
+                                <h1 class="task-left heads">Name - </h1>
+
+                                <h1 class="timer heads" id="countdown-holder"></h1></div>
+                            <script>
+                                var clock = document.getElementById("countdown-holder")
+                                    , targetDate = new Date(2015, 1, 27); // Jan 1, 2050;
+
+                                clock.innerHTML = countdown(targetDate).toString();
+                                setInterval(function () {
+                                    clock.innerHTML = countdown(targetDate).toString();
+                                }, 1000);
+                            </script>
                             <div class="task-content-div icon-menu">
                                 <div data-icon="ei-star"></div>
                                 <div data-icon="ei-chevron-down"></div>
@@ -75,7 +88,18 @@ include_once "header.php";
                         <td>
                             <div class="task-content-div"><input type="checkbox" class="task-left">
 
-                                <h1 class="task-left">Name</h1></div>
+                                <h1 class="task-left heads">Name - </h1>
+
+                                <h1 class="timer heads" id="countdown-holder1"></h1></div>
+                            <script>
+                                var clock1 = document.getElementById("countdown-holder1")
+                                    , targetDate = new Date(2015, 1, 27); // Jan 1, 2050;
+
+                                clock1.innerHTML = countdown(targetDate).toString();
+                                setInterval(function () {
+                                    clock1.innerHTML = countdown(targetDate).toString();
+                                }, 1000);
+                            </script>
                             <div class="task-content-div icon-menu">
                                 <div data-icon="ei-star"></div>
                                 <div data-icon="ei-chevron-down"></div>

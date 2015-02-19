@@ -11,7 +11,19 @@ $resultArray = array();
 $tempArray = array();
 $newJson = array();
 $otherArray = array();
-date_default_timezone_set('UTC');
+$sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND last_updated > STR_TO_DATE('" . $lastUpdated . "','%Y/%c/%e %T')";
+$conn = new connManager();
+$Connection = $conn->GetConnection();
+if (!$Connection) {
+    echo "Failed to connect to MySQL: " . mysql_error();
+}
+$result = mysql_query($sql);
+//    mysql_free_result($result);
+while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+    $resultArray = $row;
+    array_push($otherArray, $resultArray);
+}
+mysql_close($Connection);
 foreach ($taskInfo['info'] as $a) {
     if (count($a) == 1) {
         continue;
@@ -62,19 +74,6 @@ foreach ($taskInfo['info'] as $a) {
         echo json_encode(array('status' => 'nothing'));
     }
 }
-$sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND last_updated > '" . $lastUpdated . "'";
-$conn = new connManager();
-$Connection = $conn->GetConnection();
-if (!$Connection) {
-    echo "Failed to connect to MySQL: " . mysql_error();
-}
-$result = mysql_query($sql);
-//    mysql_free_result($result);
-while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-    $resultArray = $row;
-    array_push($otherArray, $resultArray);
-}
-mysql_close($Connection);
 
 //if (count($endArray) == 0) {
 //    $newJson = $otherArray;
@@ -84,8 +83,8 @@ mysql_close($Connection);
 //    echo '[]';
 //}
 //else {
-    $newJson = array_merge($endArray, $otherArray);
-    echo json_encode($newJson);
+$newJson = array_merge($endArray, $otherArray);
+echo json_encode($newJson);
 //}
 //echo json_encode($resultArray);
 //$newJson = json_encode($newJson);

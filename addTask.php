@@ -2,7 +2,6 @@
 session_start();
 if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
 
-
     if (@isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == "https://www.readmybluebutton.com/werk/main.php") {
         //HTTP_REFERER verification
         if ($_POST['token'] == $_SESSION['token']) {
@@ -21,7 +20,6 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             $startTime = $startDate . " " . $startHour . ":" . $startMinute . ":00" . " " . $startTOD;
             $endTime = $endDate . " " . $endHour . ":" . $endMinute . ":00" . " " . $endTOD;
 //            echo $startTime . " " . $endTime;
-            date_default_timezone_set ('UTC');
             $currentDate = date('m/d/Y h:i:s A');
             function validateDate($date)
             {
