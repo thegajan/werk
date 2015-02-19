@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @class Account;
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
 
-@property (strong, nonatomic) Account * acc;
+@property (strong, nonatomic) UITableView * taskView;
+@property (strong, nonatomic) NSFetchedResultsController * fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext * managedObjectContext;
 
 @end
 

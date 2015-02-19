@@ -8,6 +8,9 @@
 
 #import "MainViewController.h"
 #import "ColorOptions.h"
+#import "CoreDataHandler.h"
+#import "TaskCell.h"
+#import "Task.h"
 
 @interface MainViewController ()
 
@@ -17,7 +20,35 @@
 
 -(void)loadView {
     [super loadView];
+    _taskView = [[UITableView alloc] init];
+    _taskView.dataSource = self;
+    _taskView.delegate = self;
+    [_taskView setTranslatesAutoresizingMaskIntoConstraints:NO];
     
+    [self setUpDataFetch];
+}
+
+-(void)setUpDataFetch {
+    static NSString * const cacheName = @"taskCache";
+    
+    [NSFetchedResultsController deleteCacheWithName:cacheName];
+    
+    _managedObjectContext = [[CoreDataHandler sharedInstance] moc];
+    
+    NSFetchRequest * fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription * entityDescription = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:_managedObjectContext];
+    [fetchRequest setEntity:entityDescription];
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"account == %@", [CoreDataHandler getAccount]];
+    [fetchRequest setPredicate:predicate];
+    NSSortDescriptor * sortSection = [[NSSortDescriptor alloc] initWithKey:@"n_status" ascending:YES];
+    NSSortDescriptor * sortTime = [[NSSortDescriptor alloc] initWithKey:@"t_end" ascending:NO];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortSection, sortTime, nil]];
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:_managedObjectContext sectionNameKeyPath:@"s_status" cacheName:cacheName];
+    
+    NSError * err;
+    _fetchedResultsController.delegate = self;
+    if (![_fetchedResultsController performFetch:&err])
+        NSLog(@"ERROR: FAILED TO FETCH EVENTS: %@", err);
 }
 
 - (void)viewDidLoad {
@@ -29,7 +60,7 @@
 }
 
 -(void)addUIComponents {
-
+    [self.view addSubview:_taskView];
 }
 
 -(void)loadBasicUI {
@@ -38,11 +69,118 @@
 }
 
 -(void)createContstraints {
-
+    NSNumber * tab = @(self.tabBarController.tabBar.frame.size.height);
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_taskView]-tab-|" options:0 metrics:NSDictionaryOfVariableBindings(tab) views:NSDictionaryOfVariableBindings(_taskView)]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_taskView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_taskView)]];
 }
 
 -(void)openSettings {
     
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [[_fetchedResultsController sections] count];
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if ([[_fetchedResultsController sections] count] > 0) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+        return [sectionInfo numberOfObjects];
+    }
+    else
+        return 0;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString * const cell_id = @"task cell";
+    TaskCell * cell = [tableView dequeueReusableCellWithIdentifier:cell_id];
+    if (!cell) {
+        cell = [[TaskCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cell_id];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    [self configureCell:cell atIndexPath:indexPath];
+    return cell;
+}
+
+-(void)configureCell:(TaskCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    Task * info = [_fetchedResultsController objectAtIndexPath:indexPath];
+    cell.name = info.name;
+    cell.end = info.t_end;
+    [cell updateTimeDisplay];
+}
+
+-(NSString *)tableView:(TaskCell *)tableView titleForHeaderInSection:(NSInteger)section {
+    if ([[_fetchedResultsController sections] count] > 0) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+        return [sectionInfo name];
+    }
+    else
+        return nil;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if ([[_fetchedResultsController sections] count] > 0) {
+        UILabel * label = [UILabel new];
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+        label.text = [sectionInfo name];
+        label.font = [UIFont fontWithName:@"Exo2-Medium" size:30.0];
+        return label;
+    }
+    else
+        return nil;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 30.0;
+}
+
+-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [_fetchedResultsController sectionIndexTitles];
+}
+
+-(NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return [_fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+}
+
+-(void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [_taskView beginUpdates];
+}
+
+-(void)controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+    NSLog(@"CHANGED SECTION: %ld", sectionIndex);
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [_taskView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [_taskView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    NSLog(@"CHANGED OBJECT ROW: %ld SECTION: %ld", newIndexPath.row, newIndexPath.section);
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [_taskView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [_taskView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:(TaskCell *)[_taskView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            break;
+        case NSFetchedResultsChangeMove:
+            [_taskView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [_taskView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+-(void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [_taskView endUpdates];
 }
 
 @end

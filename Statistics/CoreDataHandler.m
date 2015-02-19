@@ -48,11 +48,20 @@
             task.t_end = end;
             NSCalendar * calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
             NSDateComponents * dc = [calendar components:NSCalendarUnitMinute fromDate:start toDate:end options:0];
-            task.length = [NSNumber numberWithInteger:dc.minute * 60];
+            task.length = dc.minute * 60;
             task.account = cdh.acc;
             task.last_changed = [NSDate new];
             task.should_delete = [NSNumber numberWithBool:NO];
             task.local_id = [CoreDataHandler getNextLocalID];
+            NSDate * now = [NSDate new];
+            if (!([start compare:now] == NSOrderedDescending)) {
+                task.n_status = TaskStatusFuture;
+            }
+            else if (!([end compare:now] == NSOrderedAscending)) {
+                task.n_status = TaskStatusCompleted;
+            }
+            else
+                task.n_status = TaskStatusCurrent;
             [CoreDataHandler saveContext];
         }
         else {
@@ -64,9 +73,10 @@
     }
 }
 
-+(NSNumber *)getNextLocalID {
-    NSNumber * n = [[CoreDataHandler sharedInstance] acc].last_event_id;
-    [[[CoreDataHandler sharedInstance] acc] setLast_event_id:[NSNumber numberWithInteger:n.integerValue + 1]];
++(int64_t)getNextLocalID {
+    int64_t n = [[CoreDataHandler sharedInstance] acc].last_event_id;
+    [[[CoreDataHandler sharedInstance] acc] setLast_event_id:n + 1];
+    [CoreDataHandler saveContext];
     return n;
 }
 
@@ -74,8 +84,8 @@
     Account * account = [CoreDataHandler sharedInstance].acc;
     if (!account) {
         account = [NSEntityDescription insertNewObjectForEntityForName:@"Account" inManagedObjectContext:[[CoreDataHandler sharedInstance] moc]];
-        account.last_synced = [NSDate dateWithTimeIntervalSince1970:0];
-        account.last_event_id = @1;
+        account.last_synced = [NSDate distantPast];
+        account.last_event_id = 1;
         [CoreDataHandler saveContext];
         // TODO: Setup account
     }

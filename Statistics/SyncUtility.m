@@ -14,10 +14,28 @@
 #define SECONDS_PER_SYNC 10
 #define TIMEOUT 9
 
-const char * address = "https://www.readmybluebutton.com/werk/mobile_php/addTask.php";
-//const char * address = "http://www.readmybluebutton.com/werk/mobile_php/test.php";
+@interface SyncUtility ()
+
+@property (strong, nonatomic) NSString * address;
+@property (strong, nonatomic) NSDateFormatter * df;
+@property (strong, nonatomic) NSNumberFormatter * nf;
+
+@end
 
 @implementation SyncUtility
+
+-(id)init {
+    self = [super init];
+    if (self) {
+        _address = @"https://www.readmybluebutton.com/werk/mobile_php/addTask.php";
+        _df = [[NSDateFormatter alloc] init];
+        _df.dateFormat = @"yyyy/MM/dd HH:mm:ss";
+        _df.timeZone = [NSTimeZone timeZoneWithName:@"CST"];
+        _nf = [[NSNumberFormatter alloc] init];
+        _nf.numberStyle = NSNumberFormatterDecimalStyle;
+    }
+    return self;
+}
 
 +(SyncUtility *)sharedInstance {
     static SyncUtility * sharedInstance = nil;
@@ -33,7 +51,7 @@ const char * address = "https://www.readmybluebutton.com/werk/mobile_php/addTask
 
 -(void)syncDatabases {
     NSString * database = [self getDatabase];
-    NSURL * url = [NSURL URLWithString:[NSString stringWithCString:address encoding:NSStringEncodingConversionAllowLossy]];
+    NSURL * url = [NSURL URLWithString:_address];
     NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:TIMEOUT];
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -47,7 +65,6 @@ const char * address = "https://www.readmybluebutton.com/werk/mobile_php/addTask
     NSMutableArray * data;
     NSMutableDictionary * totalData;
     NSMutableDictionary * taskInfo;
-    NSDateFormatter * df;
     Account * acc = [CoreDataHandler getAccount];
     NSManagedObjectContext * moc = [[CoreDataHandler sharedInstance] moc];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -64,17 +81,14 @@ const char * address = "https://www.readmybluebutton.com/werk/mobile_php/addTask
     
     totalData = [NSMutableDictionary dictionary];
     data = [NSMutableArray array];
-    df = [[NSDateFormatter alloc] init];
-    df.dateFormat = @"yyyy/MM/dd HH:mm:ss";
-    df.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
     for (Task * task in fetchedObjects) {
         taskInfo = [NSMutableDictionary dictionary];
         [taskInfo setValue:task.name forKey:@"taskName"];
         [taskInfo setValue:task.task_description forKey:@"description"];
-        [taskInfo setValue:[df stringFromDate:task.t_start] forKey:@"startDate"];
-        [taskInfo setValue:[df stringFromDate:task.t_end] forKey:@"endDate"];
+        [taskInfo setValue:[_df stringFromDate:task.t_start] forKey:@"startDate"];
+        [taskInfo setValue:[_df stringFromDate:task.t_end] forKey:@"endDate"];
         
-        if (task.should_delete.intValue) {
+        if (task.should_delete) {
             [taskInfo setValue:@"delete" forKey:@"status"];
             [moc deleteObject:task];
         }
@@ -82,12 +96,12 @@ const char * address = "https://www.readmybluebutton.com/werk/mobile_php/addTask
             [taskInfo setValue:@"create" forKey:@"status"];
         }
         
-        [taskInfo setValue:task.local_id forKey:@"id"];
+        [taskInfo setValue:@(task.local_id) forKey:@"id"];
         [data addObject:taskInfo];
     }
     [totalData setObject:data forKey:@"info"];
-    [totalData setObject:acc.user_id forKey:@"creator_id"];
-    [totalData setObject:[df stringFromDate:acc.last_synced] forKey:@"last_updated"];
+    [totalData setObject:@(acc.user_id) forKey:@"creator_id"];
+    [totalData setObject:[_df stringFromDate:acc.last_synced] forKey:@"last_updated"];
     NSError * err;
     NSData * jsonData = [NSJSONSerialization dataWithJSONObject:totalData options:NSJSONWritingPrettyPrinted error:&err];
     if (!jsonData) {
@@ -116,7 +130,6 @@ const char * address = "https://www.readmybluebutton.com/werk/mobile_php/addTask
     NSArray * fetchedObjects;
     Task * task;
     NSString * response = [[NSString alloc] initWithData:_downloadData encoding:NSUTF8StringEncoding];
-    [CoreDataHandler sharedInstance].acc.last_synced = [NSDate new];
     NSLog(@"RESPONSE: %@", response);
     
     NSError * err;
@@ -143,24 +156,33 @@ const char * address = "https://www.readmybluebutton.com/werk/mobile_php/addTask
             }
             else {
                 task = [fetchedObjects objectAtIndex:0];
-                task.server_id = [object objectForKey:@"new_id"];
+                task.server_id = [[object objectForKey:@"new_id"] integerValue];
             }
         }
         else if ([object objectForKey:@"id"]) {
             task = [NSEntityDescription insertNewObjectForEntityForName:@"Task" inManagedObjectContext:[[CoreDataHandler sharedInstance] moc]];
-            task.server_id = [object objectForKey:@"id"];
+            task.name = [object objectForKey:@"task_name"];
+            task.server_id = [_nf numberFromString:[object objectForKey:@"id"]].integerValue;
             task.task_description = [object objectForKey:@"task_description"];
-            task.t_start = nil;
-            task.t_end = nil;
+            task.t_start = [_df dateFromString:[object objectForKey:@"time_start"]];
+            task.t_end = [_df dateFromString:[object objectForKey:@"time_end"]];
             NSCalendar * calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
             NSDateComponents * dc = [calendar components:NSCalendarUnitMinute fromDate:task.t_start toDate:task.t_end options:0];
-            task.length = [NSNumber numberWithInteger:dc.minute * 60];
+            task.length = dc.minute * 60;
             task.account = [[CoreDataHandler sharedInstance] acc];
             task.last_changed = [NSDate new];
-            task.should_delete = [NSNumber numberWithBool:NO];
+            task.should_delete = NO;
             task.local_id = [CoreDataHandler getNextLocalID];
+            NSDate * now = [NSDate new];
+            if (!([task.t_start compare:now] == NSOrderedAscending))
+                task.n_status = TaskStatusFuture;
+            else if (!([task.t_end compare:now] == NSOrderedDescending))
+                task.n_status = TaskStatusCompleted;
+            else
+                task.n_status = TaskStatusCurrent;
         }
     }
+    [CoreDataHandler sharedInstance].acc.last_synced = [[NSDate alloc] init];
     [CoreDataHandler saveContext];
 }
 
