@@ -63,7 +63,7 @@ foreach ($taskInfo['info'] as $a) {
     }
 }
 date_default_timezone_set('UTC');
-$sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND last_updated > STR_TO_DATE('" . $lastUpdated . "','%Y/%c/%e %T')'";
+$sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND last_updated > STR_TO_DATE('" . $lastUpdated . "','%Y/%c/%e %T')";
 $conn = new connManager();
 $Connection = $conn->GetConnection();
 if (!$Connection) {
