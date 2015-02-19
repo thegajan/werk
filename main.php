@@ -54,7 +54,7 @@ include_once "header.php";
             <div id="curr-task-header">
                 <h1 class="header">Current Tasks</h1>
 
-                <div data-icon="ei-chevron-down" class="icons header-icons"></div>
+                <img src="img_fonts/android-more-vertical.svg" class="icons header-icons"></img>
                 <div data-icon="ei-search" class="icons header-icons"></div>
             </div>
             <div id="curr-task-content-stuff" class="task-content">
