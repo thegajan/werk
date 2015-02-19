@@ -111,7 +111,8 @@ $_SESSION['token'] = $token; //store it as session variable
                                 setTimeout(function () {
                                     $('#submit-add').css({'background-color': '#2ECC71', 'border': '1px solid #2ECC71'}).val('Create Task');
                                 }, 1500);
-                            } else if (a > c || startHour > 12 || startHour < 1 || startMinute > 59 || startMinute < 0 || endHour > 59 || endHour < 1 || endMinute > 59 || endMinute < 0) {
+                                //a >= c ||
+                            } else if (startHour > 12 || startHour < 1 || startMinute > 59 || startMinute < 0 || endHour > 59 || endHour < 1 || endMinute > 59 || endMinute < 0) {
                                 $('#submit-add').css({'background-color': '#C0392B', 'border': '1px solid #C0392B'}).val('Invalid Dates!');
                                 setTimeout(function () {
                                     $('#submit-add').css({'background-color': '#2ECC71', 'border': '1px solid #2ECC71'}).val('Create Task');
