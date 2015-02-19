@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Statistics/Images.xcassets/LaunchImage.imageset/icon2-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Statistics/Images.xcassets/LaunchImage.imageset/icon2-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Statistics/Images.xcassets/LaunchImage.imageset/icon2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Statistics/Images.xcassets/LaunchImage.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobile_php/addTaskApi.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img_fonts/android-more-vertical.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/countDown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/Account.h" afterPath="$PROJECT_DIR$/Statistics/Account.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/Account.m" afterPath="$PROJECT_DIR$/Statistics/Account.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/AddTaskView.m" afterPath="$PROJECT_DIR$/Statistics/AddTaskView.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/AppDelegate.m" afterPath="$PROJECT_DIR$/Statistics/AppDelegate.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/CoreDataHandler.h" afterPath="$PROJECT_DIR$/Statistics/CoreDataHandler.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/CoreDataHandler.m" afterPath="$PROJECT_DIR$/Statistics/CoreDataHandler.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/Base.lproj/LaunchScreen.xib" afterPath="$PROJECT_DIR$/Statistics/Base.lproj/LaunchScreen.xib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/SyncUtility.h" afterPath="$PROJECT_DIR$/Statistics/SyncUtility.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/SyncUtility.m" afterPath="$PROJECT_DIR$/Statistics/SyncUtility.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/Task.h" afterPath="$PROJECT_DIR$/Statistics/Task.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/Task.m" afterPath="$PROJECT_DIR$/Statistics/Task.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addTask.php" afterPath="$PROJECT_DIR$/addTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile_php/addTask.php" afterPath="$PROJECT_DIR$/mobile_php/addTask.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Statistics/Statistics.xcdatamodeld/Statistics.xcdatamodel/contents" afterPath="$PROJECT_DIR$/Statistics/Statistics.xcdatamodeld/Statistics.xcdatamodel/contents" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/currTask.css" afterPath="$PROJECT_DIR$/css/currTask.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.php" afterPath="$PROJECT_DIR$/main.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -59,28 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="currTask.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="currTask.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/currTask.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="20" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="782">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addTask.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/addTask.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="304" selection-start="2387" selection-end="2387" vertical-scroll-proportion="0.5648" vertical-offset="361" max-vertical-offset="1241">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addTask.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="33" selection-start="2236" selection-end="2236" vertical-scroll-proportion="-7.0384617" vertical-offset="905" max-vertical-offset="1751">
+            <state line="13" column="20" selection-start="311" selection-end="311" vertical-scroll-proportion="0.13824885" vertical-offset="131" max-vertical-offset="782">
               <folding />
             </state>
           </provider>
@@ -454,7 +413,11 @@
       <created>1424114276120</created>
       <updated>1424114276120</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="FUCKING SHIT HOLES FOUND">
+      <created>1424329495454</created>
+      <updated>1424329495454</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -515,7 +478,8 @@
     <MESSAGE value="fuck this fucking bullshit&#10;and fuck you too alex" />
     <MESSAGE value="fuck this shit in the pussy" />
     <MESSAGE value="FUCKING SHIT HOLES" />
-    <option name="LAST_COMMIT_MESSAGE" value="FUCKING SHIT HOLES" />
+    <MESSAGE value="FUCKING SHIT HOLES FOUND" />
+    <option name="LAST_COMMIT_MESSAGE" value="FUCKING SHIT HOLES FOUND" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -762,23 +726,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/currTask.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="33" selection-start="2236" selection-end="2236" vertical-scroll-proportion="-7.0384617" vertical-offset="905" max-vertical-offset="1751">
+        <state line="13" column="0" selection-start="376" selection-end="376" vertical-scroll-proportion="-1.0128" vertical-offset="854" max-vertical-offset="1734">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/addTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="304" selection-start="2387" selection-end="2387" vertical-scroll-proportion="0.5648" vertical-offset="361" max-vertical-offset="1241">
+        <state line="2" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.1904" vertical-offset="153" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/currTask.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="20" selection-start="311" selection-end="311" vertical-scroll-proportion="0.13824885" vertical-offset="131" max-vertical-offset="782">
           <folding />
         </state>
       </provider>

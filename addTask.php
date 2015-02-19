@@ -1,6 +1,5 @@
 <?php
 session_start();
-date_default_timezone_set ('UTC');
 if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
 
     if (@isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == "https://www.readmybluebutton.com/werk/main.php") {
@@ -21,11 +20,9 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             $startTime = $startDate . " " . $startHour . ":" . $startMinute . ":00" . " " . $startTOD;
             $endTime = $endDate . " " . $endHour . ":" . $endMinute . ":00" . " " . $endTOD;
 //            echo $startTime . " " . $endTime;
-            date_default_timezone_set ('UTC');
             $currentDate = date('m/d/Y h:i:s A');
             function validateDate($date)
             {
-                date_default_timezone_set ('UTC');
                 $d = DateTime::createFromFormat('m/d/Y', $date);
                 return $d && $d->format('m/d/Y') == $date;
             }
@@ -34,7 +31,6 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                 echo "form not complete";
             } else{
                 include_once 'connManager.php';
-                date_default_timezone_set ('UTC');
                 $sql = "INSERT INTO task_master (task_name, task_description, time_start, time_end, creator, last_updated) VALUES (\"" . $taskName . "\", \"" . $description . "\", STR_TO_DATE('" . $startTime . "','%c/%e/%Y %r'), STR_TO_DATE('" . $endTime . "','%c/%e/%Y %r'), '" . $creator . "', NOW())";
                 $conn = new connManager();
                 $Connection = $conn->GetConnection();

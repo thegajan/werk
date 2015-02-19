@@ -11,7 +11,6 @@ $resultArray = array();
 $tempArray = array();
 $newJson = array();
 $otherArray = array();
-date_default_timezone_set('UTC');
 foreach ($taskInfo['info'] as $a) {
     if (count($a) == 1) {
         continue;
