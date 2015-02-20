@@ -4,7 +4,7 @@
         <attribute name="last_event_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="last_synced" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="user_id" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="task_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="account" inverseEntity="Task" syncable="YES"/>
     </entity>
@@ -12,7 +12,9 @@
         <attribute name="last_changed" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="length" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="local_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="n_status" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="s_status" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="server_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="should_delete" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="t_end" optional="YES" attributeType="Date" syncable="YES"/>
@@ -23,6 +25,6 @@
     </entity>
     <elements>
         <element name="Account" positionX="-63" positionY="18" width="128" height="135"/>
-        <element name="Task" positionX="-63" positionY="-18" width="128" height="208"/>
+        <element name="Task" positionX="-63" positionY="-18" width="128" height="240"/>
     </elements>
 </model>

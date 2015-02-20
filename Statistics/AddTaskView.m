@@ -52,6 +52,8 @@
         [_timePicker addTarget:self action:@selector(timeChanged:) forControlEvents:UIControlEventValueChanged];
         [_timeSelection addTarget:self action:@selector(timeSelectionChanged:) forControlEvents:UIControlEventValueChanged];
         
+        NSTimeInterval t = floor([[NSDate date] timeIntervalSinceReferenceDate] / 60.0) * 60.0;
+        _timePicker.date = [NSDate dateWithTimeIntervalSinceReferenceDate:t];
         _startTime = _timePicker.date;
         _endTime = _timePicker.date;
         
@@ -177,7 +179,7 @@
 -(void)attemptToCreateTask {
     if (_titleInput.text.length == 0)
         [self displayErrorWithMessage:@"Incomplete Form"];
-    else if ([_endTime compare:_startTime] == NSOrderedAscending)
+    else if (!([_endTime compare:_startTime] == NSOrderedDescending))
         [self displayErrorWithMessage:@"Invalid Dates"];
     else
         [self createTask];

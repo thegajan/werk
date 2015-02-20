@@ -25,13 +25,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [CoreDataHandler sharedInstance].moc = [self managedObjectContext];
+    [CoreDataHandler sharedInstance].acc = [CoreDataHandler getAccount];
+    
     MainViewController * mvc = [MainViewController new];
     StatsViewController * svc = [StatsViewController new];
     GraphsViewController * gvc = [GraphsViewController new];
     AddTaskController * atc = [AddTaskController new];
     
-    [CoreDataHandler sharedInstance].moc = [self managedObjectContext];
-    [CoreDataHandler sharedInstance].acc = [CoreDataHandler getAccount];
     UITabBarController *tbc = [[UITabBarController alloc] init];
     tbc.viewControllers = [NSArray arrayWithObjects:mvc, svc, gvc, nil];
     UINavigationController * nvc = [[UINavigationController alloc] initWithRootViewController:tbc];
