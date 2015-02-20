@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/countDown.js" afterPath="$PROJECT_DIR$/js/countDown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/currTask.css" afterPath="$PROJECT_DIR$/css/currTask.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/currentTask.php" afterPath="$PROJECT_DIR$/currentTask.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.php" afterPath="$PROJECT_DIR$/main.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -31,33 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="79" selection-start="4369" selection-end="4369" vertical-scroll-proportion="-21.923077" vertical-offset="1147" max-vertical-offset="2227">
+            <state line="101" column="79" selection-start="4369" selection-end="4369" vertical-scroll-proportion="0.75297225" vertical-offset="1147" max-vertical-offset="2227">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="currentTask.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/currentTask.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="42" selection-start="2443" selection-end="2443" vertical-scroll-proportion="0.77278733" vertical-offset="333" max-vertical-offset="1156">
-              <folding>
-                <marker date="1424463648309" expanded="true" signature="498:539" placeholder="SELECT * FRO..task_master..." />
-                <marker date="1424463648309" expanded="true" signature="1150:1236" placeholder="..." />
-                <marker date="1424463648309" expanded="true" signature="1150:1219" placeholder="..." />
-                <marker date="1424463648309" expanded="true" signature="1150:2262" placeholder="..." />
-                <marker date="1424463648309" expanded="true" signature="1150:1341" placeholder="..." />
-                <marker date="1424463648309" expanded="true" signature="1179:1219" placeholder="..." />
-                <marker date="1424463648309" expanded="true" signature="1238:1594" placeholder="..." />
-                <marker date="1424463648309" expanded="true" signature="1238:1341" placeholder="..." />
-                <marker date="1424463648309" expanded="true" signature="1631:1674" placeholder="..." />
-                <marker date="1424463648309" expanded="true" signature="1631:1805" placeholder="..." />
-                <marker date="1424463648309" expanded="true" signature="1874:1981" placeholder="..." />
-                <marker date="1424463648309" expanded="true" signature="2040:2206" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -453,7 +425,6 @@
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30428362" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -469,6 +440,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30428362" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -519,6 +491,33 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="79" selection-start="4369" selection-end="4369" vertical-scroll-proportion="0.0" vertical-offset="1147" max-vertical-offset="2227">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/currentTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="42" selection-start="2443" selection-end="2443" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1139">
+          <folding>
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..task_master..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="66" selection-start="2305" selection-end="2314" vertical-scroll-proportion="0.0" vertical-offset="1139" max-vertical-offset="1819">
           <folding />
         </state>
@@ -541,7 +540,20 @@
     <entry file="file://$PROJECT_DIR$/currentTask.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
+          <folding>
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..task_master..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -681,16 +693,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/connManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="32" selection-start="191" selection-end="191" vertical-scroll-proportion="0.1632" vertical-offset="0" max-vertical-offset="625">
-          <folding />
-        </state>
+        <state line="6" column="32" selection-start="191" selection-end="191" vertical-scroll-proportion="0.1632" vertical-offset="0" max-vertical-offset="625" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626" />
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -698,16 +706,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/img_fonts/android-more-vertical.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="11" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0651341" vertical-offset="0" max-vertical-offset="783">
-          <folding />
-        </state>
+        <state line="3" column="11" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0651341" vertical-offset="0" max-vertical-offset="783" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="32" selection-end="177" vertical-scroll-proportion="0.021711366" vertical-offset="0" max-vertical-offset="783">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="32" selection-end="177" vertical-scroll-proportion="0.021711366" vertical-offset="0" max-vertical-offset="783" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
@@ -719,9 +723,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="17" selection-start="3355" selection-end="3355" vertical-scroll-proportion="0.7228608" vertical-offset="2426" max-vertical-offset="8585">
-          <folding />
-        </state>
+        <state line="173" column="17" selection-start="3355" selection-end="3355" vertical-scroll-proportion="0.7228608" vertical-offset="2426" max-vertical-offset="8585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/currTask.css">
@@ -745,16 +747,12 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
@@ -778,30 +776,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
+    <entry file="file://$PROJECT_DIR$/currentTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="79" selection-start="4369" selection-end="4369" vertical-scroll-proportion="-21.923077" vertical-offset="1147" max-vertical-offset="2227">
-          <folding />
+        <state line="53" column="42" selection-start="2443" selection-end="2443" vertical-scroll-proportion="0.94319683" vertical-offset="204" max-vertical-offset="1156">
+          <folding>
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..task_master..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424463648309" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/currentTask.php">
+    <entry file="file://$PROJECT_DIR$/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="42" selection-start="2443" selection-end="2443" vertical-scroll-proportion="0.77278733" vertical-offset="333" max-vertical-offset="1156">
-          <folding>
-            <marker date="1424463648309" expanded="true" signature="498:539" placeholder="SELECT * FRO..task_master..." />
-            <marker date="1424463648309" expanded="true" signature="1150:1236" placeholder="..." />
-            <marker date="1424463648309" expanded="true" signature="1150:1219" placeholder="..." />
-            <marker date="1424463648309" expanded="true" signature="1150:2262" placeholder="..." />
-            <marker date="1424463648309" expanded="true" signature="1150:1341" placeholder="..." />
-            <marker date="1424463648309" expanded="true" signature="1179:1219" placeholder="..." />
-            <marker date="1424463648309" expanded="true" signature="1238:1594" placeholder="..." />
-            <marker date="1424463648309" expanded="true" signature="1238:1341" placeholder="..." />
-            <marker date="1424463648309" expanded="true" signature="1631:1674" placeholder="..." />
-            <marker date="1424463648309" expanded="true" signature="1631:1805" placeholder="..." />
-            <marker date="1424463648309" expanded="true" signature="1874:1981" placeholder="..." />
-            <marker date="1424463648309" expanded="true" signature="2040:2206" placeholder="..." />
-          </folding>
+        <state line="101" column="79" selection-start="4369" selection-end="4369" vertical-scroll-proportion="0.75297225" vertical-offset="1147" max-vertical-offset="2227">
+          <folding />
         </state>
       </provider>
     </entry>
