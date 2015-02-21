@@ -9,8 +9,10 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             $currDate = $_POST['currDate'];
             $creator = $_POST['creator'];
             $creator = 1;
+            $timeZone = $_POST['timeZone'];
+            $timeZone = new DateTimeZone($timeZone);
             include_once 'connManager.php';
-            $sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND time_start < '" . $currDate . "' AND success='No'";
+            $sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND time_start < '" . $currDate . "' AND success='not over' ORDER BY time_end";
             $conn = new connManager();
             $Connection = $conn->GetConnection();
             if (!$Connection) {
@@ -45,7 +47,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                             </div>
                         </td>
                     </tr>");
-//                    print_r($b);
+
                 }
             } else{
                 echo "error";
