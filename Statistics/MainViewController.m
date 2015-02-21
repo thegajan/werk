@@ -11,6 +11,7 @@
 #import "CoreDataHandler.h"
 #import "TaskCell.h"
 #import "Task.h"
+#import "TaskStatusHandler.h"
 
 @interface MainViewController () {
     NSTimer * _refreshTimer;
@@ -27,6 +28,7 @@
     [_taskView setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     [self setUpDataFetch];
+    [TaskStatusHandler initialLoad];
 }
 
 -(void)setUpDataFetch {
@@ -39,10 +41,10 @@
     NSFetchRequest * fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription * entityDescription = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:_managedObjectContext];
     [fetchRequest setEntity:entityDescription];
-    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"account == %@", [CoreDataHandler getAccount]];
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"account == %@ && should_delete == NO", [CoreDataHandler getAccount]];
     [fetchRequest setPredicate:predicate];
     NSSortDescriptor * sortSection = [[NSSortDescriptor alloc] initWithKey:@"n_status" ascending:YES];
-    NSSortDescriptor * sortTime = [[NSSortDescriptor alloc] initWithKey:@"t_end" ascending:NO];
+    NSSortDescriptor * sortTime = [[NSSortDescriptor alloc] initWithKey:@"t_end" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortSection, sortTime, nil]];
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:_managedObjectContext sectionNameKeyPath:@"s_status" cacheName:cacheName];
     
@@ -54,7 +56,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    _refreshTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(refreshCells) userInfo:nil repeats:YES];
+    _refreshTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(refreshCellsAndTasks) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:_refreshTimer forMode:NSRunLoopCommonModes];
 }
 
@@ -185,10 +187,11 @@
     [_taskView endUpdates];
 }
 
--(void)refreshCells {
+-(void)refreshCellsAndTasks {
     for (TaskCell * cell in _taskView.visibleCells) {
         [cell updateTimeDisplay];
     }
+    [TaskStatusHandler updateTaskStatus];
 }
 
 @end

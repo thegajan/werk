@@ -42,6 +42,7 @@
 		D931A4A51A8DE2DB000B8E8B /* ColorOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = D931A4A41A8DE2DB000B8E8B /* ColorOptions.m */; };
 		D94AC2231A95E1F800FD6614 /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D94AC2221A95E1F800FD6614 /* TaskCell.m */; };
 		D96587791A9885D7001D0EA3 /* OxygenMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D96587781A9885D7001D0EA3 /* OxygenMono-Regular.otf */; };
+		D965877C1A98994C001D0EA3 /* TaskStatusHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D965877B1A98994C001D0EA3 /* TaskStatusHandler.m */; };
 		D96C18991A9084CD00202BE1 /* CoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D96C18981A9084CD00202BE1 /* CoreDataHandler.m */; };
 		D995A1841A913ECA005BC74F /* AddTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = D995A1831A913ECA005BC74F /* AddTaskView.m */; };
 		D9F75EF51A928E22008B6495 /* SyncUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F75EF41A928E22008B6495 /* SyncUtility.m */; };
@@ -109,6 +110,8 @@
 		D94AC2211A95E1F800FD6614 /* TaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskCell.h; sourceTree = "<group>"; };
 		D94AC2221A95E1F800FD6614 /* TaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskCell.m; sourceTree = "<group>"; };
 		D96587781A9885D7001D0EA3 /* OxygenMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OxygenMono-Regular.otf"; path = "Statistics/OxygenMono-Regular.otf"; sourceTree = "<group>"; };
+		D965877A1A98994C001D0EA3 /* TaskStatusHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskStatusHandler.h; sourceTree = "<group>"; };
+		D965877B1A98994C001D0EA3 /* TaskStatusHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskStatusHandler.m; sourceTree = "<group>"; };
 		D96C18971A9084CD00202BE1 /* CoreDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHandler.h; sourceTree = "<group>"; };
 		D96C18981A9084CD00202BE1 /* CoreDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHandler.m; sourceTree = "<group>"; };
 		D995A1821A913ECA005BC74F /* AddTaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskView.h; sourceTree = "<group>"; };
@@ -282,6 +285,8 @@
 				D931A4851A8DDD1D000B8E8B /* MainViewController.m */,
 				D94AC2211A95E1F800FD6614 /* TaskCell.h */,
 				D94AC2221A95E1F800FD6614 /* TaskCell.m */,
+				D965877A1A98994C001D0EA3 /* TaskStatusHandler.h */,
+				D965877B1A98994C001D0EA3 /* TaskStatusHandler.m */,
 			);
 			name = MainPanelUI;
 			sourceTree = "<group>";
@@ -444,6 +449,7 @@
 				D9F75EF51A928E22008B6495 /* SyncUtility.m in Sources */,
 				D92928DB1A8F12CB00CCA1CF /* StatsViewController.m in Sources */,
 				D931A4861A8DDD1D000B8E8B /* MainViewController.m in Sources */,
+				D965877C1A98994C001D0EA3 /* TaskStatusHandler.m in Sources */,
 				D931A4831A8DDD1D000B8E8B /* Statistics.xcdatamodeld in Sources */,
 				D92928E51A8F3E4100CCA1CF /* Task.m in Sources */,
 				D92928E91A8F3F0A00CCA1CF /* AddTaskController.m in Sources */,
