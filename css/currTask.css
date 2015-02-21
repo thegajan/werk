@@ -56,3 +56,29 @@
 .timer {
     font-size: 20px;
 }
+
+.task-description {
+    margin-right: auto;
+    margin-left: auto;
+    display: none;
+    width: 430px;
+    word-wrap: break-word;
+}
+
+.task-description h3 {
+    padding: 5px 0;
+}
+
+.task-description h4 {
+    font-size: 15px;
+}
+
+.clicks {
+    cursor: pointer;
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+.clicks:hover {
+    text-decoration: underline;
+}

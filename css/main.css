@@ -6,7 +6,7 @@
 #side-menu {
     float: left;
     background-color: #ecf0f1;
-    height: 91.5vh;
+    height: 91.4vh;
     width: 100px;
     text-align: center;
     font-family: 'exo 2', sans-serif;
@@ -52,12 +52,12 @@
 /*}*/
 
 #main-contents {
-    height: 91.5vh;
+    height: 91.4vh;
 }
 
 #curr-task-content {
     float: right;
-    height: 91.5vh;
+    height: 91.4vh;
     border-left: 1px solid #ecf0f1;
     width: 450px;
 }
