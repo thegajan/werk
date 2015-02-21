@@ -19,11 +19,12 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>8</string>
+	<string>13</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>OxygenMono-Regular.otf</string>
 		<string>Exo2-Light.otf</string>
 		<string>Exo2-Thin.otf</string>
 		<string>Exo2-Regular.otf</string>

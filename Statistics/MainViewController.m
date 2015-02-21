@@ -11,9 +11,11 @@
 #import "CoreDataHandler.h"
 #import "TaskCell.h"
 #import "Task.h"
+#import "TaskStatusHandler.h"
 
-@interface MainViewController ()
-
+@interface MainViewController () {
+    NSTimer * _refreshTimer;
+}
 @end
 
 @implementation MainViewController
@@ -26,6 +28,7 @@
     [_taskView setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     [self setUpDataFetch];
+    [TaskStatusHandler initialLoad];
 }
 
 -(void)setUpDataFetch {
@@ -38,10 +41,10 @@
     NSFetchRequest * fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription * entityDescription = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:_managedObjectContext];
     [fetchRequest setEntity:entityDescription];
-    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"account == %@", [CoreDataHandler getAccount]];
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"account == %@ && should_delete == NO", [CoreDataHandler getAccount]];
     [fetchRequest setPredicate:predicate];
     NSSortDescriptor * sortSection = [[NSSortDescriptor alloc] initWithKey:@"n_status" ascending:YES];
-    NSSortDescriptor * sortTime = [[NSSortDescriptor alloc] initWithKey:@"t_end" ascending:NO];
+    NSSortDescriptor * sortTime = [[NSSortDescriptor alloc] initWithKey:@"t_end" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortSection, sortTime, nil]];
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:_managedObjectContext sectionNameKeyPath:@"s_status" cacheName:cacheName];
     
@@ -49,6 +52,16 @@
     _fetchedResultsController.delegate = self;
     if (![_fetchedResultsController performFetch:&err])
         NSLog(@"ERROR: FAILED TO FETCH EVENTS: %@", err);
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    _refreshTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(refreshCellsAndTasks) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_refreshTimer forMode:NSRunLoopCommonModes];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [_refreshTimer invalidate];
 }
 
 - (void)viewDidLoad {
@@ -106,40 +119,31 @@
     Task * info = [_fetchedResultsController objectAtIndexPath:indexPath];
     cell.name = info.name;
     cell.end = info.t_end;
+    cell.taskInfo = info;
     [cell updateTimeDisplay];
 }
-
--(NSString *)tableView:(TaskCell *)tableView titleForHeaderInSection:(NSInteger)section {
-    if ([[_fetchedResultsController sections] count] > 0) {
-        id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
-        return [sectionInfo name];
-    }
-    else
-        return nil;
-}
-
+ 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if ([[_fetchedResultsController sections] count] > 0) {
-        UILabel * label = [UILabel new];
         id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
-        label.text = [sectionInfo name];
-        label.font = [UIFont fontWithName:@"Exo2-Medium" size:30.0];
-        return label;
+        UIBlurEffect * blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+        UIVisualEffectView * blurView = [[UIVisualEffectView alloc] initWithEffect:blur];
+        UILabel * header = [UILabel new];
+        header.text = [NSString stringWithFormat:@" %@", [sectionInfo name]];
+        header.font = [UIFont fontWithName:@"Exo2-Light" size:30.0];
+        header.textColor = [ColorOptions mainRed];
+        [header setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [blurView.contentView addSubview:header];
+        [blurView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[header]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(header)]];
+        [blurView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[header]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(header)]];
+        return blurView;
     }
     else
         return nil;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30.0;
-}
-
--(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return [_fetchedResultsController sectionIndexTitles];
-}
-
--(NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    return [_fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+    return 45.0;
 }
 
 -(void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
@@ -147,7 +151,7 @@
 }
 
 -(void)controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
-    NSLog(@"CHANGED SECTION: %ld", sectionIndex);
+    NSLog(@"CHANGED SECTION: %ld", (unsigned long)sectionIndex);
     switch (type) {
         case NSFetchedResultsChangeInsert:
             [_taskView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
@@ -161,7 +165,7 @@
 }
 
 -(void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
-    NSLog(@"CHANGED OBJECT ROW: %ld SECTION: %ld", newIndexPath.row, newIndexPath.section);
+    NSLog(@"CHANGED OBJECT ROW: %ld SECTION: %ld", (long)newIndexPath.row, (long)newIndexPath.section);
     switch (type) {
         case NSFetchedResultsChangeInsert:
             [_taskView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -181,6 +185,13 @@
 
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [_taskView endUpdates];
+}
+
+-(void)refreshCellsAndTasks {
+    for (TaskCell * cell in _taskView.visibleCells) {
+        [cell updateTimeDisplay];
+    }
+    [TaskStatusHandler updateTaskStatus];
 }
 
 @end

@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class Task;
+
 @interface TaskCell : UITableViewCell
 
 -(void)updateTimeDisplay;
 
+@property (strong, nonatomic) Task * taskInfo;
 @property (strong, nonatomic) NSString * name;
 @property (strong, nonatomic) NSDate * end;
 
