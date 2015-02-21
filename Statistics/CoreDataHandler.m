@@ -51,13 +51,13 @@
             task.length = dc.minute * 60;
             task.account = cdh.acc;
             task.last_changed = [NSDate new];
-            task.should_delete = [NSNumber numberWithBool:NO];
+            task.should_delete = NO;
             task.local_id = [CoreDataHandler getNextLocalID];
             NSDate * now = [NSDate new];
-            if (!([start compare:now] == NSOrderedDescending)) {
+            if (!([start compare:now] == NSOrderedAscending)) {
                 task.n_status = TaskStatusFuture;
             }
-            else if (!([end compare:now] == NSOrderedAscending)) {
+            else if (!([end compare:now] == NSOrderedDescending)) {
                 task.n_status = TaskStatusCompleted;
             }
             else
