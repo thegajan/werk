@@ -1,0 +1,3 @@
+# werk
+A Time Productivity App.
+Not complete, mobile app sucks dick... alex...
