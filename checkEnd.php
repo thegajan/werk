@@ -10,5 +10,10 @@
     $pass = mysql_affected_rows();
     mysql_close($Connection);
     echo mysql_error();
+//    if ($pass > 0) {
+//
+//    } else {
+//        mail("thegajannagaraj@gmail.com", "FAIL", "FAIL");
+//    }
 
 ?>
