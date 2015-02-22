@@ -72,7 +72,14 @@ include_once "header.php";
                 <table id="task-table">
                     <tbody>
                     <script type="text/javascript">
-                        var date = $.datepicker.formatDate('yy/mm/dd hh:mm:ss', new Date());
+                        var d = new Date();
+                        var curr_date = d.getDate();
+                        var curr_month = d.getMonth() + 1; //Months are zero based
+                        var curr_year = d.getFullYear();
+                        var curr_hour = d.getHours();
+                        var curr_min = d.getMinutes();
+                        var curr_sec = d.getSeconds();
+                        var date = curr_year + "-" + curr_month + "-" + curr_date + " " + curr_hour + ":" + curr_min + ":" + curr_sec;
                         (function worker() {
                             $.ajax({
                                 type: "POST",
