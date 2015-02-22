@@ -131,7 +131,7 @@ include_once "header.php";
                                 },
                                 complete: function () {
                                     // Schedule the next request when the current one's complete
-                                    setTimeout(worker1, 2000);
+                                    setTimeout(worker1, 3000);
                                 }
                             });
                         })();
@@ -162,7 +162,7 @@ include_once "header.php";
                                 },
                                 complete: function () {
                                     // Schedule the next request when the current one's complete
-                                    setTimeout(worker2, 2000);
+                                    setTimeout(worker2, 10000);
                                 }
                             });
                         })();

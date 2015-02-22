@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkEnd.php" afterPath="$PROJECT_DIR$/checkEnd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.php" afterPath="$PROJECT_DIR$/main.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -25,7 +26,19 @@
     <favorites_list name="werk" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="checkEnd.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/checkEnd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="23" selection-start="413" selection-end="413" vertical-scroll-proportion="0.24702774" vertical-offset="0" max-vertical-offset="757">
+              <folding>
+                <marker date="1424646223076" expanded="true" signature="54:135" placeholder="UPDATE task_..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -61,9 +74,9 @@
         <option value="$PROJECT_DIR$/css/currTask.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/futureTask.php" />
-        <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/pastTask.php" />
+        <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/checkEnd.php" />
       </list>
     </option>
@@ -425,12 +438,16 @@
       <created>1424592005833</created>
       <updated>1424592005833</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added future and past tasks cronjobs?">
+      <created>1424592500577</created>
+      <updated>1424592500577</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30428362" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -438,7 +455,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18819444" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14444445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14444445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3988183" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880098" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -486,7 +503,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Made sidebar" />
     <MESSAGE value="Adding Db shit" />
     <MESSAGE value="Added new font and made add task" />
     <MESSAGE value="Finished front end for add task" />
@@ -511,7 +527,8 @@
     <MESSAGE value="ajax" />
     <MESSAGE value="FIXED THIS MOTHER FUCKING SHIT" />
     <MESSAGE value="Added future and past tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added future and past tasks" />
+    <MESSAGE value="Added future and past tasks cronjobs?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added future and past tasks cronjobs?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -528,7 +545,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="69" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="238">
           <folding>
-            <marker date="1424592442405" expanded="true" signature="-1:-1" placeholder="UPDATE task_..." />
+            <marker date="1424646223076" expanded="true" signature="54:135" placeholder="UPDATE task_..." />
           </folding>
         </state>
       </provider>
@@ -839,13 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="41" selection-start="7016" selection-end="7016" vertical-scroll-proportion="0.16908851" vertical-offset="2337" max-vertical-offset="3213">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/connManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="32" selection-start="191" selection-end="191" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="340">
@@ -853,11 +863,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="57" selection-start="6539" selection-end="6539" vertical-scroll-proportion="-24.538462" vertical-offset="1623" max-vertical-offset="3213">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/checkEnd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="5" selection-start="651" selection-end="651" vertical-scroll-proportion="0.4266843" vertical-offset="0" max-vertical-offset="757">
+        <state line="11" column="23" selection-start="413" selection-end="413" vertical-scroll-proportion="0.24702774" vertical-offset="0" max-vertical-offset="757">
           <folding>
-            <marker date="1424592442405" expanded="true" signature="-1:-1" placeholder="UPDATE task_..." />
+            <marker date="1424646223076" expanded="true" signature="54:135" placeholder="UPDATE task_..." />
           </folding>
         </state>
       </provider>
