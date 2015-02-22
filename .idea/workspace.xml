@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/futureTask.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pastTask.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/currTask.css" afterPath="$PROJECT_DIR$/css/currTask.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.php" afterPath="$PROJECT_DIR$/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkEnd.php" afterPath="$PROJECT_DIR$/checkEnd.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -31,46 +25,7 @@
     <favorites_list name="werk" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="41" selection-start="7016" selection-end="7016" vertical-scroll-proportion="-4.269231" vertical-offset="2354" max-vertical-offset="3230">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pastTask.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pastTask.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="82" selection-start="657" selection-end="657" vertical-scroll-proportion="0.13474241" vertical-offset="136" max-vertical-offset="1156">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="futureTask.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/futureTask.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="126" selection-start="0" selection-end="2767" vertical-scroll-proportion="-11.461538" vertical-offset="365" max-vertical-offset="1224">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="currentTask.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/currentTask.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="30" selection-start="0" selection-end="2765" vertical-scroll-proportion="-10.461538" vertical-offset="408" max-vertical-offset="1224">
-              <folding>
-                <marker date="1424587818927" expanded="true" signature="597:622" placeholder="SELECT * FRO..task_master..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -101,7 +56,6 @@
         <option value="$PROJECT_DIR$/css/header.css" />
         <option value="$PROJECT_DIR$/js/countDown.js" />
         <option value="$PROJECT_DIR$/js/hook.js" />
-        <option value="$PROJECT_DIR$/checkEnd.php" />
         <option value="$PROJECT_DIR$/currentTask.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/css/currTask.css" />
@@ -110,6 +64,7 @@
         <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/pastTask.php" />
+        <option value="$PROJECT_DIR$/checkEnd.php" />
       </list>
     </option>
   </component>
@@ -466,12 +421,16 @@
       <created>1424587904299</created>
       <updated>1424587904299</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Added future and past tasks">
+      <created>1424592005833</created>
+      <updated>1424592005833</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30428362" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -479,7 +438,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18819444" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14444445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14444445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3988183" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880098" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -527,7 +486,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Changed the icon" />
     <MESSAGE value="Made sidebar" />
     <MESSAGE value="Adding Db shit" />
     <MESSAGE value="Added new font and made add task" />
@@ -552,7 +510,8 @@
     <MESSAGE value="Some more fucking shit" />
     <MESSAGE value="ajax" />
     <MESSAGE value="FIXED THIS MOTHER FUCKING SHIT" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIXED THIS MOTHER FUCKING SHIT" />
+    <MESSAGE value="Added future and past tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added future and past tasks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -569,7 +528,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="69" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="238">
           <folding>
-            <marker date="1424585778552" expanded="true" signature="-1:-1" placeholder="UPDATE task_..." />
+            <marker date="1424592442405" expanded="true" signature="-1:-1" placeholder="UPDATE task_..." />
           </folding>
         </state>
       </provider>
@@ -595,7 +554,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="42" selection-start="2443" selection-end="2443" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1139">
           <folding>
-            <marker date="1424587818927" expanded="true" signature="597:622" placeholder="SELECT * FRO..task_master..." />
+            <marker date="1424587818927" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..task_master..." />
           </folding>
         </state>
       </provider>
@@ -625,7 +584,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <folding>
-            <marker date="1424587818927" expanded="true" signature="597:622" placeholder="SELECT * FRO..task_master..." />
+            <marker date="1424587818927" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..task_master..." />
           </folding>
         </state>
       </provider>
@@ -764,11 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="32" selection-start="191" selection-end="191" vertical-scroll-proportion="0.1632" vertical-offset="0" max-vertical-offset="625" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626" />
@@ -820,15 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkEnd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="69" selection-start="249" selection-end="249" vertical-scroll-proportion="0.11228534" vertical-offset="0" max-vertical-offset="757">
-          <folding>
-            <marker date="1424585778552" expanded="true" signature="-1:-1" placeholder="UPDATE task_..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="484" column="11" selection-start="9055" selection-end="9056" vertical-scroll-proportion="0.7305152" vertical-offset="7743" max-vertical-offset="8602">
@@ -868,15 +813,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="30" selection-start="0" selection-end="2765" vertical-scroll-proportion="-10.461538" vertical-offset="408" max-vertical-offset="1224">
           <folding>
-            <marker date="1424587818927" expanded="true" signature="597:622" placeholder="SELECT * FRO..task_master..." />
+            <marker date="1424587818927" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..task_master..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="41" selection-start="7016" selection-end="7016" vertical-scroll-proportion="-4.269231" vertical-offset="2354" max-vertical-offset="3230">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -898,6 +836,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="82" selection-start="657" selection-end="657" vertical-scroll-proportion="0.13474241" vertical-offset="136" max-vertical-offset="1156">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="41" selection-start="7016" selection-end="7016" vertical-scroll-proportion="0.16908851" vertical-offset="2337" max-vertical-offset="3213">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="32" selection-start="191" selection-end="191" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkEnd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="5" selection-start="651" selection-end="651" vertical-scroll-proportion="0.4266843" vertical-offset="0" max-vertical-offset="757">
+          <folding>
+            <marker date="1424592442405" expanded="true" signature="-1:-1" placeholder="UPDATE task_..." />
+          </folding>
         </state>
       </provider>
     </entry>
