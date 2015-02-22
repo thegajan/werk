@@ -25,6 +25,7 @@
 }
 
 .task-left {
+    font-weight: 400;
     display: inline-block;
 }
 
@@ -37,15 +38,7 @@
     stroke-linejoin: miter;
 }
 
-.icon-menu .icon--ei-chevron-down:hover {
-    fill: #DB4437;
-}
-
 .icon--ei-star {
-    z-index: -1;
-}
-
-.icon--ei-chevron-down {
     z-index: -1;
 }
 
@@ -54,6 +47,8 @@
 }
 
 .timer {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
     font-size: 20px;
 }
 
@@ -81,4 +76,7 @@
 
 .clicks:hover {
     text-decoration: underline;
+}
+.header-stuff{
+    display: inline-block;
 }

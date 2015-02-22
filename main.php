@@ -49,7 +49,7 @@ include_once "header.php";
     <section id="main-contents">
         <div id="curr-task-content">
             <div id="curr-task-header">
-                <h1 class="header">Current Tasks</h1>
+                <h1 class="header">Tasks</h1>
 
                 <img src="img_fonts/android-more-vertical.svg" class="icons header-icons">
 
@@ -69,37 +69,100 @@ include_once "header.php";
                     var timezone = jstz.determine();
                     var timeZone = timezone.name();
                 </script>
-                <table id="task-table">
+                <div id="current-header" class="some-header"><h1>Current Tasks</h1></div>
+                    <table id="task-table">
+                        <tbody>
+                        <script type="text/javascript">
+                            var d = new Date();
+                            var curr_date = d.getDate();
+                            var curr_month = d.getMonth() + 1; //Months are zero based
+                            var curr_year = d.getFullYear();
+                            var curr_hour = d.getHours();
+                            var curr_min = d.getMinutes();
+                            var curr_sec = d.getSeconds();
+                            var date = curr_year + "-" + curr_month + "-" + curr_date + " " + curr_hour + ":" + curr_min + ":" + curr_sec;
+                            (function worker() {
+                                $.ajax({
+                                    type: "POST",
+                                    url: 'https://www.readmybluebutton.com/werk/currentTask.php',
+//                            data: form_data,
+                                    data: {currDate: date, creator: 1, timeZone: timeZone, token: '<?php echo $token ?>'},
+                                    success: function (response) {
+                                        if (response == "error") {
+                                            $('#task-table').css('display', 'none');
+                                            $('#nothing').css('display', 'block');
+                                        }
+                                        $('#task-table tbody').html(response);
+                                    },
+                                    error: function (xhr, status, error) {
+                                        $('#task-table').css('display', 'none');
+                                        $('#fail').fadeIn('fast');
+                                    },
+                                    complete: function () {
+                                        // Schedule the next request when the current one's complete
+                                        setTimeout(worker, 2000);
+                                    }
+                                });
+                            })();
+                            //$('#hook').hook();
+                        </script>
+                        </tbody>
+                    </table>
+                <div id="future-header" class="some-header"><h1>Future Tasks</h1></div>
+                <table id="task-table1">
                     <tbody>
                     <script type="text/javascript">
-                        var d = new Date();
-                        var curr_date = d.getDate();
-                        var curr_month = d.getMonth() + 1; //Months are zero based
-                        var curr_year = d.getFullYear();
-                        var curr_hour = d.getHours();
-                        var curr_min = d.getMinutes();
-                        var curr_sec = d.getSeconds();
-                        var date = curr_year + "-" + curr_month + "-" + curr_date + " " + curr_hour + ":" + curr_min + ":" + curr_sec;
-                        (function worker() {
+                        (function worker1() {
                             $.ajax({
                                 type: "POST",
-                                url: 'https://www.readmybluebutton.com/werk/currentTask.php',
+                                url: 'https://www.readmybluebutton.com/werk/futureTask.php',
 //                            data: form_data,
                                 data: {currDate: date, creator: 1, timeZone: timeZone, token: '<?php echo $token ?>'},
                                 success: function (response) {
                                     if (response == "error") {
-                                        $('#task-table').css('display', 'none');
+                                        $('#task-table1').css('display', 'none');
                                         $('#nothing').css('display', 'block');
                                     }
-                                    $('#task-table tbody').html(response);
+                                    $('#task-table1 tbody').html(response);
                                 },
                                 error: function (xhr, status, error) {
-                                    $('#task-table').css('display', 'none');
+                                    $('#task-table1').css('display', 'none');
                                     $('#fail').fadeIn('fast');
                                 },
                                 complete: function () {
                                     // Schedule the next request when the current one's complete
-                                    setTimeout(worker, 2000);
+                                    setTimeout(worker1, 2000);
+                                }
+                            });
+                        })();
+                        //$('#hook').hook();
+                    </script>
+                    </tbody>
+                </table>
+                <div id="past-header" class="some-header"><h1>Past Tasks</h1></div>
+                <table id="task-table2">
+                    <tbody>
+                    <script type="text/javascript">
+                        (function worker2() {
+                            $.ajax({
+                                type: "POST",
+                                url: 'https://www.readmybluebutton.com/werk/pastTask.php',
+//                            data: form_data,
+                                data: {currDate: date, creator: 1, timeZone: timeZone, token: '<?php echo $token ?>'},
+                                success: function (response) {
+                                    if (response == "error") {
+                                        $('#task-table2').css('display', 'none');
+                                        $('#nothing').css('display', 'block');
+                                    }
+                                    $('#task-table2 tbody').html(response);
+                                },
+                                error: function (xhr, status, error) {
+                                    $('#task-table2').css('display', 'none');
+                                    $('#fail').fadeIn('fast');
+                                },
+                                complete: function () {
+                                    // Schedule the next request when the current one's complete
+                                    setTimeout(worker2, 2000);
                                 }
                             });
                         })();
@@ -111,10 +174,10 @@ include_once "header.php";
                     <div data-icon="ei-exclamation"></div>
                     <h4>No Tasks Found</h4></div>
             </div>
-                <div id="fail">
-                    <div data-icon="ei-close-o"></div>
-                    <h4>Cannot Connect to Server!</h4></div>
-            </div>
+            <div id="fail">
+                <div data-icon="ei-close-o"></div>
+                <h4>Cannot Connect to Server!</h4></div>
+        </div>
         </div>
     </section>
 </main>

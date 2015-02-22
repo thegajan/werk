@@ -48,6 +48,10 @@
     height: 50px;
 }
 
+.icon--ei-chevron-down {
+    float: right;
+}
+
 .div:hover {
     background-color: #bdc3c7;
 }
@@ -115,4 +119,16 @@
     fill: #DB4437;
     color: #DB4437;
     font-size: 30px;
+}
+
+.some-header {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #000000;
+    padding: 5px;
+    background-color: #ecf0f1;
+    /*float: left;*/
+    display: block;
+    cursor: pointer;
 }
