@@ -28,7 +28,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                 foreach ($resultArray as $a => $b){
                     echo("<tr>
                         <td>
-                            <div class='task-content-div'><input type='checkbox' class='task-left'>
+                            <div class='task-content-div' id='" . $b['id'] . "'><input type='checkbox' class='task-left'>
 
                                 <h1 class='task-left heads'>" . $b['task_name'] . " - </h1>
 
@@ -37,12 +37,13 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                                 <h1 class='heads clicks' id='click'>(More Info)</h1>
                             </div>
                             <script>
+                            slidDown(" . "#" . $b['id'] . ", " . "#description" .  $b['id'] . ");
                             countdownDate('countdown-holder" . $b['id'] . "', '" . date('Y/m/d H:i:s',strtotime($b['time_end'])) . "');
                             </script>
                             <div class='task-content-div icon-menu'>
                                 <div data-icon='ei-chevron-down'></div>
                             </div>
-                            <div class='task-description'>
+                            <div class='task-description' id='" . "description" .  $b['id'] . "'>
                                 <h3>Task Description:</h3>
                                 <h4>" . $b['task_description'] . "</h4>
                             </div>

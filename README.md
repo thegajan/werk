@@ -1,3 +1,4 @@
 # werk
 A Time Productivity App.
-Not complete, web app sucks dick but I'm too shitty to fix it :D
+Not complete, iphone app is soo fucked up, i got ebolaids* just by looking at it.
+Ebolaids = ebola + aids

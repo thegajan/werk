@@ -57,6 +57,11 @@ include_once "header.php";
             </div>
             <div id="curr-task-content-stuff" class="task-content">
                 <script>
+                    function slidDown(clickId, slideId){
+                        $(clickId).click(function () {
+                            $(slideId).slideToggle('slow');
+                        });
+                    }
                     function countdownDate(elementID, date) {
                         var clock = document.getElementById(elementID)
                             , targetDate = new Date(date); // Jan 1, 2050;

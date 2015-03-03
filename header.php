@@ -5,8 +5,8 @@ $_SESSION['token'] = $token; //store it as session variable
 ?>
 <!DOCTYPE html>
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Exo+2:200,300,400,500' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600' rel='stylesheet'
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:200,300,400,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600' rel='stylesheet'
           type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
     <meta charset="utf-8"/>
