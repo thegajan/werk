@@ -58,6 +58,7 @@
     [request setHTTPBody:[database dataUsingEncoding:NSUTF8StringEncoding]];
     _downloadData = [[NSMutableData alloc] init];
     NSLog(@"DATA SENT: %@", database);
+    _startLoadingBlock();
     __unused NSURLConnection * conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
@@ -184,10 +185,12 @@
     }
     [CoreDataHandler sharedInstance].acc.last_synced = [[NSDate alloc] init];
     [CoreDataHandler saveContext];
+    _stopLoadingBlock();
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"ERROR: %@", error);
+    _stopLoadingBlock();
 }
 
 @end

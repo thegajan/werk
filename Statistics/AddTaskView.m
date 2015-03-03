@@ -167,7 +167,8 @@
     if (_didCreateTask) {
         _titleInput.text = @"";
         _descriptionInput.text = @"";
-        _timePicker.date = [NSDate new];
+        NSTimeInterval t = floor([[NSDate date] timeIntervalSinceReferenceDate] / 60.0) * 60.0;
+        _timePicker.date = [NSDate dateWithTimeIntervalSinceReferenceDate:t];
         _startTime = _timePicker.date;
         _endTime = _timePicker.date;
         _timeSelection.selectedSegmentIndex = 0;

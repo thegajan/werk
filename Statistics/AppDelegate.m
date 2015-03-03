@@ -66,11 +66,20 @@
     addTaskButton.frame = CGRectMake(0, 0, 40, 40);
     [addTaskButton addTarget:[InterfaceController sharedInstance] action:@selector(addTask) forControlEvents:UIControlEventTouchUpInside];
 
+    UIActivityIndicatorView * spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [[SyncUtility sharedInstance] setStartLoadingBlock:^void() {
+        [spinner startAnimating];
+    }];
+    [[SyncUtility sharedInstance] setStopLoadingBlock:^void() {
+        [spinner stopAnimating];
+    }];
+    
     UIBarButtonItem * settings = [[UIBarButtonItem alloc] initWithCustomView:settingsButton];
     UIBarButtonItem * addTask = [[UIBarButtonItem alloc] initWithCustomView:addTaskButton];
+    UIBarButtonItem * spinnerView = [[UIBarButtonItem alloc] initWithCustomView:spinner];
     UIBarButtonItem * negativeSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     negativeSpace.width = -10;
-    tbc.navigationItem.rightBarButtonItems = @[negativeSpace, settings, addTask];
+    tbc.navigationItem.rightBarButtonItems = @[negativeSpace, settings, addTask, spinnerView];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [[SyncUtility sharedInstance] syncDatabases];

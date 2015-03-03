@@ -13,6 +13,7 @@
     UILabel * _nameLabel;
     UILabel * _timeLabel;
     NSDateComponents * _timeRemaining;
+    NSDateFormatter * _df;
 }
 @end
 
@@ -21,6 +22,7 @@
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        _df = [NSDateFormatter new];
         _nameLabel = [UILabel new];
         _timeLabel = [UILabel new];
         
@@ -29,14 +31,18 @@
         
         _nameLabel.font = [UIFont fontWithName:@"Exo2-Light" size:20.0];
         _timeLabel.font = [UIFont fontWithName:@"OxygenMono-Regular" size:18.0];
+                
+        _nameLabel.textAlignment = NSTextAlignmentLeft;
+        _timeLabel.textAlignment = NSTextAlignmentRight;
         
         self.contentView.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:_nameLabel];
         [self.contentView addSubview:_timeLabel];
         
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-9-[_nameLabel(>=100)]-9-[_timeLabel]-9-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_nameLabel, _timeLabel)]];
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-9-[_nameLabel]-9-[_timeLabel]-9-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_nameLabel, _timeLabel)]];
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_nameLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_timeLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
+        [_timeLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
     }
     return self;
 }
@@ -48,6 +54,7 @@
 
 -(void)updateTimeDisplay {
     static NSString * const s_completed = @"Input Results";
+    NSString * text;
     NSCalendar * calendar;
     switch (_taskInfo.n_status) {
         case TaskStatusCurrent:
@@ -59,23 +66,39 @@
             NSInteger minutes = _timeRemaining.minute;
             NSInteger seconds = _timeRemaining.second;
             
-            _timeLabel.text = [NSString stringWithFormat:@"%02ldd | %02ldh | %02ldm | %02lds", (long)days, (long)hours, (long)minutes, (long)seconds];
+            if (days == 0) {
+                if (hours == 0) {
+                    if (minutes == 0) {
+                        text = [NSString stringWithFormat:@"%02lds", (long)seconds];
+                    }
+                    else {
+                        text = [NSString stringWithFormat:@"%02ldm | %02lds", (long)minutes, (long)seconds];
+                    }
+                }
+                else {
+                    text = [NSString stringWithFormat:@"%02ldh | %02ldm | %02lds", (long)hours, (long)minutes, (long)seconds];
+                }
+            }
+            else {
+                text = [NSString stringWithFormat:@"%ldd | %02ldh | %02ldm | %02lds", (long)days, (long)hours, (long)minutes, (long)seconds];
+            }
             break;
         case TaskStatusCompleted:
-            _timeLabel.text = s_completed;
+            text = s_completed;
             break;
         case TaskStatusFuture:
-            _timeLabel.text = [self stringForDate:_taskInfo.t_start];
+            text = [self stringForDate:_taskInfo.t_start];
             break;
         default:
             NSLog(@"INVALID TASK STATUS");
             break;
     }
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        _timeLabel.text = text;
+    });
 }
 
 -(NSString *)stringForDate:(NSDate *)date {
-    NSDateFormatter * df = [NSDateFormatter new];
     NSDate * now = [NSDate new];
     NSDateComponents * nowComponents = [[NSCalendar currentCalendar] components: NSCalendarUnitYear fromDate:now];
     NSDateComponents * dateComponents = [[NSCalendar currentCalendar] components: NSCalendarUnitYear fromDate:date];
@@ -84,16 +107,16 @@
     NSInteger dateDay = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date];
     
     if (nowDay == dateDay)
-        df.dateFormat = @"'Today at' hh:mm a";
+        _df.dateFormat = @"'Today at' hh:mm a";
     else if (nowDay + 1 == dateDay)
-        df.dateFormat = @"'Tomorrow at' hh:mm a";
+        _df.dateFormat = @"'Tomorrow at' hh:mm a";
     else if (diffComponents.day < 7)
-        df.dateFormat = @"EEEE 'at' hh:mm a";
+        _df.dateFormat = @"EEEE 'at' hh:mm a";
     else if (dateComponents.year == nowComponents.year)
-        df.dateFormat = @"MM'/'dd 'at' hh:mm a";
+        _df.dateFormat = @"MM'/'dd 'at' hh:mm a";
     else
-        df.dateFormat = @"MM'/'dd'/'yy 'at' hh:mm a";
-    return [df stringFromDate:date];
+        _df.dateFormat = @"MM'/'dd'/'yy 'at' hh:mm a";
+    return [_df stringFromDate:date];
 }
 
 @end

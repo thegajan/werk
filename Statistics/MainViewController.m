@@ -188,9 +188,11 @@
 }
 
 -(void)refreshCellsAndTasks {
-    for (TaskCell * cell in _taskView.visibleCells) {
-        [cell updateTimeDisplay];
-    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        dispatch_apply(_taskView.visibleCells.count, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(size_t i) {
+            [_taskView.visibleCells[i] updateTimeDisplay];
+        });
+    });
     [TaskStatusHandler updateTaskStatus];
 }
 

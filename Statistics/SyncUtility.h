@@ -11,6 +11,8 @@
 @interface SyncUtility : NSObject <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
 @property (strong, nonatomic) NSMutableData * downloadData;
+@property (strong, nonatomic) void (^startLoadingBlock)(void);
+@property (strong, nonatomic) void (^stopLoadingBlock)(void);
 
 -(void)syncDatabases;
 -(void)startSyncLoop;
