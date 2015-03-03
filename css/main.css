@@ -31,6 +31,11 @@
     background-color: #bdc3c7;
 }
 
+.icon--ei-exclamation {
+    width: 100px;
+    height: 100px;
+}
+
 .icon--ei-chart {
     padding: 10px 0 5px;
     width: 50px;
@@ -41,6 +46,10 @@
     padding: 10px 0 5px;
     width: 50px;
     height: 50px;
+}
+
+.icon--ei-chevron-down {
+    float: right;
 }
 
 .div:hover {
@@ -59,7 +68,7 @@
     float: right;
     height: 91.4vh;
     border-left: 1px solid #ecf0f1;
-    width: 450px;
+    width: 500px;
 }
 
 .header {
@@ -97,4 +106,29 @@
     height: 84.7vh;
     width: 100%;
     overflow-y: auto;
+}
+
+#nothing {
+    font-family: 'exo 2', sans-serif;
+    font-weight: 300;
+    width: 100%;
+    display: none;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    fill: #DB4437;
+    color: #DB4437;
+    font-size: 30px;
+}
+
+.some-header {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #000000;
+    padding: 5px;
+    background-color: #ecf0f1;
+    /*float: left;*/
+    display: block;
+    cursor: pointer;
 }

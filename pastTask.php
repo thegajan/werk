@@ -13,7 +13,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             $timeZone = new DateTimeZone($timeZone);
             include_once 'connManager.php';
 //            $sql = "SELECT * FROM task_master WHERE creator='" . $creator . "'";
-            $sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND time_start < '" . $currDate . "' AND time_end > '" . $currDate . "' AND success='not over' ORDER BY time_end";
+            $sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND time_start < '" . $currDate . "' AND time_end < '" . $currDate . "' AND success='not over' ORDER BY time_end";
             $conn = new connManager();
             $Connection = $conn->GetConnection();
             if (!$Connection) {
@@ -32,13 +32,10 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
 
                                 <h1 class='task-left heads'>" . $b['task_name'] . " - </h1>
 
-                                <h1 class='timer heads' id='countdown-holder" . $b['id'] . "'></h1>
+                                <h1 class='timer heads' id='countdown-holder" . $b['id'] . "'>" . $b['time_start'] . "-" . $b['time_end'] . "</h1>
 
                                 <h1 class='heads clicks' id='click'>(More Info)</h1>
                             </div>
-                            <script>
-                            countdownDate('countdown-holder" . $b['id'] . "', '" . date('Y/m/d H:i:s',strtotime($b['time_end'])) . "');
-                            </script>
                             <div class='task-content-div icon-menu'>
                                 <div data-icon='ei-chevron-down'></div>
                             </div>
