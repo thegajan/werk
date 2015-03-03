@@ -78,7 +78,6 @@
 
 -(void)loadBasicUI {
     self.view.backgroundColor = [UIColor whiteColor];
-    
 }
 
 -(void)createContstraints {

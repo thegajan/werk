@@ -11,10 +11,12 @@
 #import "CoreDataHandler.h"
 #import "Task.h"
 
-#define SECONDS_PER_SYNC 10
-#define TIMEOUT 9
+#define SECONDS_PER_SYNC 2
+#define TIMEOUT 8
 
-@interface SyncUtility ()
+@interface SyncUtility () {
+    BOOL _isFinished;
+}
 
 @property (strong, nonatomic) NSString * address;
 @property (strong, nonatomic) NSDateFormatter * df;
@@ -33,6 +35,7 @@
         _df.timeZone = [NSTimeZone timeZoneWithName:@"CST"];
         _nf = [[NSNumberFormatter alloc] init];
         _nf.numberStyle = NSNumberFormatterDecimalStyle;
+        _isFinished = YES;
     }
     return self;
 }
@@ -50,6 +53,8 @@
 }
 
 -(void)syncDatabases {
+    if (!_isFinished)
+        return;
     NSString * database = [self getDatabase];
     NSURL * url = [NSURL URLWithString:_address];
     NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:TIMEOUT];
@@ -60,6 +65,7 @@
     NSLog(@"DATA SENT: %@", database);
     _startLoadingBlock();
     __unused NSURLConnection * conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    _isFinished = NO;
 }
 
 -(NSString *)getDatabase {
@@ -130,6 +136,7 @@
     NSError * error;
     NSArray * fetchedObjects;
     Task * task;
+    _isFinished = YES;
     NSString * response = [[NSString alloc] initWithData:_downloadData encoding:NSUTF8StringEncoding];
     NSLog(@"RESPONSE: %@", response);
     
@@ -190,6 +197,7 @@
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"ERROR: %@", error);
+    _isFinished = YES;
     _stopLoadingBlock();
 }
 
