@@ -1,3 +1,3 @@
 # werk
 A Time Productivity App.
-Not complete, mobile app sucks dick... alex...
+Not complete, web app sucks dick but I'm too shitty to fix it :D
