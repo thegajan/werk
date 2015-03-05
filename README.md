@@ -1,3 +1,3 @@
 # werk
 A Time Productivity App.
-# Not complete, iPhone app is much better than web version.
+# Not complete, iPhone app is LOOKS LIKE DOGS SHIT MIXED WITH CAT PUSSYS AND ARMADILLO PENI
