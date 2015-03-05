@@ -16,12 +16,10 @@
 
 @interface SyncUtility () {
     BOOL _isFinished;
+    NSString * _address;
+    NSDateFormatter * _df;
+    NSNumberFormatter * _nf;
 }
-
-@property (strong, nonatomic) NSString * address;
-@property (strong, nonatomic) NSDateFormatter * df;
-@property (strong, nonatomic) NSNumberFormatter * nf;
-
 @end
 
 @implementation SyncUtility
