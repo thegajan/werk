@@ -17,5 +17,6 @@
 @property (strong, nonatomic) Task * taskInfo;
 @property (strong, nonatomic) NSString * name;
 @property (strong, nonatomic) NSDate * end;
+@property (nonatomic) BOOL isExpanded;
 
 @end

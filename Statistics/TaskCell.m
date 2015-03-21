@@ -22,6 +22,8 @@
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        _isExpanded = YES;
+        
         _df = [NSDateFormatter new];
         _nameLabel = [UILabel new];
         _timeLabel = [UILabel new];
@@ -69,14 +71,14 @@
             if (days == 0) {
                 if (hours == 0) {
                     if (minutes == 0) {
-                        text = [NSString stringWithFormat:@"%02lds", (long)seconds];
+                        text = [NSString stringWithFormat:@"%lds", (long)seconds];
                     }
                     else {
-                        text = [NSString stringWithFormat:@"%02ldm | %02lds", (long)minutes, (long)seconds];
+                        text = [NSString stringWithFormat:@"%ldm | %02lds", (long)minutes, (long)seconds];
                     }
                 }
                 else {
-                    text = [NSString stringWithFormat:@"%02ldh | %02ldm | %02lds", (long)hours, (long)minutes, (long)seconds];
+                    text = [NSString stringWithFormat:@"%ldh | %02ldm | %02lds", (long)hours, (long)minutes, (long)seconds];
                 }
             }
             else {

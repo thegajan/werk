@@ -90,6 +90,10 @@
     
 }
 
+-(void)presentTask:(Task *)task {
+    
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [[_fetchedResultsController sections] count];
 }
@@ -142,7 +146,11 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 45.0;
+    return 51.0;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 51.0;
 }
 
 -(void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
@@ -193,6 +201,10 @@
         });
     });
     [TaskStatusHandler updateTaskStatus];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 @end
