@@ -55,7 +55,7 @@
 }
 
 -(void)updateTimeDisplay {
-    static NSString * const s_completed = @"Input Results";
+    static NSString * const s_completed = @"Finished";
     NSString * text;
     NSCalendar * calendar;
     switch (_taskInfo.n_status) {
