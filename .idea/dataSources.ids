@@ -2432,10 +2432,11 @@
       <column name="task_description" sqlType="VARCHAR" length="250" precision="0" nullable="false" jdbcType="12"/>
       <column name="time_start" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
       <column name="time_end" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="duration" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="duration" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="creator" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="burst_notifications" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" def="J05vJw=="/>
-      <column name="success" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="burst_notifications" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" def="J05vJw=="/>
+      <column name="success" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="last_updated" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="city" schema="" catalog="world" type="TABLE">

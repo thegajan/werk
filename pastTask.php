@@ -13,7 +13,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             $timeZone = new DateTimeZone($timeZone);
             include_once 'connManager.php';
 //            $sql = "SELECT * FROM task_master WHERE creator='" . $creator . "'";
-            $sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND time_start < '" . $currDate . "' AND time_end < '" . $currDate . "' AND success='no' ORDER BY time_end";
+            $sql = "SELECT * FROM task_master WHERE creator='" . $creator . "' AND time_start < '" . $currDate . "' AND time_end < '" . $currDate . "' AND success='finished' ORDER BY time_end";
             $conn = new connManager();
             $Connection = $conn->GetConnection();
             if (!$Connection) {
@@ -32,7 +32,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
 
                                 <h1 class='task-left heads'>" . $b['task_name'] . " - </h1>
 
-                                <h1 class='timer heads' id='countdown-holder" . $b['id'] . "'>" . $b['time_start'] . "-" . $b['time_end'] . "</h1>
+                                <h1 class='timer heads' id='countdown-holder" . $b['id'] . "'>Finished</h1>
 
                                 <h1 class='heads clicks' id='click'>(More Info)</h1>
                             </div>

@@ -144,7 +144,7 @@ include_once "header.php";
                     </script>
                     </tbody>
                 </table>
-                <div id="past-header" class="some-header"><h1>Past Tasks</h1></div>
+                <div id="past-header" class="some-header"><h1>Finished</h1></div>
                 <table id="task-table2">
                     <tbody>
                     <script type="text/javascript">
