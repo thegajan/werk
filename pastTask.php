@@ -34,7 +34,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
 
                                 <h1 class='timer heads' id='countdown-holder" . $b['id'] . "'>Finished</h1>
 
-                                <h1 class='heads clicks' id='click' onclick='moreInfo(" . $b['id'] . ")'>(More Info)</h1>
+                                <h1 class='heads clicks' id='click'>(More Info)</h1>
                             </div>
                             <div class='task-content-div icon-menu'>
                                 <div data-icon='ei-chevron-down'></div>

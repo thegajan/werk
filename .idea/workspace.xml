@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="...">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/moreInfo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.php" afterPath="$PROJECT_DIR$/main.php" />
+    <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/currentTask.php" afterPath="$PROJECT_DIR$/currentTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pastTask.php" afterPath="$PROJECT_DIR$/pastTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -32,7 +30,7 @@
       <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="66" selection-start="2785" selection-end="2785" vertical-scroll-proportion="-16.846153" vertical-offset="769" max-vertical-offset="3808">
+            <state line="1" column="8" selection-start="14" selection-end="14" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="3808">
               <folding />
             </state>
           </provider>
@@ -46,15 +44,6 @@
                 <marker date="1429581940547" expanded="true" signature="382:430" placeholder="SELECT * FRO..task_master..." />
                 <marker date="1429581940547" expanded="true" signature="382:418" placeholder="SELECT * FRO..task_master..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pastTask.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pastTask.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="51" selection-start="670" selection-end="1359" vertical-scroll-proportion="-13.730769" vertical-offset="102" max-vertical-offset="1190">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -97,12 +86,12 @@
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/alexEmail.php" />
-        <option value="$PROJECT_DIR$/currentTask.php" />
         <option value="$PROJECT_DIR$/checkEnd.php" />
-        <option value="$PROJECT_DIR$/pastTask.php" />
         <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/moreInfo.php" />
+        <option value="$PROJECT_DIR$/pastTask.php" />
+        <option value="$PROJECT_DIR$/currentTask.php" />
       </list>
     </option>
   </component>
@@ -601,7 +590,11 @@
       <created>1429552372801</created>
       <updated>1429552372801</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="i did shit!">
+      <created>1429581965361</created>
+      <updated>1429581965361</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -641,7 +634,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="js" />
     <MESSAGE value="added calender" />
     <MESSAGE value="fixed calender&#10;" />
     <MESSAGE value="changed names" />
@@ -666,7 +658,8 @@
     <MESSAGE value="CRON JOBS!" />
     <MESSAGE value="this stuff isnt done obv" />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="i did shit!" />
+    <option name="LAST_COMMIT_MESSAGE" value="i did shit!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -903,11 +896,6 @@
         <state line="3" column="30" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0816" vertical-offset="0" max-vertical-offset="625" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/currentTask.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="29" selection-start="2635" selection-end="2635" vertical-scroll-proportion="1.4416" vertical-offset="0" max-vertical-offset="1275" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -920,14 +908,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="66" selection-start="2785" selection-end="2785" vertical-scroll-proportion="-16.846153" vertical-offset="769" max-vertical-offset="3808">
+        <state line="1" column="8" selection-start="14" selection-end="14" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="3808">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pastTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="51" selection-start="670" selection-end="1359" vertical-scroll-proportion="-13.730769" vertical-offset="102" max-vertical-offset="1190">
+        <state line="36" column="67" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.8704" vertical-offset="102" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/currentTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="68" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.6064" vertical-offset="284" max-vertical-offset="1292">
           <folding />
         </state>
       </provider>
