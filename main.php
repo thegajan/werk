@@ -55,8 +55,32 @@ include_once "header.php";
 
                 <div data-icon="ei-search" class="icons header-icons"></div>
             </div>
+            <div id="task-summary"></div>
             <div id="curr-task-content-stuff" class="task-content">
                 <script>
+                    function moreInfo(id){
+                        $.ajax({
+                            type: "POST",
+                            url: 'https://www.readmybluebutton.com/werk/moreInfo.php',
+//                            data: form_data,
+                            data: {id: id, token: '<?php echo $token ?>'},
+                            success: function (response) {
+                                if (response == "error") {
+                                    $('#task-table2').css('display', 'none');
+                                    $('#nothing').css('display', 'block');
+                                }
+                                $('#task-summary').html(response);
+                            },
+                            error: function (xhr, status, error) {
+                                $('#task-table2').css('display', 'none');
+                                $('#fail').fadeIn('fast');
+                            },
+                            complete: function () {
+                                // Schedule the next request when the current one's complete
+                                setTimeout(worker2, 10000);
+                            }
+                        });
+                    }
                     function slidDown(clickId, slideId){
                         $(clickId).click(function () {
                             $(slideId).slideToggle('slow');
@@ -148,6 +172,7 @@ include_once "header.php";
                 <table id="task-table2">
                     <tbody>
                     <script type="text/javascript">
+
                         (function worker2() {
                             $.ajax({
                                 type: "POST",
