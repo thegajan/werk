@@ -18,7 +18,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             mysql_close($Connection);
             if (count($row) > 0) {
                 foreach ($row as $a) {
-                print_r($a);
+                    print_r($a);
                 }
             } else {
                 header('Location: index.php');
@@ -26,8 +26,8 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
         } else {
             header('Location: index.php');
         }
-    } else {
-        header('Location: index.php');
     }
-
-    ?>
+} else {
+    header('Location: index.php');
+}
+?>

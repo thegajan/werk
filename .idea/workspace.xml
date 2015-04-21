@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/currentTask.php" afterPath="$PROJECT_DIR$/currentTask.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pastTask.php" afterPath="$PROJECT_DIR$/pastTask.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/moreInfo.php" afterPath="$PROJECT_DIR$/moreInfo.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="werk.iws" />
@@ -39,11 +39,20 @@
       <file leaf-file-name="moreInfo.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moreInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="6" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.8976" vertical-offset="0" max-vertical-offset="663">
+            <state line="27" column="9" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.7616" vertical-offset="0" max-vertical-offset="663">
               <folding>
-                <marker date="1429581940547" expanded="true" signature="382:430" placeholder="SELECT * FRO..task_master..." />
-                <marker date="1429581940547" expanded="true" signature="382:418" placeholder="SELECT * FRO..task_master..." />
+                <marker date="1429582807066" expanded="true" signature="382:430" placeholder="SELECT * FRO..task_master..." />
+                <marker date="1429582807066" expanded="true" signature="382:418" placeholder="SELECT * FRO..task_master..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="currentTask.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/currentTask.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="104" selection-start="1841" selection-end="1841" vertical-scroll-proportion="-16.538462" vertical-offset="182" max-vertical-offset="1292">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,9 +98,9 @@
         <option value="$PROJECT_DIR$/checkEnd.php" />
         <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/moreInfo.php" />
         <option value="$PROJECT_DIR$/pastTask.php" />
         <option value="$PROJECT_DIR$/currentTask.php" />
+        <option value="$PROJECT_DIR$/moreInfo.php" />
       </list>
     </option>
   </component>
@@ -594,7 +603,11 @@
       <created>1429581965361</created>
       <updated>1429581965361</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="fixed shit">
+      <created>1429582489945</created>
+      <updated>1429582489945</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -634,7 +647,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added calender" />
     <MESSAGE value="fixed calender&#10;" />
     <MESSAGE value="changed names" />
     <MESSAGE value="need new db creds" />
@@ -659,7 +671,8 @@
     <MESSAGE value="this stuff isnt done obv" />
     <MESSAGE value="..." />
     <MESSAGE value="i did shit!" />
-    <option name="LAST_COMMIT_MESSAGE" value="i did shit!" />
+    <MESSAGE value="fixed shit" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed shit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -906,13 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="8" selection-start="14" selection-end="14" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="3808">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pastTask.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="67" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.8704" vertical-offset="102" max-vertical-offset="1173">
@@ -920,19 +926,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="8" selection-start="14" selection-end="14" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="3808">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/currentTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="68" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.6064" vertical-offset="284" max-vertical-offset="1292">
+        <state line="36" column="104" selection-start="1841" selection-end="1841" vertical-scroll-proportion="-16.538462" vertical-offset="182" max-vertical-offset="1292">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/moreInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="6" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.8976" vertical-offset="0" max-vertical-offset="663">
+        <state line="27" column="9" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.7616" vertical-offset="0" max-vertical-offset="663">
           <folding>
-            <marker date="1429581940547" expanded="true" signature="382:430" placeholder="SELECT * FRO..task_master..." />
-            <marker date="1429581940547" expanded="true" signature="382:418" placeholder="SELECT * FRO..task_master..." />
+            <marker date="1429582807066" expanded="true" signature="382:430" placeholder="SELECT * FRO..task_master..." />
+            <marker date="1429582807066" expanded="true" signature="382:418" placeholder="SELECT * FRO..task_master..." />
           </folding>
         </state>
       </provider>
