@@ -132,3 +132,18 @@
     display: block;
     cursor: pointer;
 }
+
+#moreInfo-main {
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+}
+
+#moreInfo-main div{
+    padding: 2.5px 0;
+}
+
+#moreInfo-main-h1 {
+    font-size: 30px;
+    text-decoration: underline;
+
+}

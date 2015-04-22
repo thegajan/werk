@@ -69,15 +69,12 @@ include_once "header.php";
                                     $('#task-table2').css('display', 'none');
                                     $('#nothing').css('display', 'block');
                                 }
+                                $('#curr-task-content-stuff').css('display', 'none');
                                 $('#task-summary').html(response);
                             },
                             error: function (xhr, status, error) {
                                 $('#task-table2').css('display', 'none');
                                 $('#fail').fadeIn('fast');
-                            },
-                            complete: function () {
-                                // Schedule the next request when the current one's complete
-                                setTimeout(worker2, 10000);
                             }
                         });
                     }

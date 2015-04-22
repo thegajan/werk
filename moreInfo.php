@@ -17,9 +17,8 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             $row = mysql_fetch_array($result, MYSQL_ASSOC);
             mysql_close($Connection);
             if (count($row) > 0) {
-                foreach ($row as $a) {
-                    print_r($a);
-                }
+//                print_r($row);
+                echo "<div id='moreInfo-main'><div><h1 id='moreInfo-main-h1'>" . $row['task_name'] . "</h1></div><div><h2>Start Time: </h2>" . date('', strtotime($row['time_start'])) . "\r\n" . "<h2>End Time: </h2>" . $row['time_end'] . "</div><div><h2>Description: </h2>" . $row['task_description'] . "</div></div>";
             } else {
                 header('Location: index.php');
             }
