@@ -135,15 +135,26 @@
 
 #moreInfo-main {
     font-family: 'Open Sans', sans-serif;
-    padding: 5px;
 }
 
-#moreInfo-main div{
-    padding: 2.5px 0;
+#moreInfo-main h2 {
+    padding: 1.5px 0;
+}
+
+#moreInfo-main div {
+    padding: 0 2.5px;
 }
 
 #moreInfo-main-h1 {
+    padding: 0 5px;
     font-size: 30px;
     text-decoration: underline;
+}
 
+.moreInfo-h1 {
+    display: inline-block;
+}
+
+#header-stuff {
+    background-color: #ecf0f1;
 }
