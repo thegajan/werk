@@ -1,3 +1,3 @@
 # werk
 A Time Productivity App.
-# Not complete CUZ ALEX IS TO BUSY LYNCHING AFRICAN AMERICANS
+# Not complete CUZ *Gajan IS TO BUSY LYNCHING AFRICAN AMERICANS

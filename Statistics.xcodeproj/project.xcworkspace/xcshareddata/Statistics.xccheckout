@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>59015256-8B22-4D5A-8277-8893E1C43775</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Statistics</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0ACCC2DB13D13E75212737AC4A38805B59C0A158</key>
+		<string>https://github.com/thegajan/werk.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Statistics.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0ACCC2DB13D13E75212737AC4A38805B59C0A158</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/thegajan/werk.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0ACCC2DB13D13E75212737AC4A38805B59C0A158</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0ACCC2DB13D13E75212737AC4A38805B59C0A158</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Statistics</string>
+		</dict>
+	</array>
+</dict>
+</plist>
