@@ -37,7 +37,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                                 <h1 class='heads clicks' id='click' onclick='moreInfo(" . $b['id'] . ")'>(More Info)</h1>
                             </div>
                             <script>
-                            slidDown(" . "#" . $b['id'] . ", " . "#description" .  $b['id'] . ");
+//                            slidDown(" . "#" . $b['id'] . ", " . "#description" .  $b['id'] . ");
                             countdownDate('countdown-holder" . $b['id'] . "', '" . date('Y/m/d H:i:s',strtotime($b['time_end'])) . "');
                             </script>
                             <div class='task-content-div icon-menu'>
