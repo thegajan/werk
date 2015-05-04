@@ -131,7 +131,7 @@ include_once "header.php";
                             },
                             complete: function () {
                                 // Schedule the next request when the current one's complete
-                                setTimeout(worker, 2000);
+                                setTimeout(worker, 1000);
                             }
                         });
                     })();
