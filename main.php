@@ -100,7 +100,7 @@ include_once "header.php";
                 var timezone = jstz.determine();
                 var timeZone = timezone.name();
             </script>
-            <div id="current-header" class="some-header"><h1>Current Tasks</h1></div>
+            <div id="current-header" class="some-header mainhead"><h1>Current Tasks</h1></div>
             <table id="task-table">
                 <tbody>
                 <script type="text/javascript">
@@ -131,7 +131,7 @@ include_once "header.php";
                             },
                             complete: function () {
                                 // Schedule the next request when the current one's complete
-                                setTimeout(worker, 2000);
+                                setTimeout(worker, 1000);
                             }
                         });
                     })();
@@ -139,7 +139,7 @@ include_once "header.php";
                 </script>
                 </tbody>
             </table>
-            <div id="future-header" class="some-header"><h1>Future Tasks</h1></div>
+            <div id="future-header" class="some-header mainhead"><h1>Future Tasks</h1></div>
             <table id="task-table1">
                 <tbody>
                 <script type="text/javascript">
@@ -170,7 +170,7 @@ include_once "header.php";
                 </script>
                 </tbody>
             </table>
-            <div id="past-header" class="some-header"><h1>Finished</h1></div>
+            <div id="past-header" class="some-header mainhead"><h1>Finished</h1></div>
             <table id="task-table2">
                 <tbody>
                 <script type="text/javascript">

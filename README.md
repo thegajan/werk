@@ -1,3 +1,4 @@
 # werk
 A Time Productivity App.
-# Not complete CUZ *Gajan IS TO BUSY LYNCHING AFRICAN AMERICANS
+# Not complete CUZ SAMEER IS TOO BUSY FUCKING HIMSELF
+# No está terminado porque Sameer está demasiado ocupado chingarse

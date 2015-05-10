@@ -126,11 +126,14 @@
     font-weight: 300;
     font-size: 20px;
     color: #000000;
-    padding: 5px;
+    padding: 5px 5px 5px 0;
     background-color: #ecf0f1;
     /*float: left;*/
-    display: block;
+    /*display: block;*/
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 99%;
 }
 
 #moreInfo-main {
@@ -148,7 +151,6 @@
 #moreInfo-main-h1 {
     padding: 0 5px;
     font-size: 30px;
-    text-decoration: underline;
 }
 
 .moreInfo-h1 {
@@ -157,4 +159,30 @@
 
 #header-stuff {
     background-color: #ecf0f1;
+}
+
+#back {
+    color: #2980b9;
+}
+
+#back-button {
+    padding-top: 0.05em;
+    width: 20px;
+    height: 20px;
+}
+
+#task-summary h2 {
+    /*padding: 1px;*/
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+}
+
+#description-post {
+    padding: 1px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+}
+
+.mainhead{
+    padding: 5px 0 5px 5px;
 }
