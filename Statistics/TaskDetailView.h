@@ -23,4 +23,6 @@
 @property (strong, nonatomic) UIDatePicker * dateInputPicker;
 @property (strong, nonatomic) UIButton * confirmButton;
 
+-(void)addUIElements;
+
 @end

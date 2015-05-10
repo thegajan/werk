@@ -10,12 +10,14 @@
 #import <CoreData/CoreData.h>
 
 @class Account;
+@class TaskDetailController;
 
 @interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) UITableView * taskView;
 @property (strong, nonatomic) NSFetchedResultsController * fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext * managedObjectContext;
+@property (strong, nonatomic) TaskDetailController * detailController;
 
 @end
 

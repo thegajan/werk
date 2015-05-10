@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "TaskDetailController.h"
 #import "StatsViewController.h"
 #import "GraphsViewController.h"
 #import "InterfaceController.h"
@@ -15,6 +16,7 @@
 #import "ColorOptions.h"
 #import "CoreDataHandler.h"
 #import "SyncUtility.h"
+#import "ColorOptions.h"
 
 @interface AppDelegate ()
 
@@ -25,18 +27,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [ColorOptions mainRed];
     
     [CoreDataHandler sharedInstance].moc = [self managedObjectContext];
     [CoreDataHandler sharedInstance].acc = [CoreDataHandler getAccount];
     
+    UISplitViewController * splitVC = [UISplitViewController new];
     MainViewController * mvc = [MainViewController new];
+    TaskDetailController * tvc = [TaskDetailController new];
     StatsViewController * svc = [StatsViewController new];
     GraphsViewController * gvc = [GraphsViewController new];
     AddTaskController * atc = [AddTaskController new];
     
+    [InterfaceController sharedInstance].splitVC = splitVC;
+        
+    mvc.detailController = tvc;
+    
+    splitVC.viewControllers = @[[[UINavigationController alloc] initWithRootViewController:mvc], [[UINavigationController alloc] initWithRootViewController:tvc]];
+    splitVC.delegate = [InterfaceController sharedInstance];
+    
     UITabBarController *tbc = [[UITabBarController alloc] init];
-    tbc.viewControllers = [NSArray arrayWithObjects:mvc, svc, gvc, nil];
+    tbc.viewControllers = [NSArray arrayWithObjects:splitVC, svc, gvc, nil];
     UINavigationController * nvc = [[UINavigationController alloc] initWithRootViewController:tbc];
+    nvc.navigationBarHidden = YES;
     self.window.rootViewController = nvc;
     [self.window makeKeyAndVisible];
     
@@ -48,8 +61,8 @@
     [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
-    mvc.tabBarItem.image = [UIImage imageNamed:@"Home"];
-    mvc.tabBarItem.title = @"Home";
+    splitVC.tabBarItem.image = [UIImage imageNamed:@"Home"];
+    splitVC.tabBarItem.title = @"Home";
     
     svc.tabBarItem.image = [UIImage imageNamed:@"Calculator"];
     svc.tabBarItem.title = @"Stats";
@@ -79,7 +92,7 @@
     UIBarButtonItem * spinnerView = [[UIBarButtonItem alloc] initWithCustomView:spinner];
     UIBarButtonItem * negativeSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     negativeSpace.width = -10;
-    tbc.navigationItem.rightBarButtonItems = @[negativeSpace, settings, addTask, spinnerView];
+    mvc.navigationItem.rightBarButtonItems = @[negativeSpace, settings, addTask, spinnerView];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [[SyncUtility sharedInstance] syncDatabases];

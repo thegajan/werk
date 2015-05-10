@@ -13,10 +13,10 @@
 #import "Task.h"
 #import "TaskStatusHandler.h"
 #import "TaskDetailController.h"
+#import "InterfaceController.h"
 
 @interface MainViewController () {
     NSTimer * _refreshTimer;
-    TaskDetailController * _detailController;
 }
 @end
 
@@ -28,8 +28,6 @@
     _taskView.dataSource = self;
     _taskView.delegate = self;
     [_taskView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-    _detailController = [[TaskDetailController alloc] init];
     
     [self setUpDataFetch];
     [TaskStatusHandler initialLoad];
@@ -96,7 +94,7 @@
 
 -(void)presentTask:(Task *)task {
     _detailController.task = task;
-    [self.navigationController pushViewController:_detailController animated:YES];
+    [[InterfaceController sharedInstance].splitVC showDetailViewController:_detailController.navigationController sender:self];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

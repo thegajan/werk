@@ -25,15 +25,21 @@
 }
 
 -(void)loadView {
-    self.view = [[TaskDetailView alloc] init];
+    self.view = _detailView;
 }
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    [_detailView addUIElements];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     _detailView.task = _task;
+}
+
+-(void)setTask:(Task *)task {
+    _task = task;
+    _detailView.task = task;
 }
 
 @end

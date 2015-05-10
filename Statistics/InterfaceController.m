@@ -7,6 +7,7 @@
 //
 
 #import "InterfaceController.h"
+#import "TaskDetailController.h"
 
 @implementation InterfaceController
 
@@ -28,10 +29,25 @@
 
 -(void)addTask {
     [_c_nav pushViewController:_c_task animated:YES];
+    _c_nav.navigationBarHidden = NO;
 }
 
 -(void)popToRoot {
+    _c_nav.navigationBarHidden = YES;
     [_c_nav popToRootViewControllerAnimated:YES];
+}
+
+-(BOOL)splitViewController:(UISplitViewController *)splitViewController showDetailViewController:(UIViewController *)vc sender:(id)sender {
+    if (splitViewController.collapsed) {
+        UINavigationController * nvc = [splitViewController.viewControllers objectAtIndex:0];
+        [nvc pushViewController:vc animated:YES];
+        return YES;
+    }
+    return NO;
+}
+
+-(BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
+    return YES;
 }
 
 @end

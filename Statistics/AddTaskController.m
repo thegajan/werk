@@ -24,6 +24,11 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [(AddTaskView *)self.view resetOptions];
+    self.navigationController.navigationBarHidden = NO;
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewDidLoad {
