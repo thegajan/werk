@@ -9,8 +9,9 @@ $_SESSION['token'] = $token; //store it as session variable
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600' rel='stylesheet'
           type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8"/>
-            <link rel="shortcut icon" href="img_fonts/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img_fonts/logo.png" type="image/x-icon">
     <title>Werk | A Time Productivity App</title>
     <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -108,9 +109,9 @@ $_SESSION['token'] = $token; //store it as session variable
                             var a = startDate + " " + startHour + ":" + startMinute + ":00 " + startTOD;
                             var c = endDate + " " + endHour + ":" + endMinute + ":00 " + endTOD;
                             if (taskName.length == 0 || str.length == 0 || startHour.length == 0 || startMinute.length == 0 || startTOD.length == 0 || str1.length == 0 || endHour.length == 0 || endMinute.length == 0 || endTOD.length == 0) {
-                                $('#submit-add').css({'background-color': '#C0392B', 'border': '1px solid #C0392B'}).val('Incomplete Form!');
+                                $('#submit-add').css({'background-color': '#C0392B', 'border': '1px solid #C0392B'}).val('Incomplete Form!').addClass('animated shake');
                                 setTimeout(function () {
-                                    $('#submit-add').css({'background-color': '#2ECC71', 'border': '1px solid #2ECC71'}).val('Create Task');
+                                    $('#submit-add').css({'background-color': '#2ECC71', 'border': '1px solid #2ECC71'}).val('Create Task').removeClass('animated shake');
                                 }, 1500);
                                 //a >= c ||
                             } else if (startHour > 12 || startHour < 1 || startMinute > 59 || startMinute < 0 || endHour > 59 || endHour < 1 || endMinute > 59 || endMinute < 0) {
