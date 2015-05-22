@@ -9,6 +9,7 @@
 #import "CoreDataHandler.h"
 #import "Task.h"
 #import "Account.h"
+#import "ColorOptions.h"
 
 @implementation CoreDataHandler
 
@@ -37,7 +38,7 @@
     }
 }
 
-+(void)createTaskWithName:(NSString *)name withDescription:(NSString *)description startsAt:(NSDate *)start endsAt:(NSDate *)end {
++(void)createTaskWithName:(NSString *)name withDescription:(NSString *)description startsAt:(NSDate *)start endsAt:(NSDate *)end withColor:(int64_t)color {
     CoreDataHandler * cdh = [CoreDataHandler sharedInstance];
     if (cdh.moc != nil) {
         if (cdh.acc != nil) {
@@ -53,6 +54,7 @@
             task.last_changed = [NSDate new];
             task.should_delete = NO;
             task.local_id = [CoreDataHandler getNextLocalID];
+            task.color = color;
             NSDate * now = [NSDate new];
             if (!([start compare:now] == NSOrderedAscending)) {
                 task.n_status = TaskStatusFuture;

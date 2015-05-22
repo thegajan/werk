@@ -2,7 +2,7 @@
 //  Task.m
 //  Statistics
 //
-//  Created by Alex Erf on 2/19/15.
+//  Created by Alex Erf on 5/22/15.
 //  Copyright (c) 2015 Orange. All rights reserved.
 //
 
@@ -15,35 +15,16 @@
 @dynamic last_changed;
 @dynamic length;
 @dynamic local_id;
+@dynamic n_status;
 @dynamic name;
+@dynamic s_status;
 @dynamic server_id;
 @dynamic should_delete;
-@dynamic s_status;
 @dynamic t_end;
 @dynamic t_start;
 @dynamic task_description;
 @dynamic was_success;
+@dynamic color;
 @dynamic account;
-
-@synthesize n_status = _n_status;
-
--(void)setN_status:(int64_t)n_status {
-    _n_status = n_status;
-    
-    switch (n_status) {
-        case TaskStatusCurrent:
-            self.s_status = @"Current";
-            break;
-        case TaskStatusFuture:
-            self.s_status = @"Future";
-            break;
-        case TaskStatusCompleted:
-            self.s_status = @"Finished";
-            break;
-        default:
-            NSLog(@"INVALID TASK N_STATUS");
-            break;
-    }
-}
 
 @end

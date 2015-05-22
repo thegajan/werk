@@ -92,6 +92,7 @@
         [taskInfo setValue:task.task_description forKey:@"description"];
         [taskInfo setValue:[_df stringFromDate:task.t_start] forKey:@"startDate"];
         [taskInfo setValue:[_df stringFromDate:task.t_end] forKey:@"endDate"];
+        [taskInfo setValue:[NSNumber numberWithLongLong:task.color] forKey:@"color"];
         
         if (task.should_delete) {
             [taskInfo setValue:@"delete" forKey:@"status"];

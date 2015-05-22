@@ -13,7 +13,6 @@
 +(UIColor*)colorFromHex:(unsigned)hex {
     return [UIColor colorWithRed:((hex & 0xFF0000) >> 16) / 255.0 green:((hex & 0xFF00) >> 8) / 255.0 blue:((hex & 0xFF)) / 255.0 alpha:1.0];
 }
-
 +(UIColor *)mainRed {
     return [ColorOptions colorFromHex:0xDB4437]; // Alizarin
 }

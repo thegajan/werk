@@ -13,7 +13,6 @@
 		D92928DB1A8F12CB00CCA1CF /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928DA1A8F12CB00CCA1CF /* StatsViewController.m */; };
 		D92928DE1A8F12DB00CCA1CF /* GraphsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928DD1A8F12DB00CCA1CF /* GraphsViewController.m */; };
 		D92928E11A8F3DAB00CCA1CF /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928E01A8F3DAB00CCA1CF /* Account.m */; };
-		D92928E51A8F3E4100CCA1CF /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928E41A8F3E4100CCA1CF /* Task.m */; };
 		D92928E91A8F3F0A00CCA1CF /* AddTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928E81A8F3F0A00CCA1CF /* AddTaskController.m */; };
 		D92928EC1A8F3FA300CCA1CF /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928EB1A8F3FA300CCA1CF /* InterfaceController.m */; };
 		D92929041A8F4DD900CCA1CF /* Exo2-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928F21A8F4DD900CCA1CF /* Exo2-Black.otf */; };
@@ -47,6 +46,7 @@
 		D965877C1A98994C001D0EA3 /* TaskStatusHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D965877B1A98994C001D0EA3 /* TaskStatusHandler.m */; };
 		D96C18991A9084CD00202BE1 /* CoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D96C18981A9084CD00202BE1 /* CoreDataHandler.m */; };
 		D995A1841A913ECA005BC74F /* AddTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = D995A1831A913ECA005BC74F /* AddTaskView.m */; };
+		D9C4D4951B0FD9F100E1705F /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D4941B0FD9F100E1705F /* Task.m */; };
 		D9DEA9D01ABD073F00AFFE07 /* TaskDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DEA9CF1ABD073F00AFFE07 /* TaskDetailView.m */; };
 		D9F75EF51A928E22008B6495 /* SyncUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F75EF41A928E22008B6495 /* SyncUtility.m */; };
 		D9FF04D61A91D89B0010436C /* SuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FF04D51A91D89B0010436C /* SuccessView.m */; };
@@ -74,8 +74,6 @@
 		D92928DD1A8F12DB00CCA1CF /* GraphsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphsViewController.m; sourceTree = "<group>"; };
 		D92928DF1A8F3DAB00CCA1CF /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		D92928E01A8F3DAB00CCA1CF /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
-		D92928E31A8F3E4100CCA1CF /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		D92928E41A8F3E4100CCA1CF /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		D92928E71A8F3F0A00CCA1CF /* AddTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskController.h; sourceTree = "<group>"; };
 		D92928E81A8F3F0A00CCA1CF /* AddTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskController.m; sourceTree = "<group>"; };
 		D92928EA1A8F3FA300CCA1CF /* InterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
@@ -122,6 +120,8 @@
 		D96C18981A9084CD00202BE1 /* CoreDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHandler.m; sourceTree = "<group>"; };
 		D995A1821A913ECA005BC74F /* AddTaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskView.h; sourceTree = "<group>"; };
 		D995A1831A913ECA005BC74F /* AddTaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskView.m; sourceTree = "<group>"; };
+		D9C4D4931B0FD9F100E1705F /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		D9C4D4941B0FD9F100E1705F /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		D9DEA9CE1ABD073F00AFFE07 /* TaskDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskDetailView.h; sourceTree = "<group>"; };
 		D9DEA9CF1ABD073F00AFFE07 /* TaskDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskDetailView.m; sourceTree = "<group>"; };
 		D9F75EF31A928E22008B6495 /* SyncUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncUtility.h; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 		D92928E21A8F3DB300CCA1CF /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				D92928E31A8F3E4100CCA1CF /* Task.h */,
-				D92928E41A8F3E4100CCA1CF /* Task.m */,
+				D9C4D4931B0FD9F100E1705F /* Task.h */,
+				D9C4D4941B0FD9F100E1705F /* Task.m */,
 				D92928DF1A8F3DAB00CCA1CF /* Account.h */,
 				D92928E01A8F3DAB00CCA1CF /* Account.m */,
 				D96C18971A9084CD00202BE1 /* CoreDataHandler.h */,
@@ -456,6 +456,7 @@
 				D92928EC1A8F3FA300CCA1CF /* InterfaceController.m in Sources */,
 				D92928E11A8F3DAB00CCA1CF /* Account.m in Sources */,
 				D931A4801A8DDD1D000B8E8B /* AppDelegate.m in Sources */,
+				D9C4D4951B0FD9F100E1705F /* Task.m in Sources */,
 				D94AC2231A95E1F800FD6614 /* TaskCell.m in Sources */,
 				D91275111A927B530009DEDD /* PHTextView.m in Sources */,
 				D904589D1ABD00B200C4C8D9 /* TaskDetailController.m in Sources */,
@@ -466,7 +467,6 @@
 				D931A4861A8DDD1D000B8E8B /* MainViewController.m in Sources */,
 				D965877C1A98994C001D0EA3 /* TaskStatusHandler.m in Sources */,
 				D931A4831A8DDD1D000B8E8B /* Statistics.xcdatamodeld in Sources */,
-				D92928E51A8F3E4100CCA1CF /* Task.m in Sources */,
 				D92928E91A8F3F0A00CCA1CF /* AddTaskController.m in Sources */,
 				D9DEA9D01ABD073F00AFFE07 /* TaskDetailView.m in Sources */,
 				D931A4A51A8DE2DB000B8E8B /* ColorOptions.m in Sources */,
