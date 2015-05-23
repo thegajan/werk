@@ -5,10 +5,9 @@ $_SESSION['token'] = $token; //store it as session variable
 ?>
 <!DOCTYPE html>
 <head>
-    <link href='https://fonts.googleapis.com/css?family=Exo+2:200,300,400,500' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600' rel='stylesheet'
-          type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+    <link
+        href='http://fonts.googleapis.com/css?family=Roboto:400,100,900italic,700italic,900,100italic,300,300italic,400italic,500,500italic,700'
+        rel='stylesheet' type='text/css'>
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8"/>
     <link rel="shortcut icon" href="img_fonts/logo.png" type="image/x-icon">

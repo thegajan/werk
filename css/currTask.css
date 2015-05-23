@@ -8,7 +8,7 @@
 
 #curr-task-content-stuff table tbody tr td {
     padding: 11px 5px 10px;
-    font-family: 'open sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 20px;
     cursor: pointer;
@@ -47,7 +47,7 @@
 }
 
 .timer {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 20px;
 }
