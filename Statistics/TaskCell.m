@@ -121,8 +121,8 @@
     int64_t length = [_end timeIntervalSinceDate:_start];
     int64_t remaining = [_end timeIntervalSinceNow];
     
-    double transparency = (double)remaining / length;
-    _colorBlocker.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0 - transparency];
+    double tColor = (double)remaining / length;
+    _colorBlocker.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0 - tColor];
 }
 
 -(NSString *)stringForDate:(NSDate *)date {
