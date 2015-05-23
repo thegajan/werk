@@ -243,3 +243,8 @@
 #task-table2 {
     display: none;
 }
+
+.countdown-el{
+    position: relative;
+    float: right;
+}

@@ -30,12 +30,12 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                         <td onclick='moreInfo(" . $b['id'] . ")'>
                             <div class='task-content-div' id='" . $b['id'] . "'><input type='checkbox' class='task-left'>
 
-                                <h1 class='task-left heads'>" . $b['task_name'] . " - </h1>
+                                <h1 class='task-left heads'>" . $b['task_name'] . "</h1></div>
 
-                                <h1 class='timer heads' id='countdown-holder" . $b['id'] . "'></h1>
+                                <h1 class='timer heads countdown-el' id='countdown-holder" . $b['id'] . "'></h1>
 
 
-                            </div>
+
                             <script>
 //                            slidDown(" . "#" . $b['id'] . ", " . "#description" .  $b['id'] . ");
                             countdownDate('countdown-holder" . $b['id'] . "', '" . date('Y/m/d H:i:s',strtotime($b['time_end'])) . "');
