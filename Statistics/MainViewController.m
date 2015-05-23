@@ -18,6 +18,8 @@
 
 @interface MainViewController () {
     NSTimer * _refreshTimer;
+    NSMutableDictionary * _objChanges;
+    NSMutableDictionary * _sectChanges;
 }
 @end
 
@@ -25,7 +27,9 @@
 
 -(void)loadView {
     [super loadView];
-    _taskView = [[UITableView alloc] init];
+    _taskView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[UICollectionViewFlowLayout new]];
+    [_taskView registerClass:[TaskCell class] forCellWithReuseIdentifier:@"task cell"];
+    _taskView.backgroundColor = [UIColor whiteColor];
     _taskView.dataSource = self;
     _taskView.delegate = self;
     [_taskView setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -84,8 +88,7 @@
 }
 
 -(void)createContstraints {
-    NSNumber * tab = @(self.tabBarController.tabBar.frame.size.height);
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_taskView]-tab-|" options:0 metrics:NSDictionaryOfVariableBindings(tab) views:NSDictionaryOfVariableBindings(_taskView)]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_taskView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_taskView)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_taskView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_taskView)]];
 }
 
@@ -98,11 +101,11 @@
     [[InterfaceController sharedInstance].splitVC showDetailViewController:_detailController.navigationController sender:self];
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return [[_fetchedResultsController sections] count];
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if ([[_fetchedResultsController sections] count] > 0) {
         id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
         return [sectionInfo numberOfObjects];
@@ -111,13 +114,9 @@
         return 0;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString * const cell_id = @"task cell";
-    TaskCell * cell = [tableView dequeueReusableCellWithIdentifier:cell_id];
-    if (!cell) {
-        cell = [[TaskCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cell_id];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
+    TaskCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell_id forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -125,78 +124,167 @@
 -(void)configureCell:(TaskCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     Task * info = [_fetchedResultsController objectAtIndexPath:indexPath];
     cell.name = info.name;
+    cell.start = info.t_start;
     cell.end = info.t_end;
-    cell.backgroundColor = [ColorOptions colorFromHex:(unsigned)info.color];
     cell.taskInfo = info;
     [cell updateTimeDisplay];
 }
- 
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if ([[_fetchedResultsController sections] count] > 0) {
-        id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
-        UIBlurEffect * blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-        UIVisualEffectView * blurView = [[UIVisualEffectView alloc] initWithEffect:blur];
-        UILabel * header = [UILabel new];
-        header.text = [NSString stringWithFormat:@" %@", [sectionInfo name]];
-        header.font = [UIFont fontWithName:@"Roboto-Light" size:30.0];
-        header.textColor = [ColorOptions mainRed];
-        [header setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [blurView.contentView addSubview:header];
-        [blurView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[header]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(header)]];
-        [blurView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[header]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(header)]];
-        return blurView;
-    }
-    else
-        return nil;
-}
 
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 51.0;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 90.0;
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(self.view.frame.size.width / 2, 201);
 }
 
 -(void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-    [_taskView beginUpdates];
+    _objChanges = [NSMutableDictionary dictionary];
+    _sectChanges = [NSMutableDictionary dictionary];
 }
 
 -(void)controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
     NSLog(@"CHANGED SECTION: %ld", (unsigned long)sectionIndex);
-    switch (type) {
-        case NSFetchedResultsChangeInsert:
-            [_taskView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-        case NSFetchedResultsChangeDelete:
-            [_taskView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-        default:
-            break;
+    if (type == NSFetchedResultsChangeDelete || type == NSFetchedResultsChangeInsert) {
+        NSMutableIndexSet * set = _sectChanges[@(type)];
+        if (set) {
+            [set addIndex:sectionIndex];
+        }
+        else {
+            _sectChanges[@(type)] = [[NSMutableIndexSet alloc] initWithIndex:sectionIndex];
+        }
     }
 }
 
 -(void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
     NSLog(@"CHANGED OBJECT ROW: %ld SECTION: %ld", (long)newIndexPath.row, (long)newIndexPath.section);
+    
+    NSMutableArray * set = _objChanges[@(type)];
+    if (!set) {
+        set = [NSMutableArray array];
+        _objChanges[@(type)] = set;
+    }
+    
     switch (type) {
         case NSFetchedResultsChangeInsert:
-            [_taskView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [set addObject:newIndexPath];
             break;
         case NSFetchedResultsChangeDelete:
-            [_taskView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:(TaskCell *)[_taskView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [set addObject:indexPath];
             break;
         case NSFetchedResultsChangeMove:
-            [_taskView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [_taskView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [set addObject:@[indexPath, newIndexPath]];
             break;
     }
 }
 
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    [_taskView endUpdates];
+    NSMutableArray * moves = _objChanges[@(NSFetchedResultsChangeMove)];
+    if (moves.count > 0) {
+        NSMutableArray * updatedMoves = [[NSMutableArray alloc] initWithCapacity:moves.count];
+        
+        NSMutableIndexSet * insertSections = _sectChanges[@(NSFetchedResultsChangeInsert)];
+        NSMutableIndexSet * deleteSections = _sectChanges[@(NSFetchedResultsChangeDelete)];
+        for (NSArray * move in moves) {
+            NSIndexPath * fromIP = move[0];
+            NSIndexPath * toIP = move[1];
+            
+            if ([deleteSections containsIndex:fromIP.section]) {
+                if (![insertSections containsIndex:toIP.section]) {
+                    NSMutableArray * set = _objChanges[@(NSFetchedResultsChangeInsert)];
+                    if (!set) {
+                        set = [[NSMutableArray alloc] initWithObjects:toIP, nil];
+                        _objChanges[@(NSFetchedResultsChangeInsert)] = set;
+                    }
+                    else {
+                        [set addObject:toIP];
+                    }
+                }
+            }
+            else if ([insertSections containsIndex:toIP.section]) {
+                NSMutableArray * set = _objChanges[@(NSFetchedResultsChangeDelete)];
+                if (!set) {
+                    set = [[NSMutableArray alloc] initWithObjects:fromIP, nil];
+                    _objChanges[@(NSFetchedResultsChangeDelete)] = set;
+                }
+                else {
+                    [set addObject:fromIP];
+                }
+            }
+            else {
+                [updatedMoves addObject:move];
+            }
+        }
+        if (updatedMoves.count > 0) {
+            _objChanges[@(NSFetchedResultsChangeMove)] = updatedMoves;
+        }
+        else {
+            [_objChanges removeObjectForKey:@(NSFetchedResultsChangeMove)];
+        }
+    }
+    
+    NSMutableArray * toDelete = _objChanges[@(NSFetchedResultsChangeDelete)];
+    if (toDelete.count > 0) {
+        NSMutableIndexSet * deletedSections = _sectChanges[@(NSFetchedResultsChangeDelete)];
+        [toDelete filterUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(NSIndexPath * evaluatedObject, NSDictionary * bindings) {
+            return ![deletedSections containsIndex:evaluatedObject.section];
+        }]];
+    }
+    
+    NSMutableArray * toInsert = _objChanges[@(NSFetchedResultsChangeInsert)];
+    if (toInsert.count > 0) {
+        NSMutableIndexSet * insertedSections = _sectChanges[@(NSFetchedResultsChangeInsert)];
+        [toInsert filterUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(NSIndexPath * evaluatedObject, NSDictionary * bindings) {
+            return ![insertedSections containsIndex:evaluatedObject.section];
+        }]];
+    }
+    
+    UICollectionView * collectionView = _taskView;
+    
+    [collectionView performBatchUpdates:^{
+        NSIndexSet * deletedSections = _sectChanges[@(NSFetchedResultsChangeDelete)];
+        if (deletedSections.count > 0) {
+            [collectionView deleteSections:deletedSections];
+        }
+        
+        NSIndexSet * insertedSections = _sectChanges[@(NSFetchedResultsChangeInsert)];
+        if (insertedSections.count > 0) {
+            [collectionView insertSections:insertedSections];
+        }
+        
+        NSArray * deletedItems = _objChanges[@(NSFetchedResultsChangeDelete)];
+        if (deletedItems.count > 0) {
+            [collectionView deleteItemsAtIndexPaths:deletedItems];
+        }
+        
+        NSArray * insertedItems = _objChanges[@(NSFetchedResultsChangeInsert)];
+        if (insertedItems.count > 0) {
+            [collectionView insertItemsAtIndexPaths:insertedItems];
+        }
+        
+        NSArray * reloadItems = _objChanges[@(NSFetchedResultsChangeUpdate)];
+        if (reloadItems.count > 0) {
+            [collectionView reloadItemsAtIndexPaths:reloadItems];
+        }
+        
+        NSArray * moveItems = _objChanges[@(NSFetchedResultsChangeMove)];
+        for (NSArray * paths in moveItems) {
+            [collectionView moveItemAtIndexPath:paths[0] toIndexPath:paths[1]];
+        }
+    } completion:nil];
+    
+    _objChanges = nil;
+    _sectChanges = nil;
+    
+}
+
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
+}
+
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
 }
 
 -(void)refreshCellsAndTasks {
@@ -206,11 +294,6 @@
         }
     });
     [TaskStatusHandler updateTaskStatus];
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TaskCell * cell = (TaskCell *)[tableView cellForRowAtIndexPath:indexPath];
-    [self presentTask:cell.taskInfo];
 }
 
 @end

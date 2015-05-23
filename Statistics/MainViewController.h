@@ -12,9 +12,9 @@
 @class Account;
 @class TaskDetailController;
 
-@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
+@interface MainViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate>
 
-@property (strong, nonatomic) UITableView * taskView;
+@property (strong, nonatomic) UICollectionView * taskView;
 @property (strong, nonatomic) NSFetchedResultsController * fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext * managedObjectContext;
 @property (strong, nonatomic) TaskDetailController * detailController;
