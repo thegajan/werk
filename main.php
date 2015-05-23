@@ -49,6 +49,7 @@ include_once "header.php";
 <section id="main-contents">
     <div id="curr-task-content">
         <div id="curr-task-header">
+            <input class="header" type=""
             <h1 class="header">Tasks</h1>
 
             <img src="img_fonts/android-more-vertical.svg" class="icons header-icons">

@@ -219,6 +219,8 @@ textarea {
 }
 
 #task-name {
+    border: none;
+    border-bottom: 1px #DB4437 solid;
     font-family: "Open Sans", sans-serif;
     margin: 10px;
     font-size: 20px;
