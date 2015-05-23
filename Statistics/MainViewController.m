@@ -14,6 +14,7 @@
 #import "TaskStatusHandler.h"
 #import "TaskDetailController.h"
 #import "InterfaceController.h"
+#import "ColorOptions.h"
 
 @interface MainViewController () {
     NSTimer * _refreshTimer;
@@ -125,6 +126,7 @@
     Task * info = [_fetchedResultsController objectAtIndexPath:indexPath];
     cell.name = info.name;
     cell.end = info.t_end;
+    cell.backgroundColor = [ColorOptions colorFromHex:(unsigned)info.color];
     cell.taskInfo = info;
     [cell updateTimeDisplay];
 }

@@ -180,6 +180,13 @@
             task.last_changed = [NSDate new];
             task.should_delete = NO;
             task.local_id = [CoreDataHandler getNextLocalID];
+            NSNumber * color = [object objectForKey:@"color"];
+            if (color) {
+                task.color = color.integerValue;
+            }
+            else {
+                task.color = 0xFFFFFF;
+            }
             NSDate * now = [NSDate new];
             if (!([task.t_start compare:now] == NSOrderedAscending))
                 task.n_status = TaskStatusFuture;
