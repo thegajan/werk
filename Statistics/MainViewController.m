@@ -15,11 +15,13 @@
 #import "TaskDetailController.h"
 #import "InterfaceController.h"
 #import "ColorOptions.h"
+#import "AppDelegate.h"
 
 @interface MainViewController () {
     NSTimer * _refreshTimer;
     NSMutableDictionary * _objChanges;
     NSMutableDictionary * _sectChanges;
+    BOOL _isRotating;
 }
 @end
 
@@ -27,6 +29,7 @@
 
 -(void)loadView {
     [super loadView];
+    _isRotating = NO;
     _taskView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[UICollectionViewFlowLayout new]];
     [_taskView registerClass:[TaskCell class] forCellWithReuseIdentifier:@"task cell"];
     _taskView.backgroundColor = [UIColor whiteColor];
@@ -131,7 +134,32 @@
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.view.frame.size.width / 2, 201);
+    if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])) {
+        if (_isRotating) {
+            AppDelegate * delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            NSInteger width = delegate.primaryColumnWidth;
+            return CGSizeMake(width, 150);
+        }
+        else {
+            return CGSizeMake([UIScreen mainScreen].bounds.size.width / 2, 201);
+        }
+    }
+    else {
+        if (_isRotating) {
+            return CGSizeMake([UIScreen mainScreen].bounds.size.height / 2, 201);
+        }
+        else {
+            AppDelegate * delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            NSInteger width = delegate.primaryColumnWidth;
+            return CGSizeMake(width, 150);
+        }
+    }
+}
+
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    _isRotating = YES;
+    [_taskView performBatchUpdates:nil completion:nil];
 }
 
 -(void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
@@ -285,6 +313,11 @@
 
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    TaskCell * cell = (TaskCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    [self presentTask:cell.taskInfo];
 }
 
 -(void)refreshCellsAndTasks {

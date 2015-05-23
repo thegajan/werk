@@ -118,11 +118,19 @@
 }
 
 -(void)updateColor {
-    int64_t length = [_end timeIntervalSinceDate:_start];
-    int64_t remaining = [_end timeIntervalSinceNow];
-    
-    double tColor = (double)remaining / length;
-    _colorBlocker.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0 - tColor];
+    if (_taskInfo.n_status == TaskStatusCompleted) {
+        _colorBlocker.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+    }
+    else if (_taskInfo.n_status == TaskStatusFuture) {
+        _colorBlocker.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.0];
+    }
+    else {
+        int64_t length = [_end timeIntervalSinceDate:_start];
+        int64_t remaining = [_end timeIntervalSinceNow];
+        
+        double tColor = (double)remaining / length;
+        _colorBlocker.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0 - tColor];
+    }
 }
 
 -(NSString *)stringForDate:(NSDate *)date {

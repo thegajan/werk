@@ -26,6 +26,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    _primaryColumnWidth = 264;
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [ColorOptions mainRed];
     
@@ -43,6 +46,8 @@
         
     mvc.detailController = tvc;
     
+    splitVC.maximumPrimaryColumnWidth = _primaryColumnWidth;
+    splitVC.minimumPrimaryColumnWidth = _primaryColumnWidth;
     splitVC.viewControllers = @[[[UINavigationController alloc] initWithRootViewController:mvc], [[UINavigationController alloc] initWithRootViewController:tvc]];
     splitVC.delegate = [InterfaceController sharedInstance];
     
