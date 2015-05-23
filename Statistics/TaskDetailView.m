@@ -40,13 +40,13 @@
     [_dateInputPicker setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_confirmButton setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    _titleLabel.font = [UIFont fontWithName:@"Exo2-Thin" size:40];
-    _countdownLabel.font = [UIFont fontWithName:@"Exo2-Medium" size:16];
-    _descriptionView.font = [UIFont fontWithName:@"Exo2-Regular" size:22];
-    _startDateLabel.font = [UIFont fontWithName:@"Exo2-Medium" size:16];
-    _endDateLabel.font = [UIFont fontWithName:@"Exo2-Medium" size:16];
-    _completionHeader.font = [UIFont fontWithName:@"Exo2-Medium" size:22];
-    _confirmButton.titleLabel.font = [UIFont fontWithName:@"Exo2-Thin" size:22];
+    _titleLabel.font = [UIFont fontWithName:@"Roboto-Thin" size:40];
+    _countdownLabel.font = [UIFont fontWithName:@"Roboto-Medium" size:16];
+    _descriptionView.font = [UIFont fontWithName:@"Roboto-Regular" size:22];
+    _startDateLabel.font = [UIFont fontWithName:@"Roboto-Medium" size:16];
+    _endDateLabel.font = [UIFont fontWithName:@"Roboto-Medium" size:16];
+    _completionHeader.font = [UIFont fontWithName:@"Roboto-Medium" size:22];
+    _confirmButton.titleLabel.font = [UIFont fontWithName:@"Roboto-Thin" size:22];
 }
 
 -(void)addUIElements {

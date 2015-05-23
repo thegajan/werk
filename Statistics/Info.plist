@@ -24,16 +24,18 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>OxygenMono-Regular.otf</string>
-		<string>Exo2-Light.otf</string>
-		<string>Exo2-Thin.otf</string>
-		<string>Exo2-Regular.otf</string>
-		<string>Exo2-ExtraLight.otf</string>
-		<string>Exo2-Bold.otf</string>
-		<string>Exo2-ExtraBold.otf</string>
-		<string>Exo2-Black.otf</string>
-		<string>Exo2-SemiBold.otf</string>
-		<string>Exo2-Medium.otf</string>
+		<string>Roboto-Black.ttf</string>
+		<string>Roboto-BlackItalic.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-BoldItalic.ttf</string>
+		<string>Roboto-Italic.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-LightItalic.ttf</string>
+		<string>Roboto-Medium.ttf</string>
+		<string>Roboto-MediumItalic.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Thin.ttf</string>
+		<string>Roboto-ThinItalic.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

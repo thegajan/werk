@@ -31,8 +31,8 @@
         [_nameLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_timeLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         
-        _nameLabel.font = [UIFont fontWithName:@"Exo2-Light" size:20.0];
-        _timeLabel.font = [UIFont fontWithName:@"OxygenMono-Regular" size:18.0];
+        _nameLabel.font = [UIFont fontWithName:@"Roboto-Light" size:40.0];
+        _timeLabel.font = [UIFont fontWithName:@"Roboto-Thin" size:54.0];
                 
         _nameLabel.textAlignment = NSTextAlignmentLeft;
         _timeLabel.textAlignment = NSTextAlignmentRight;
@@ -74,15 +74,15 @@
                         text = [NSString stringWithFormat:@"%lds", (long)seconds];
                     }
                     else {
-                        text = [NSString stringWithFormat:@"%ldm | %02lds", (long)minutes, (long)seconds];
+                        text = [NSString stringWithFormat:@"%ldm", (long)minutes];
                     }
                 }
                 else {
-                    text = [NSString stringWithFormat:@"%ldh | %02ldm | %02lds", (long)hours, (long)minutes, (long)seconds];
+                    text = [NSString stringWithFormat:@"%ldh", (long)hours];
                 }
             }
             else {
-                text = [NSString stringWithFormat:@"%ldd | %02ldh | %02ldm | %02lds", (long)days, (long)hours, (long)minutes, (long)seconds];
+                text = [NSString stringWithFormat:@"%ldd", (long)days];
             }
             break;
         case TaskStatusCompleted:

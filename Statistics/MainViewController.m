@@ -138,7 +138,7 @@
         UIVisualEffectView * blurView = [[UIVisualEffectView alloc] initWithEffect:blur];
         UILabel * header = [UILabel new];
         header.text = [NSString stringWithFormat:@" %@", [sectionInfo name]];
-        header.font = [UIFont fontWithName:@"Exo2-Light" size:30.0];
+        header.font = [UIFont fontWithName:@"Roboto-Light" size:30.0];
         header.textColor = [ColorOptions mainRed];
         [header setTranslatesAutoresizingMaskIntoConstraints:NO];
         [blurView.contentView addSubview:header];
@@ -155,7 +155,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 51.0;
+    return 90.0;
 }
 
 -(void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
@@ -201,9 +201,9 @@
 
 -(void)refreshCellsAndTasks {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        dispatch_apply(_taskView.visibleCells.count, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(size_t i) {
-            [_taskView.visibleCells[i] updateTimeDisplay];
-        });
+        for (TaskCell * cell in _taskView.visibleCells) {
+            [cell updateTimeDisplay];
+        }
     });
     [TaskStatusHandler updateTaskStatus];
 }

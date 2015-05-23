@@ -15,24 +15,6 @@
 		D92928E11A8F3DAB00CCA1CF /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928E01A8F3DAB00CCA1CF /* Account.m */; };
 		D92928E91A8F3F0A00CCA1CF /* AddTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928E81A8F3F0A00CCA1CF /* AddTaskController.m */; };
 		D92928EC1A8F3FA300CCA1CF /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92928EB1A8F3FA300CCA1CF /* InterfaceController.m */; };
-		D92929041A8F4DD900CCA1CF /* Exo2-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928F21A8F4DD900CCA1CF /* Exo2-Black.otf */; };
-		D92929051A8F4DD900CCA1CF /* Exo2-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928F31A8F4DD900CCA1CF /* Exo2-BlackItalic.otf */; };
-		D92929061A8F4DD900CCA1CF /* Exo2-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928F41A8F4DD900CCA1CF /* Exo2-Bold.otf */; };
-		D92929071A8F4DD900CCA1CF /* Exo2-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928F51A8F4DD900CCA1CF /* Exo2-BoldItalic.otf */; };
-		D92929081A8F4DD900CCA1CF /* Exo2-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928F61A8F4DD900CCA1CF /* Exo2-ExtraBold.otf */; };
-		D92929091A8F4DD900CCA1CF /* Exo2-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928F71A8F4DD900CCA1CF /* Exo2-ExtraBoldItalic.otf */; };
-		D929290A1A8F4DD900CCA1CF /* Exo2-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928F81A8F4DD900CCA1CF /* Exo2-ExtraLight.otf */; };
-		D929290B1A8F4DD900CCA1CF /* Exo2-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928F91A8F4DD900CCA1CF /* Exo2-ExtraLightItalic.otf */; };
-		D929290C1A8F4DD900CCA1CF /* Exo2-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928FA1A8F4DD900CCA1CF /* Exo2-Italic.otf */; };
-		D929290D1A8F4DD900CCA1CF /* Exo2-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928FB1A8F4DD900CCA1CF /* Exo2-Light.otf */; };
-		D929290E1A8F4DD900CCA1CF /* Exo2-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928FC1A8F4DD900CCA1CF /* Exo2-LightItalic.otf */; };
-		D929290F1A8F4DD900CCA1CF /* Exo2-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928FD1A8F4DD900CCA1CF /* Exo2-Medium.otf */; };
-		D92929101A8F4DD900CCA1CF /* Exo2-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928FE1A8F4DD900CCA1CF /* Exo2-MediumItalic.otf */; };
-		D92929111A8F4DD900CCA1CF /* Exo2-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92928FF1A8F4DD900CCA1CF /* Exo2-Regular.otf */; };
-		D92929121A8F4DD900CCA1CF /* Exo2-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92929001A8F4DD900CCA1CF /* Exo2-SemiBold.otf */; };
-		D92929131A8F4DD900CCA1CF /* Exo2-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92929011A8F4DD900CCA1CF /* Exo2-SemiBoldItalic.otf */; };
-		D92929141A8F4DD900CCA1CF /* Exo2-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92929021A8F4DD900CCA1CF /* Exo2-Thin.otf */; };
-		D92929151A8F4DD900CCA1CF /* Exo2-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D92929031A8F4DD900CCA1CF /* Exo2-ThinItalic.otf */; };
 		D931A47D1A8DDD1D000B8E8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D931A47C1A8DDD1D000B8E8B /* main.m */; };
 		D931A4801A8DDD1D000B8E8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D931A47F1A8DDD1D000B8E8B /* AppDelegate.m */; };
 		D931A4831A8DDD1D000B8E8B /* Statistics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D931A4811A8DDD1D000B8E8B /* Statistics.xcdatamodeld */; };
@@ -42,9 +24,20 @@
 		D931A49A1A8DDD1D000B8E8B /* StatisticsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D931A4991A8DDD1D000B8E8B /* StatisticsTests.m */; };
 		D931A4A51A8DE2DB000B8E8B /* ColorOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = D931A4A41A8DE2DB000B8E8B /* ColorOptions.m */; };
 		D94AC2231A95E1F800FD6614 /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D94AC2221A95E1F800FD6614 /* TaskCell.m */; };
-		D96587791A9885D7001D0EA3 /* OxygenMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D96587781A9885D7001D0EA3 /* OxygenMono-Regular.otf */; };
 		D965877C1A98994C001D0EA3 /* TaskStatusHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D965877B1A98994C001D0EA3 /* TaskStatusHandler.m */; };
 		D96C18991A9084CD00202BE1 /* CoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D96C18981A9084CD00202BE1 /* CoreDataHandler.m */; };
+		D98370151B1003C1001A9BBF /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D98370091B1003C1001A9BBF /* Roboto-Black.ttf */; };
+		D98370161B1003C1001A9BBF /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D983700A1B1003C1001A9BBF /* Roboto-BlackItalic.ttf */; };
+		D98370171B1003C1001A9BBF /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D983700B1B1003C1001A9BBF /* Roboto-Bold.ttf */; };
+		D98370181B1003C1001A9BBF /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D983700C1B1003C1001A9BBF /* Roboto-BoldItalic.ttf */; };
+		D98370191B1003C1001A9BBF /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D983700D1B1003C1001A9BBF /* Roboto-Italic.ttf */; };
+		D983701A1B1003C1001A9BBF /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D983700E1B1003C1001A9BBF /* Roboto-Light.ttf */; };
+		D983701B1B1003C1001A9BBF /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D983700F1B1003C1001A9BBF /* Roboto-LightItalic.ttf */; };
+		D983701C1B1003C1001A9BBF /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D98370101B1003C1001A9BBF /* Roboto-Medium.ttf */; };
+		D983701D1B1003C1001A9BBF /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D98370111B1003C1001A9BBF /* Roboto-MediumItalic.ttf */; };
+		D983701E1B1003C1001A9BBF /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D98370121B1003C1001A9BBF /* Roboto-Regular.ttf */; };
+		D983701F1B1003C1001A9BBF /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D98370131B1003C1001A9BBF /* Roboto-Thin.ttf */; };
+		D98370201B1003C1001A9BBF /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D98370141B1003C1001A9BBF /* Roboto-ThinItalic.ttf */; };
 		D995A1841A913ECA005BC74F /* AddTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = D995A1831A913ECA005BC74F /* AddTaskView.m */; };
 		D9C4D4951B0FD9F100E1705F /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D4941B0FD9F100E1705F /* Task.m */; };
 		D9DEA9D01ABD073F00AFFE07 /* TaskDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DEA9CF1ABD073F00AFFE07 /* TaskDetailView.m */; };
@@ -78,24 +71,6 @@
 		D92928E81A8F3F0A00CCA1CF /* AddTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskController.m; sourceTree = "<group>"; };
 		D92928EA1A8F3FA300CCA1CF /* InterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
 		D92928EB1A8F3FA300CCA1CF /* InterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
-		D92928F21A8F4DD900CCA1CF /* Exo2-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Black.otf"; path = "Statistics/EXO_2_OTF/Exo2-Black.otf"; sourceTree = "<group>"; };
-		D92928F31A8F4DD900CCA1CF /* Exo2-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-BlackItalic.otf"; path = "Statistics/EXO_2_OTF/Exo2-BlackItalic.otf"; sourceTree = "<group>"; };
-		D92928F41A8F4DD900CCA1CF /* Exo2-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Bold.otf"; path = "Statistics/EXO_2_OTF/Exo2-Bold.otf"; sourceTree = "<group>"; };
-		D92928F51A8F4DD900CCA1CF /* Exo2-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-BoldItalic.otf"; path = "Statistics/EXO_2_OTF/Exo2-BoldItalic.otf"; sourceTree = "<group>"; };
-		D92928F61A8F4DD900CCA1CF /* Exo2-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-ExtraBold.otf"; path = "Statistics/EXO_2_OTF/Exo2-ExtraBold.otf"; sourceTree = "<group>"; };
-		D92928F71A8F4DD900CCA1CF /* Exo2-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-ExtraBoldItalic.otf"; path = "Statistics/EXO_2_OTF/Exo2-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
-		D92928F81A8F4DD900CCA1CF /* Exo2-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-ExtraLight.otf"; path = "Statistics/EXO_2_OTF/Exo2-ExtraLight.otf"; sourceTree = "<group>"; };
-		D92928F91A8F4DD900CCA1CF /* Exo2-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-ExtraLightItalic.otf"; path = "Statistics/EXO_2_OTF/Exo2-ExtraLightItalic.otf"; sourceTree = "<group>"; };
-		D92928FA1A8F4DD900CCA1CF /* Exo2-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Italic.otf"; path = "Statistics/EXO_2_OTF/Exo2-Italic.otf"; sourceTree = "<group>"; };
-		D92928FB1A8F4DD900CCA1CF /* Exo2-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Light.otf"; path = "Statistics/EXO_2_OTF/Exo2-Light.otf"; sourceTree = "<group>"; };
-		D92928FC1A8F4DD900CCA1CF /* Exo2-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-LightItalic.otf"; path = "Statistics/EXO_2_OTF/Exo2-LightItalic.otf"; sourceTree = "<group>"; };
-		D92928FD1A8F4DD900CCA1CF /* Exo2-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Medium.otf"; path = "Statistics/EXO_2_OTF/Exo2-Medium.otf"; sourceTree = "<group>"; };
-		D92928FE1A8F4DD900CCA1CF /* Exo2-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-MediumItalic.otf"; path = "Statistics/EXO_2_OTF/Exo2-MediumItalic.otf"; sourceTree = "<group>"; };
-		D92928FF1A8F4DD900CCA1CF /* Exo2-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Regular.otf"; path = "Statistics/EXO_2_OTF/Exo2-Regular.otf"; sourceTree = "<group>"; };
-		D92929001A8F4DD900CCA1CF /* Exo2-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-SemiBold.otf"; path = "Statistics/EXO_2_OTF/Exo2-SemiBold.otf"; sourceTree = "<group>"; };
-		D92929011A8F4DD900CCA1CF /* Exo2-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-SemiBoldItalic.otf"; path = "Statistics/EXO_2_OTF/Exo2-SemiBoldItalic.otf"; sourceTree = "<group>"; };
-		D92929021A8F4DD900CCA1CF /* Exo2-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Thin.otf"; path = "Statistics/EXO_2_OTF/Exo2-Thin.otf"; sourceTree = "<group>"; };
-		D92929031A8F4DD900CCA1CF /* Exo2-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-ThinItalic.otf"; path = "Statistics/EXO_2_OTF/Exo2-ThinItalic.otf"; sourceTree = "<group>"; };
 		D931A4771A8DDD1D000B8E8B /* Statistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Statistics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D931A47B1A8DDD1D000B8E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D931A47C1A8DDD1D000B8E8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,11 +88,22 @@
 		D931A4A41A8DE2DB000B8E8B /* ColorOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorOptions.m; sourceTree = "<group>"; };
 		D94AC2211A95E1F800FD6614 /* TaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskCell.h; sourceTree = "<group>"; };
 		D94AC2221A95E1F800FD6614 /* TaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskCell.m; sourceTree = "<group>"; };
-		D96587781A9885D7001D0EA3 /* OxygenMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OxygenMono-Regular.otf"; path = "Statistics/OxygenMono-Regular.otf"; sourceTree = "<group>"; };
 		D965877A1A98994C001D0EA3 /* TaskStatusHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskStatusHandler.h; sourceTree = "<group>"; };
 		D965877B1A98994C001D0EA3 /* TaskStatusHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskStatusHandler.m; sourceTree = "<group>"; };
 		D96C18971A9084CD00202BE1 /* CoreDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHandler.h; sourceTree = "<group>"; };
 		D96C18981A9084CD00202BE1 /* CoreDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHandler.m; sourceTree = "<group>"; };
+		D98370091B1003C1001A9BBF /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "Statistics/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		D983700A1B1003C1001A9BBF /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BlackItalic.ttf"; path = "Statistics/Roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		D983700B1B1003C1001A9BBF /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Statistics/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		D983700C1B1003C1001A9BBF /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BoldItalic.ttf"; path = "Statistics/Roboto/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D983700D1B1003C1001A9BBF /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Italic.ttf"; path = "Statistics/Roboto/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		D983700E1B1003C1001A9BBF /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "Statistics/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		D983700F1B1003C1001A9BBF /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-LightItalic.ttf"; path = "Statistics/Roboto/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		D98370101B1003C1001A9BBF /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "Statistics/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		D98370111B1003C1001A9BBF /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-MediumItalic.ttf"; path = "Statistics/Roboto/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		D98370121B1003C1001A9BBF /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "Statistics/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		D98370131B1003C1001A9BBF /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "Statistics/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		D98370141B1003C1001A9BBF /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-ThinItalic.ttf"; path = "Statistics/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		D995A1821A913ECA005BC74F /* AddTaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskView.h; sourceTree = "<group>"; };
 		D995A1831A913ECA005BC74F /* AddTaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskView.m; sourceTree = "<group>"; };
 		D9C4D4931B0FD9F100E1705F /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
@@ -194,36 +180,10 @@
 			name = TaskCreationUI;
 			sourceTree = "<group>";
 		};
-		D92929161A8F4DED00CCA1CF /* Exo2 */ = {
-			isa = PBXGroup;
-			children = (
-				D92928F21A8F4DD900CCA1CF /* Exo2-Black.otf */,
-				D92928F31A8F4DD900CCA1CF /* Exo2-BlackItalic.otf */,
-				D92928F41A8F4DD900CCA1CF /* Exo2-Bold.otf */,
-				D92928F51A8F4DD900CCA1CF /* Exo2-BoldItalic.otf */,
-				D92928F61A8F4DD900CCA1CF /* Exo2-ExtraBold.otf */,
-				D92928F71A8F4DD900CCA1CF /* Exo2-ExtraBoldItalic.otf */,
-				D92928F81A8F4DD900CCA1CF /* Exo2-ExtraLight.otf */,
-				D92928F91A8F4DD900CCA1CF /* Exo2-ExtraLightItalic.otf */,
-				D92928FA1A8F4DD900CCA1CF /* Exo2-Italic.otf */,
-				D92928FB1A8F4DD900CCA1CF /* Exo2-Light.otf */,
-				D92928FC1A8F4DD900CCA1CF /* Exo2-LightItalic.otf */,
-				D92928FD1A8F4DD900CCA1CF /* Exo2-Medium.otf */,
-				D92928FE1A8F4DD900CCA1CF /* Exo2-MediumItalic.otf */,
-				D92928FF1A8F4DD900CCA1CF /* Exo2-Regular.otf */,
-				D92929001A8F4DD900CCA1CF /* Exo2-SemiBold.otf */,
-				D92929011A8F4DD900CCA1CF /* Exo2-SemiBoldItalic.otf */,
-				D92929021A8F4DD900CCA1CF /* Exo2-Thin.otf */,
-				D92929031A8F4DD900CCA1CF /* Exo2-ThinItalic.otf */,
-			);
-			name = Exo2;
-			sourceTree = "<group>";
-		};
 		D931A46E1A8DDD1D000B8E8B = {
 			isa = PBXGroup;
 			children = (
-				D96587781A9885D7001D0EA3 /* OxygenMono-Regular.otf */,
-				D92929161A8F4DED00CCA1CF /* Exo2 */,
+				D98370211B1003C7001A9BBF /* Roboto */,
 				D931A4791A8DDD1D000B8E8B /* Statistics */,
 				D931A4961A8DDD1D000B8E8B /* StatisticsTests */,
 				D931A4781A8DDD1D000B8E8B /* Products */,
@@ -322,6 +282,25 @@
 			name = UIManagement;
 			sourceTree = "<group>";
 		};
+		D98370211B1003C7001A9BBF /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				D98370091B1003C1001A9BBF /* Roboto-Black.ttf */,
+				D983700A1B1003C1001A9BBF /* Roboto-BlackItalic.ttf */,
+				D983700B1B1003C1001A9BBF /* Roboto-Bold.ttf */,
+				D983700C1B1003C1001A9BBF /* Roboto-BoldItalic.ttf */,
+				D983700D1B1003C1001A9BBF /* Roboto-Italic.ttf */,
+				D983700E1B1003C1001A9BBF /* Roboto-Light.ttf */,
+				D983700F1B1003C1001A9BBF /* Roboto-LightItalic.ttf */,
+				D98370101B1003C1001A9BBF /* Roboto-Medium.ttf */,
+				D98370111B1003C1001A9BBF /* Roboto-MediumItalic.ttf */,
+				D98370121B1003C1001A9BBF /* Roboto-Regular.ttf */,
+				D98370131B1003C1001A9BBF /* Roboto-Thin.ttf */,
+				D98370141B1003C1001A9BBF /* Roboto-ThinItalic.ttf */,
+			);
+			name = Roboto;
+			sourceTree = "<group>";
+		};
 		D9C4BC001A91CBF700F27EBC /* Syncing */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,27 +390,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D92929041A8F4DD900CCA1CF /* Exo2-Black.otf in Resources */,
-				D92929051A8F4DD900CCA1CF /* Exo2-BlackItalic.otf in Resources */,
-				D92929061A8F4DD900CCA1CF /* Exo2-Bold.otf in Resources */,
-				D92929071A8F4DD900CCA1CF /* Exo2-BoldItalic.otf in Resources */,
-				D92929081A8F4DD900CCA1CF /* Exo2-ExtraBold.otf in Resources */,
-				D92929091A8F4DD900CCA1CF /* Exo2-ExtraBoldItalic.otf in Resources */,
-				D929290A1A8F4DD900CCA1CF /* Exo2-ExtraLight.otf in Resources */,
-				D929290B1A8F4DD900CCA1CF /* Exo2-ExtraLightItalic.otf in Resources */,
-				D929290C1A8F4DD900CCA1CF /* Exo2-Italic.otf in Resources */,
-				D929290D1A8F4DD900CCA1CF /* Exo2-Light.otf in Resources */,
-				D929290E1A8F4DD900CCA1CF /* Exo2-LightItalic.otf in Resources */,
-				D929290F1A8F4DD900CCA1CF /* Exo2-Medium.otf in Resources */,
-				D92929101A8F4DD900CCA1CF /* Exo2-MediumItalic.otf in Resources */,
-				D92929111A8F4DD900CCA1CF /* Exo2-Regular.otf in Resources */,
-				D96587791A9885D7001D0EA3 /* OxygenMono-Regular.otf in Resources */,
-				D92929121A8F4DD900CCA1CF /* Exo2-SemiBold.otf in Resources */,
-				D92929131A8F4DD900CCA1CF /* Exo2-SemiBoldItalic.otf in Resources */,
-				D92929141A8F4DD900CCA1CF /* Exo2-Thin.otf in Resources */,
-				D92929151A8F4DD900CCA1CF /* Exo2-ThinItalic.otf in Resources */,
+				D98370201B1003C1001A9BBF /* Roboto-ThinItalic.ttf in Resources */,
+				D983701F1B1003C1001A9BBF /* Roboto-Thin.ttf in Resources */,
 				D931A48E1A8DDD1D000B8E8B /* LaunchScreen.xib in Resources */,
 				D931A48B1A8DDD1D000B8E8B /* Images.xcassets in Resources */,
+				D983701B1B1003C1001A9BBF /* Roboto-LightItalic.ttf in Resources */,
+				D98370171B1003C1001A9BBF /* Roboto-Bold.ttf in Resources */,
+				D983701D1B1003C1001A9BBF /* Roboto-MediumItalic.ttf in Resources */,
+				D98370161B1003C1001A9BBF /* Roboto-BlackItalic.ttf in Resources */,
+				D98370191B1003C1001A9BBF /* Roboto-Italic.ttf in Resources */,
+				D98370181B1003C1001A9BBF /* Roboto-BoldItalic.ttf in Resources */,
+				D983701C1B1003C1001A9BBF /* Roboto-Medium.ttf in Resources */,
+				D983701E1B1003C1001A9BBF /* Roboto-Regular.ttf in Resources */,
+				D98370151B1003C1001A9BBF /* Roboto-Black.ttf in Resources */,
+				D983701A1B1003C1001A9BBF /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
