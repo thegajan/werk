@@ -27,14 +27,13 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
             if (count($resultArray) > 0){
                 foreach ($resultArray as $a => $b){
                     echo("<tr>
-                        <td>
+                        <td onclick='moreInfo(" . $b['id'] . ")'>
                             <div class='task-content-div'><input type='checkbox' class='task-left'>
 
                                 <h1 class='task-left heads'>" . $b['task_name'] . " - </h1>
 
                                 <h1 class='timer heads' id='countdown-holder" . $b['id'] . "'></h1>
 
-                                <h1 class='heads clicks' id='click' onclick='moreInfo(" . $b['id'] . ")'>(More Info)</h1>
                             </div>
                             <script>
                             countdownDate('countdown-holder" . $b['id'] . "', '" . date('Y/m/d H:i:s',strtotime($b['time_start'])) . "');
