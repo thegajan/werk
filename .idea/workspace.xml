@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b806506-dd45-42b3-948e-042f55417fd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/currTask.css" afterPath="$PROJECT_DIR$/css/currTask.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/header.css" afterPath="$PROJECT_DIR$/css/header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/countDown.js" afterPath="$PROJECT_DIR$/js/countDown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/header.js" afterPath="$PROJECT_DIR$/js/header.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.php" afterPath="$PROJECT_DIR$/main.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,37 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="-5.230769" vertical-offset="34" max-vertical-offset="3587">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="182" column="5" selection-start="2732" selection-end="2732" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3281">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/header.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="226" column="14" selection-start="4204" selection-end="4204" vertical-scroll-proportion="0.9078341" vertical-offset="3319" max-vertical-offset="8653">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1603" selection-end="1603" vertical-scroll-proportion="-7.3461537" vertical-offset="693" max-vertical-offset="3842">
+            <state line="184" column="0" selection-start="8028" selection-end="8028" vertical-scroll-proportion="3.1824" vertical-offset="1190" max-vertical-offset="4029">
               <folding />
             </state>
           </provider>
@@ -91,13 +64,10 @@
         <option value="$PROJECT_DIR$/js/jquery.js" />
         <option value="$PROJECT_DIR$/connManager.php" />
         <option value="$PROJECT_DIR$/mobile_php/add_task.php" />
-        <option value="$PROJECT_DIR$/js/header.js" />
         <option value="$PROJECT_DIR$/img_fonts/android-more-vertical.svg" />
         <option value="$PROJECT_DIR$/addTask.php" />
         <option value="$PROJECT_DIR$/mobile_php/addTask.php" />
-        <option value="$PROJECT_DIR$/js/countDown.js" />
         <option value="$PROJECT_DIR$/js/hook.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/alexEmail.php" />
         <option value="$PROJECT_DIR$/checkEnd.php" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -106,11 +76,14 @@
         <option value="$PROJECT_DIR$/futureTask.php" />
         <option value="$PROJECT_DIR$/pastTask.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/header.php" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/css/currTask.css" />
         <option value="$PROJECT_DIR$/css/header.css" />
+        <option value="$PROJECT_DIR$/js/header.js" />
+        <option value="$PROJECT_DIR$/main.php" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/countDown.js" />
+        <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
   </component>
@@ -541,7 +514,11 @@
       <created>1432340529663</created>
       <updated>1432340529663</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="minor tweeks">
+      <created>1432361049432</created>
+      <updated>1432361049432</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -581,7 +558,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="sql" />
     <MESSAGE value="fuck this fucking bullshit&#10;and fuck you too alex" />
     <MESSAGE value="fuck this shit in the pussy" />
     <MESSAGE value="FUCKING SHIT HOLES" />
@@ -606,7 +582,8 @@
     <MESSAGE value="fixed ajax" />
     <MESSAGE value="fixed summary" />
     <MESSAGE value="fixed more stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed more stuff" />
+    <MESSAGE value="minor tweeks" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor tweeks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -737,11 +714,6 @@
         <state line="0" column="317" selection-start="310" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="175984" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTaskApi.txt">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -750,29 +722,14 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/countDown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1301" column="0" selection-start="37539" selection-end="37539" vertical-scroll-proportion="5.1251597" vertical-offset="18138" max-vertical-offset="22491" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile_php/addTask.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="13" selection-start="721" selection-end="873" vertical-scroll-proportion="-8.5" vertical-offset="153" max-vertical-offset="1717" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jstz-1.0.4.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/connManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="32" selection-start="191" selection-end="191" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="340" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="0" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alexEmail.php">
@@ -836,11 +793,6 @@
         <state line="36" column="104" selection-start="1819" selection-end="1819" vertical-scroll-proportion="0.4624" vertical-offset="357" max-vertical-offset="1258" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="230" selection-end="326" vertical-scroll-proportion="0.1827957" vertical-offset="0" max-vertical-offset="651" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addTask.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="39" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.184" vertical-offset="582" max-vertical-offset="1207" />
@@ -853,20 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1603" selection-end="1603" vertical-scroll-proportion="-7.3461537" vertical-offset="693" max-vertical-offset="3842">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="-5.230769" vertical-offset="34" max-vertical-offset="3587">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/currTask.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="5" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.7127496" vertical-offset="845" max-vertical-offset="1496">
@@ -874,16 +812,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
+    <entry file="file://$PROJECT_DIR$/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="5" selection-start="2732" selection-end="2732" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3281">
+        <state line="226" column="14" selection-start="4204" selection-end="4204" vertical-scroll-proportion="0.0" vertical-offset="3319" max-vertical-offset="8653">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/header.css">
+    <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="14" selection-start="4204" selection-end="4204" vertical-scroll-proportion="0.9078341" vertical-offset="3319" max-vertical-offset="8653">
+        <state line="10" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="-0.9792" vertical-offset="799" max-vertical-offset="3587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="177412">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jstz-1.0.4.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="19" selection-start="285" selection-end="285" vertical-scroll-proportion="0.23502304" vertical-offset="0" max-vertical-offset="651">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="16" selection-start="48" selection-end="48" vertical-scroll-proportion="0.026113672" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/countDown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1295" column="31" selection-start="37283" selection-end="37283" vertical-scroll-proportion="0.37327188" vertical-offset="21874" max-vertical-offset="22576">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="236" column="0" selection-start="3551" selection-end="3551" vertical-scroll-proportion="0.6344086" vertical-offset="3599" max-vertical-offset="4250">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="0" selection-start="8028" selection-end="8028" vertical-scroll-proportion="3.1824" vertical-offset="1190" max-vertical-offset="4029">
           <folding />
         </state>
       </provider>

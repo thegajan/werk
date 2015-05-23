@@ -55,11 +55,25 @@ include_once "header.php";
 
             <div data-icon="ei-search" class="icons header-icons"></div>
         </div>
+        <div id="curr-task-sub-header">
+            <ul class="tabs  primary-nav">
+                <li class="tabs__item current" id="current-task-click">
+                    <a class="tabs__link">Current</a>
+                </li>
+                <li class="tabs__item others" id="future-task-click">
+                    <a class="tabs__link">Future</a>
+                </li>
+                <li class="tabs__item others" id="finish-task-click">
+                    <a class="tabs__link">Finished</a>
+                </li>
+
+            </ul>
+        </div>
         <div id="task-summary"></div>
         <div id="curr-task-content-stuff" class="task-content">
             <script>
                 function closeMoreInfo() {
-                    $('#task-summary').css('display','none');
+                    $('#task-summary').css('display', 'none');
                     $('#curr-task-content-stuff').fadeIn('fast');
                 }
                 function moreInfo(id) {
@@ -100,7 +114,6 @@ include_once "header.php";
                 var timezone = jstz.determine();
                 var timeZone = timezone.name();
             </script>
-            <div id="current-header" class="some-header mainhead"><h1>Current Tasks</h1></div>
             <table id="task-table">
                 <tbody>
                 <script type="text/javascript">
@@ -139,7 +152,6 @@ include_once "header.php";
                 </script>
                 </tbody>
             </table>
-            <div id="future-header" class="some-header mainhead"><h1>Future Tasks</h1></div>
             <table id="task-table1">
                 <tbody>
                 <script type="text/javascript">
@@ -170,7 +182,6 @@ include_once "header.php";
                 </script>
                 </tbody>
             </table>
-            <div id="past-header" class="some-header mainhead"><h1>Finished</h1></div>
             <table id="task-table2">
                 <tbody>
                 <script type="text/javascript">

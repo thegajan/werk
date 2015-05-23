@@ -1292,8 +1292,8 @@ var countdown = (
          * @public
          */
         var resetLabels = countdown.resetLabels = function() {
-            LABELS_SINGLUAR = ' millisecond| s| m | h | d| week| month| year| decade| century| millennium'.split('|');
-            LABELS_PLURAL = ' milliseconds| s| m | h | d| weeks| months| years| decades| centuries| millennia'.split('|');
+            LABELS_SINGLUAR = ' millisecond| s| m| h| d| week| month| year| decade| century| millennium'.split('|');
+            LABELS_PLURAL = ' milliseconds| s| m| h| d| weeks| months| years| decades| centuries| millennia'.split('|');
             LABEL_LAST = ',';
             LABEL_DELIM = ',';
             LABEL_NOW = '';

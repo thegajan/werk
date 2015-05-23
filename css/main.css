@@ -97,13 +97,13 @@
 
 #curr-task-header h1 {
     font-family: "Roboto", sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 25px;
     color: #DB4437;
 }
 
 #curr-task-content-stuff {
-    height: 84.7vh;
+    height: 79vh;
     width: 100%;
     overflow-y: auto;
 }
@@ -183,6 +183,63 @@
     font-size: 17px;
 }
 
-.mainhead{
+.mainhead {
     padding: 5px 0 5px 5px;
+}
+
+#curr-task-sub-header {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.tabs {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table; /* [1] */
+    table-layout: fixed; /* [2] */
+    width: 100%; /* [3] */
+}
+
+.tabs__item {
+    cursor: pointer;
+    display: table-cell; /* [4] */
+}
+
+.tabs__link {
+    cursor: pointer;
+    display: block; /* [5] */
+}
+
+.primary-nav {
+    text-align: center;
+    overflow: hidden; /* [1] */
+}
+
+.primary-nav a {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ecf0f1;
+    color: #000;
+    text-decoration: none;
+}
+
+.current {
+    border-bottom: 3px #DB4437 solid;
+}
+
+.others {
+    border-bottom: 3px #ecf0f1 solid;
+}
+
+
+#task-table1 {
+    display: none;
+}
+
+#task-table2 {
+    display: none;
 }
