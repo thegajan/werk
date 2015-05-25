@@ -21,7 +21,6 @@
     NSTimer * _refreshTimer;
     NSMutableDictionary * _objChanges;
     NSMutableDictionary * _sectChanges;
-    BOOL _isRotating;
 }
 @end
 
@@ -29,13 +28,14 @@
 
 -(void)loadView {
     [super loadView];
-    _isRotating = NO;
     _taskView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[UICollectionViewFlowLayout new]];
     [_taskView registerClass:[TaskCell class] forCellWithReuseIdentifier:@"task cell"];
     _taskView.backgroundColor = [UIColor whiteColor];
     _taskView.dataSource = self;
     _taskView.delegate = self;
     [_taskView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
     
     [self setUpDataFetch];
     [TaskStatusHandler initialLoad];
@@ -134,31 +134,21 @@
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])) {
-        if (_isRotating) {
-            AppDelegate * delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-            NSInteger width = delegate.primaryColumnWidth;
-            return CGSizeMake(width, 150);
-        }
-        else {
-            return CGSizeMake([UIScreen mainScreen].bounds.size.width / 2, 201);
-        }
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    if (UIDeviceOrientationIsLandscape(orientation)) {
+        AppDelegate * delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        NSInteger width = delegate.primaryColumnWidth;
+        return CGSizeMake(width, 150);
     }
     else {
-        if (_isRotating) {
-            return CGSizeMake([UIScreen mainScreen].bounds.size.height / 2, 201);
-        }
-        else {
-            AppDelegate * delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-            NSInteger width = delegate.primaryColumnWidth;
-            return CGSizeMake(width, 150);
-        }
+        CGFloat dim1 = [UIScreen mainScreen].bounds.size.width;
+        CGFloat dim2 = [UIScreen mainScreen].bounds.size.height;
+        return CGSizeMake((dim1 < dim2 ? dim1 : dim2) / 2, 201);
     }
 }
 
--(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-    _isRotating = YES;
+
+-(void)orientationChanged:(NSNotification *)notification {
     [_taskView performBatchUpdates:nil completion:nil];
 }
 
