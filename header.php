@@ -6,7 +6,7 @@ $_SESSION['token'] = $token; //store it as session variable
 <!DOCTYPE html>
 <head>
     <link
-        href='http://fonts.googleapis.com/css?family=Roboto:400,100,900italic,700italic,900,100italic,300,300italic,400italic,500,500italic,700'
+        href='https://fonts.googleapis.com/css?family=Roboto:400,100,900italic,700italic,900,100italic,300,300italic,400italic,500,500italic,700'
         rel='stylesheet' type='text/css'>
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8"/>
