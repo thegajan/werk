@@ -10,7 +10,7 @@
 
 @class Task;
 
-@interface TaskDetailView : UIScrollView
+@interface TaskDetailView : UIView
 
 @property (strong, nonatomic) Task * task;
 

@@ -25,15 +25,20 @@
 }
 
 -(void)loadView {
-    self.view = _detailView;
+    [super loadView];
+    self.view = [[UIScrollView alloc] init];
 }
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [_detailView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addSubview:_detailView];
     [_detailView addUIElements];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     _detailView.task = _task;
 }
 

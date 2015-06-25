@@ -14,9 +14,7 @@
 -(id)init {
     self = [super init];
     if (self) {
-        self.frame = CGRectMake(0, 0, 0, 1000);
-        self.backgroundColor = [UIColor whiteColor];
-        
+        self.frame = CGRectMake(0, 0, 0, 900);
         [self initializeUIElements];
     }
     return self;
@@ -47,6 +45,9 @@
     _endDateLabel.font = [UIFont fontWithName:@"Roboto-Medium" size:16];
     _completionHeader.font = [UIFont fontWithName:@"Roboto-Medium" size:22];
     _confirmButton.titleLabel.font = [UIFont fontWithName:@"Roboto-Thin" size:22];
+    
+    //_descriptionView.editable = NO;
+    _descriptionView.backgroundColor = [UIColor blackColor];
 }
 
 -(void)addUIElements {
@@ -58,12 +59,16 @@
     [self addSubview:_completionHeader];
     [self addSubview:_confirmButton];
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[_titleLabel]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleLabel)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[_titleLabel]-10-[_descriptionView]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleLabel, _descriptionView)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-10-[_titleLabel]-10-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleLabel)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-10-[_descriptionView]-10-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_descriptionView)]];
+
+    NSLog(@"%@", self.constraints);
 }
 
 -(void)setTask:(Task *)task {
     _titleLabel.text = task.name;
+    _descriptionView.text = @"test";
 }
 
 @end
