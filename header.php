@@ -108,22 +108,46 @@ $_SESSION['token'] = $token; //store it as session variable
                             var a = startDate + " " + startHour + ":" + startMinute + ":00 " + startTOD;
                             var c = endDate + " " + endHour + ":" + endMinute + ":00 " + endTOD;
                             if (taskName.length == 0 || str.length == 0 || startHour.length == 0 || startMinute.length == 0 || startTOD.length == 0 || str1.length == 0 || endHour.length == 0 || endMinute.length == 0 || endTOD.length == 0) {
-                                $('#submit-add').css({'background-color': '#C0392B', 'border': '1px solid #C0392B'}).val('Incomplete Form!').addClass('animated shake');
+                                $('#submit-add').css({
+                                    'background-color': '#C0392B',
+                                    'border': '1px solid #C0392B'
+                                }).val('Incomplete Form!').addClass('animated shake');
                                 setTimeout(function () {
-                                    $('#submit-add').css({'background-color': '#2ECC71', 'border': '1px solid #2ECC71'}).val('Create Task').removeClass('animated shake');
+                                    $('#submit-add').css({
+                                        'background-color': '#2ECC71',
+                                        'border': '1px solid #2ECC71'
+                                    }).val('Create Task').removeClass('animated shake');
                                 }, 1500);
                                 //a >= c ||
                             } else if (startHour > 12 || startHour < 1 || startMinute > 59 || startMinute < 0 || endHour > 59 || endHour < 1 || endMinute > 59 || endMinute < 0) {
-                                $('#submit-add').css({'background-color': '#C0392B', 'border': '1px solid #C0392B'}).val('Invalid Dates!');
+                                $('#submit-add').css({
+                                    'background-color': '#C0392B',
+                                    'border': '1px solid #C0392B'
+                                }).val('Invalid Dates!');
                                 setTimeout(function () {
-                                    $('#submit-add').css({'background-color': '#2ECC71', 'border': '1px solid #2ECC71'}).val('Create Task');
+                                    $('#submit-add').css({
+                                        'background-color': '#2ECC71',
+                                        'border': '1px solid #2ECC71'
+                                    }).val('Create Task');
                                 }, 1500);
                             } else {
                                 $.ajax({
                                     type: "POST",
                                     url: 'https://www.readmybluebutton.com/werk/addTask.php',
 //                            data: form_data,
-                                    data: {taskName: taskName, description: description, sur: str, startHour: startHour, startMinute: startMinute, startTOD: startTOD, sur1: str1, endHour: endHour, endMinute: endMinute, endTOD: endTOD, token: '<?php echo $token ?>'},
+                                    data: {
+                                        taskName: taskName,
+                                        description: description,
+                                        sur: str,
+                                        startHour: startHour,
+                                        startMinute: startMinute,
+                                        startTOD: startTOD,
+                                        sur1: str1,
+                                        endHour: endHour,
+                                        endMinute: endMinute,
+                                        endTOD: endTOD,
+                                        token: '<?php echo $token ?>'
+                                    },
                                     success: function (response) {
                                         if (response == "success") {
                                             $('#add-task-content').css('display', 'none');
@@ -146,9 +170,15 @@ $_SESSION['token'] = $token; //store it as session variable
                                                 }, 1000);
                                             }, 3000);
                                         } else if (response == "form not complete") {
-                                            $('#submit-add').css({'background-color': '#C0392B', 'border': '1px solid #C0392B'}).val('Invalid Form!');
+                                            $('#submit-add').css({
+                                                'background-color': '#C0392B',
+                                                'border': '1px solid #C0392B'
+                                            }).val('Invalid Form!');
                                             setTimeout(function () {
-                                                $('#submit-add').css({'background-color': '#2ECC71', 'border': '1px solid #2ECC71'}).val('Create Task');
+                                                $('#submit-add').css({
+                                                    'background-color': '#2ECC71',
+                                                    'border': '1px solid #2ECC71'
+                                                }).val('Create Task');
                                             }, 1500);
                                         } else {
                                             $('#add-task-content').css('display', 'none');

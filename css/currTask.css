@@ -77,6 +77,7 @@
 .clicks:hover {
     text-decoration: underline;
 }
-.header-stuff{
+
+.header-stuff {
     display: inline-block;
 }

@@ -24,8 +24,8 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                 array_push($resultArray, $row);
             }
             mysql_close($Connection);
-            if (count($resultArray) > 0){
-                foreach ($resultArray as $a => $b){
+            if (count($resultArray) > 0) {
+                foreach ($resultArray as $a => $b) {
                     echo("<tr>
                         <td onclick='moreInfo(" . $b['id'] . ")'>
                             <div class='task-content-div'><input type='checkbox' class='task-left'>
@@ -36,7 +36,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
 
 
                             <script>
-                            countdownDate('countdown-holder" . $b['id'] . "', '" . date('Y/m/d H:i:s',strtotime($b['time_start'])) . "');
+                            countdownDate('countdown-holder" . $b['id'] . "', '" . date('Y/m/d H:i:s', strtotime($b['time_start'])) . "');
                             </script>
                             <div class='task-content-div icon-menu'>
                                 <div data-icon='ei-chevron-down'></div>
@@ -49,7 +49,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                     </tr>");
 
                 }
-            } else{
+            } else {
                 echo "error";
             }
         } else {

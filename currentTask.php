@@ -24,8 +24,8 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                 array_push($resultArray, $row);
             }
             mysql_close($Connection);
-            if (count($resultArray) > 0){
-                foreach ($resultArray as $a => $b){
+            if (count($resultArray) > 0) {
+                foreach ($resultArray as $a => $b) {
                     echo("<tr>
                         <td onclick='moreInfo(" . $b['id'] . ")'>
                             <div class='task-content-div' id='" . $b['id'] . "'><input type='checkbox' class='task-left'>
@@ -37,13 +37,13 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
 
 
                             <script>
-//                            slidDown(" . "#" . $b['id'] . ", " . "#description" .  $b['id'] . ");
-                            countdownDate('countdown-holder" . $b['id'] . "', '" . date('Y/m/d H:i:s',strtotime($b['time_end'])) . "');
+//                            slidDown(" . "#" . $b['id'] . ", " . "#description" . $b['id'] . ");
+                            countdownDate('countdown-holder" . $b['id'] . "', '" . date('Y/m/d H:i:s', strtotime($b['time_end'])) . "');
                             </script>
                             <div class='task-content-div icon-menu'>
                                 <div data-icon='ei-chevron-down'></div>
                             </div>
-                            <div class='task-description' id='" . "description" .  $b['id'] . "'>
+                            <div class='task-description' id='" . "description" . $b['id'] . "'>
                                 <h3>Task Description:</h3>
                                 <h4>" . $b['task_description'] . "</h4>
                             </div>
@@ -51,7 +51,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
                     </tr>");
 
                 }
-            } else{
+            } else {
                 echo "error";
             }
         } else {

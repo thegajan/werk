@@ -8,7 +8,7 @@ $(document).ready(function () {
     $('#past-header').click(function () {
         $('#task-table2').slideToggle('slow');
     });
-    $('#current-task-click').click(function (){
+    $('#current-task-click').click(function () {
         $('#finish-task-click').removeClass('current').addClass('others');
         $('#future-task-click').removeClass('current').addClass('others');
         $('#current-task-click').removeClass('others').addClass('current');
@@ -16,7 +16,7 @@ $(document).ready(function () {
         $('#task-table2').css('display', 'none');
         $('#task-table').fadeIn('fast');
     });
-    $('#finish-task-click').click(function (){
+    $('#finish-task-click').click(function () {
         $('#current-task-click').removeClass('current').addClass('others');
         $('#future-task-click').removeClass('current').addClass('others');
         $('#finish-task-click').removeClass('others').addClass('current');
@@ -24,7 +24,7 @@ $(document).ready(function () {
         $('#task-table1').css('display', 'none');
         $('#task-table2').fadeIn('fast');
     });
-    $('#future-task-click').click(function (){
+    $('#future-task-click').click(function () {
         $('#finish-task-click').removeClass('current').addClass('others');
         $('#current-task-click').removeClass('current').addClass('others');
         $('#future-task-click').removeClass('others').addClass('current');
