@@ -10,7 +10,7 @@
 
 @class Task;
 
-@interface TaskDetailView : UIScrollView
+@interface TaskDetailView : UIView
 
 @property (strong, nonatomic) Task * task;
 
@@ -19,6 +19,7 @@
 @property (strong, nonatomic) UITextView * descriptionView;
 @property (strong, nonatomic) UILabel * startDateLabel;
 @property (strong, nonatomic) UILabel * endDateLabel;
+@property (strong, nonatomic) UIProgressView * progressBar;
 @property (strong, nonatomic) UILabel * completionHeader;
 @property (strong, nonatomic) UIDatePicker * dateInputPicker;
 @property (strong, nonatomic) UIButton * confirmButton;

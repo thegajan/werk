@@ -92,6 +92,7 @@
         [taskInfo setValue:task.task_description forKey:@"description"];
         [taskInfo setValue:[_df stringFromDate:task.t_start] forKey:@"startDate"];
         [taskInfo setValue:[_df stringFromDate:task.t_end] forKey:@"endDate"];
+        [taskInfo setValue:[NSNumber numberWithLongLong:task.color] forKey:@"color"];
         
         if (task.should_delete) {
             [taskInfo setValue:@"delete" forKey:@"status"];
@@ -179,6 +180,13 @@
             task.last_changed = [NSDate new];
             task.should_delete = NO;
             task.local_id = [CoreDataHandler getNextLocalID];
+            NSNumber * color = [object objectForKey:@"color"];
+            if (color) {
+                task.color = color.integerValue;
+            }
+            else {
+                task.color = 0xFFFFFF;
+            }
             NSDate * now = [NSDate new];
             if (!([task.t_start compare:now] == NSOrderedAscending))
                 task.n_status = TaskStatusFuture;

@@ -79,7 +79,7 @@
     _titleInput.layer.cornerRadius = 9.0;
     _titleInput.layer.borderColor = [ColorOptions mainRed].CGColor;
     _titleInput.layer.borderWidth = 1.0;
-    _titleInput.font = [UIFont fontWithName:@"Exo2-Light" size:32];
+    _titleInput.font = [UIFont fontWithName:@"Roboto-Light" size:32];
     _titleInput.placeholder = @"Task Name";
     UIView * pad = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
     pad.backgroundColor = _titleInput.backgroundColor;
@@ -91,18 +91,18 @@
     _descriptionInput.layer.cornerRadius = 9.0;
     _descriptionInput.layer.borderColor = [ColorOptions mainRed].CGColor;
     _descriptionInput.layer.borderWidth = 1.0;
-    _descriptionInput.font = [UIFont fontWithName:@"Exo2-Light" size:22];
+    _descriptionInput.font = [UIFont fontWithName:@"Roboto-Light" size:22];
     _descriptionInput.placeholderText = @"Task Description";
     
     _timePicker.datePickerMode = UIDatePickerModeDateAndTime;
     
     _timeSelection.selectedSegmentIndex = 0;
     _timeSelection.tintColor = [ColorOptions mainRed];
-    [_timeSelection setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Exo2-Black" size:18]} forState:UIControlStateNormal];
+    [_timeSelection setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Roboto-Black" size:18]} forState:UIControlStateNormal];
     
     _confirmTask.backgroundColor = _confirmColor;
     _confirmTask.layer.cornerRadius = 9.0;
-    _confirmTask.titleLabel.font = [UIFont fontWithName:@"Exo2-Light" size:24];
+    _confirmTask.titleLabel.font = [UIFont fontWithName:@"Roboto-Light" size:24];
     [_confirmTask setTitleColor:[ColorOptions mainWhite] forState:UIControlStateNormal];
     [_confirmTask setTitle:_confirmText forState:UIControlStateNormal];
     
@@ -196,7 +196,7 @@
 }
 
 -(void)createTask {
-    [CoreDataHandler createTaskWithName:_titleInput.text withDescription:_descriptionInput.text startsAt:_startTime endsAt:_endTime];
+    [CoreDataHandler createTaskWithName:_titleInput.text withDescription:_descriptionInput.text startsAt:_startTime endsAt:_endTime withColor:0xFFFFFF];
     _successView.hidden = NO;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [[InterfaceController sharedInstance] popToRoot];

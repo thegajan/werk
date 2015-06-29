@@ -19,7 +19,7 @@
         _label = [UILabel new];
         _label.text = @"Task Created!";
         _label.textColor = [ColorOptions secondaryGreen];
-        _label.font = [UIFont fontWithName:@"Exo2-Light" size:48];
+        _label.font = [UIFont fontWithName:@"Roboto-Light" size:48];
         
         [_check setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_label setTranslatesAutoresizingMaskIntoConstraints:NO];

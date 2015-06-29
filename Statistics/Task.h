@@ -2,7 +2,7 @@
 //  Task.h
 //  Statistics
 //
-//  Created by Alex Erf on 2/19/15.
+//  Created by Alex Erf on 5/22/15.
 //  Copyright (c) 2015 Orange. All rights reserved.
 //
 
@@ -31,6 +31,7 @@ typedef NS_ENUM(int64_t, TaskStatus) {
 @property (nonatomic, retain) NSString * task_description;
 @property (nonatomic) BOOL was_success;
 @property (nonatomic) int64_t n_status;
+@property (nonatomic) int64_t color;
 @property (nonatomic, retain) Account *account;
 
 @end

@@ -10,13 +10,14 @@
 
 @class Task;
 
-@interface TaskCell : UITableViewCell
+@interface TaskCell : UICollectionViewCell
 
 -(void)updateTimeDisplay;
 
 @property (strong, nonatomic) Task * taskInfo;
 @property (strong, nonatomic) NSString * name;
 @property (strong, nonatomic) NSDate * end;
+@property (strong, nonatomic) NSDate * start;
 @property (nonatomic) BOOL isExpanded;
 
 @end

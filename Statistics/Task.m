@@ -2,7 +2,7 @@
 //  Task.m
 //  Statistics
 //
-//  Created by Alex Erf on 2/19/15.
+//  Created by Alex Erf on 5/22/15.
 //  Copyright (c) 2015 Orange. All rights reserved.
 //
 
@@ -16,13 +16,14 @@
 @dynamic length;
 @dynamic local_id;
 @dynamic name;
+@dynamic s_status;
 @dynamic server_id;
 @dynamic should_delete;
-@dynamic s_status;
 @dynamic t_end;
 @dynamic t_start;
 @dynamic task_description;
 @dynamic was_success;
+@dynamic color;
 @dynamic account;
 
 @synthesize n_status = _n_status;
