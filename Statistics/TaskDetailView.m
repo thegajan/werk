@@ -104,6 +104,7 @@
     _task = task;
     _titleLabel.text = task.name;
     _descriptionView.text = task.task_description;
+    _dateInputPicker.minimumDate = _task.t_start;
     
     if (_descriptionView.text.length == 0) {
         _descriptionView.text = @"<No Description>";
