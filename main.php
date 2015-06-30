@@ -72,6 +72,9 @@ include_once "header.php";
             <div id="task-summary"></div>
             <div id="curr-task-content-stuff" class="task-content">
                 <script>
+                    function completeTask(id) {
+                    var date = document.getElementById();
+                    }
                     function closeMoreInfo() {
                         $('#task-summary').css('display', 'none');
                         $('#curr-task-content-stuff').fadeIn('fast');
@@ -89,6 +92,7 @@ include_once "header.php";
                                 }
                                 $('#curr-task-content-stuff').css('display', 'none');
                                 $('#task-summary').html(response);
+                                //.append("<div id='time-finished-container'><h2>Time Finished</h2><input type='text' id='start-date' class='time datepicker box' name='startDay' placeholder='Start Day'><br></div>");
                                 $('#task-summary').fadeIn('fast');
                             },
                             error: function (xhr, status, error) {

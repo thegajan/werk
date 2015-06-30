@@ -53,7 +53,7 @@ $_SESSION['token'] = $token; //store it as session variable
 
                     <h1>Task Timings</h1>
 
-                    <h2>Start Time:</h2> <input type="text" id="start-date" class="time datepicker box"
+                    <h2>Start Time:</h2><input type="text" id="start-date" class="time datepicker box"
                                                 name="startDay"
                                                 placeholder="Start Day"><br>
                     <input type="text" id="startHour" name="startHour" placeholder="Hour"

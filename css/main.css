@@ -248,3 +248,46 @@
     position: relative;
     float: right;
 }
+
+#time-finished-date {
+    width: 96%;
+    margin: 5px auto;
+    display: block;
+    padding: 5px;
+    font-family: Roboto, sans-serif;
+    font-size: 17px;
+}
+
+#task-complete{
+    background-color: #2ecc71;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    border: none;
+    padding: 5px;
+    margin: 0 auto;
+    display: block;
+    width: 98%;
+    color: #FFFFFF;
+    transition: .5s;
+    cursor: pointer;
+}
+
+#task-complete:hover {
+    background-color: #27ae60;
+}
+
+#task-complete:active {
+    background-color: #279c50;
+}
+
+.time-inputs{
+    margin: 0 auto;
+    display: block;
+}
+
+/*.boxes {*/
+    /*margin: 0 auto;*/
+    /*width: 25%;*/
+/*}*/

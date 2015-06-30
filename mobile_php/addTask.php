@@ -32,6 +32,7 @@ foreach ($taskInfo['info'] as $a) {
     $description = $a['description'];
     $startDate = $a['startDate'];
     $endDate = $a['endDate'];
+    $completeTime = $a['completeTime'];
     $status = $a['status'];
     $oldId = $a['id'];
     if ($status == 'create') {
@@ -55,6 +56,24 @@ foreach ($taskInfo['info'] as $a) {
     } elseif ($status == 'delete') {
         $id = $a['id'];
         $sql = "DELETE FROM task_master WHERE id='" . $id . "'";
+        $conn = new connManager();
+        $Connection = $conn->GetConnection();
+        if (!$Connection) {
+            echo "Failed to connect to MySQL: " . mysql_error();
+        }
+        mysql_query($sql);
+        mysql_close($Connection);
+        $num = mysql_affected_rows();
+        if ($num > 0) {
+            $tempArray = array('id' => $id, 'status' => 'deleted');
+            array_push($endArray, $tempArray);
+        } else {
+            echo json_encode($endArray);
+            exit;
+        }
+    } elseif ($status == 'complete') {
+        $id = $a['id'];
+        $sql = "UPDATE task_master WHERE id='" . $id . "' SET time_complete = '" . $completeTime . "'";
         $conn = new connManager();
         $Connection = $conn->GetConnection();
         if (!$Connection) {
