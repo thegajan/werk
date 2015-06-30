@@ -83,7 +83,7 @@ foreach ($taskInfo['info'] as $a) {
         mysql_close($Connection);
         $num = mysql_affected_rows();
         if ($num > 0) {
-            $tempArray = array('id' => $id, 'status' => 'deleted');
+            $tempArray = array('id' => $id, 'status' => 'complete');
             array_push($endArray, $tempArray);
         } else {
             echo json_encode($endArray);
